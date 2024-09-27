@@ -1,0 +1,343 @@
+:root {
+    /* Warna global */
+    --primary-color: #000;
+    --secondary-color: #fff;
+    --accent-color: #6366F1;
+    --text-color: #333;
+    --bg-color: #f8f9fa;
+    --scroll-bg-color: rgba(255, 255, 255, 0.8); /* Glass color */
+
+    /* Ukuran global */
+    --container-padding: 80px;
+    --btn-padding: 11px 32px;
+    --border-radius: 200px;
+
+    /* Responsive breakpoints */
+    --mobile: 576px;
+    --tablet: 768px;
+    --laptop-sm: 992px;
+    --laptop-lg: 1200px;
+    --desktop: 1400px;
+
+    /* Animasi */
+    --transition-speed: 0.3s;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+a {
+    color: var(--primary-color);
+    transition: color var(--transition-speed);
+}
+
+a:hover {
+    color: var(--accent-color);
+}
+
+/* Full-screen loader container */
+#loader {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+/* Loading icon style */
+.loading-icon {
+    width: 40px;
+    height: 40px;
+    background-image: url('../assets/logo.png'); /* Your logo */
+    background-size: cover;
+    animation: spin 3s linear infinite; /* Spinning animation with slower speed (3s) */
+}
+
+/* Keyframes for spinning effect */
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+body {
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    line-height: 1.6;
+    transition: background-color var(--transition-speed);
+}
+
+.container {
+    margin: 0 auto;
+    padding: 0 var(--container-padding);
+    max-width: 100%;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.d-flex {
+    display: flex;
+    gap: 1rem;
+}
+
+.btn {
+    padding: var(--btn-padding);
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    border: 1px solid var(--primary-color);
+    transition: all var(--transition-speed) ease-in-out;
+}
+
+.btn-a {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+.btn-b {
+    background: none;
+    color: var(--primary-color);
+}
+
+.btn-c {
+    background: none;
+    color: var(--bg-color);
+    border: 1px solid var(--bg-color);
+}
+
+.btn:hover {
+    opacity: 0.8;
+    transform: scale(1.05);
+}
+
+li#btn {
+    display: none;
+}
+/* Nav styles */
+nav {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    transition: background-color 0.3s ease-in-out;
+}
+
+#navbar {
+    background-color: transparent;
+    color: var(--primary-color);
+    padding: 10px 20px;
+}
+
+#navbar.scroll {
+    background-color: var(--scroll-bg-color);
+    color: var(--secondary-color);
+    backdrop-filter: blur(2px); /* Efek kaca (blur) */
+    -webkit-backdrop-filter: blur(2px); /* Untuk dukungan browser Safari */
+}
+
+nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+nav a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+nav.scroll a {
+    color: var(--primary-color);
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.hamburger .bar {
+    width: 25px;
+    height: 3px;
+    background-color: var(--primary-color);
+    transition: background-color 0.3s;
+}
+
+nav.scroll .hamburger .bar {
+    background-color: var(--secondary-color);
+}
+
+/* Font styles */
+h1.title {
+    color: var(--primary-color);
+    font-size: 45px;
+    font-weight: 600;
+    line-height: 60px;
+    margin-bottom: 1rem;
+}
+
+p.desc {
+    color: var(--text-color);
+    font-size: 15px;
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+
+/* Section styles */
+section {
+    margin-bottom: 80px;
+}
+
+section.home,
+section.partner {
+    overflow-x: hidden;
+    padding: 40px 0;
+}
+
+.img-banner {
+    width: 100%;
+    max-width: 500px;
+}
+
+/* Swiper styles */
+.swiper-container {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: var(--secondary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    width: 100%;
+    max-width: 150px;
+}
+
+/* Responsive Design */
+@media (max-width: 576px) { /* Ini ukuran untuk mobile */
+    .container {
+        padding: 0 20px;
+    }
+    section.home {
+        margin-top: 100px;
+    }
+    .row {
+        flex-direction: column;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 90%;
+        left: 0;
+        width: 100%;
+        background-color: var(--bg-color);
+        text-align: center;
+        padding: 20px 0px 50px 0px;
+        transition: all 0.5s ease-in-out; /* Smooth transisi untuk menu */
+    }
+    nav .nav-links {
+        display: none;
+        gap: 2rem;
+    }
+    /* Toggle menu visibility when hamburger is clicked */
+
+    .btn-b {
+        display: none;
+    }
+
+    .btn-b.show {
+        display: block;
+    }
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    /* Display Register button when hamburger is clicked */
+    #btn.show {
+        display: flex;
+        justify-content: center;
+    }
+    #navbar {
+        background-color: var(--bg-color);
+        color: var(--primary-color);
+        padding: 10px 20px;
+    }
+    #navbar.scroll {
+        background-color: var(--bg-color);
+        color: var(--primary-color);
+    }
+    nav.scroll a {
+        color: var(--primary-color);
+    }
+    nav.scroll .hamburger .bar {
+        background-color: var(--primary-color);
+    }
+    .col-sm-0 {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) { /* Ini ukuran untuk tablet */
+    .container {
+        padding: 0 40px;
+    }
+    .img-banner {
+        max-width: 400px;
+    }
+}
+
+@media (min-width: 992px) { /* Untuk laptop */
+    .container {
+        padding: 0 60px;
+    }
+    .img-banner {
+        max-width: 450px;
+    }
+}
+
+@media (min-width: 1200px) { /* Untuk laptop lebih besar */
+    .container {
+        padding: 0 80px;
+    }
+    .img-banner {
+        max-width: 500px;
+    }
+}
