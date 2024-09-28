@@ -1,0 +1,372 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Meta Information for SEO and Social Sharing -->
+    <meta name="description" content="Build your career as a professional developer. Learn coding, programming, and software development from industry experts.">
+    <meta name="keywords" content="Developer, Career, Programming, Software Development, Courses">
+    <meta name="author" content="Sekolah Coding">
+    
+    <!-- Meta Open Graph for better social sharing -->
+    <meta property="og:title" content="Build Your Career As Professional Developer">
+    <meta property="og:description" content="Learn coding, programming, and software development with industry experts. Join your journey now.">
+    <meta property="og:image" content="assets/logo.png">
+    
+    <!-- Title of the Document -->
+    <title>Build Your Career As Professional Developer</title>
+    
+    <!-- Linking External CSS and Fonts -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="lib/swiperjs v11.1.5/swiper-bundle.css">
+    <link rel="stylesheet" href="lib/boxicons v2.1.4/css/boxicons.min.css">
+    <link rel="stylesheet" href="lib/Animate On Scroll v2.3.2/dist/aos.css">
+
+    <!-- Preconnect for faster font loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link rel="icon" href="assets/logo.png">
+</head>
+<body>
+    <!-- Loader HTML Element -->
+    <div id="loader">
+        <div class="loading-icon"></div>
+    </div>
+
+    <div class="">
+        <!-- Navigation Bar -->
+        <nav id="navbar">
+            <div class="container">
+                <a href="index.html" class="logo">
+                    <img src="assets/logo.png" alt="Logo" data-aos="zoom-in" data-aos-duration="500">
+                </a>
+
+                <!-- UL Links -->
+                <ul class="nav-links" id="nav-links">
+                    <li data-aos="fade-up-right" data-aos-duration="500"><a href="index.html">Home</a></li>
+                    <li data-aos="fade-up-right" data-aos-duration="650"><a href="index.html">Programs</a></li>
+                    <li data-aos="fade-up-right" data-aos-duration="800"><a href="courses.html">Courses</a></li>
+                    <li data-aos="fade-up-right" data-aos-duration="950"><a href="events.html">Events</a></li>
+                    <li class="d-flex" id="btn">
+                        <a href="register.html">
+                            <button class="btn btn-b show">Register</button>
+                        </a>
+                        <div class="darkmode-toggle"> 
+                            <button class="btn btn-rounded toggle-dark-mode">
+                                <i class="bx bx-moon" id="icon-dark-mode"></i>
+                            </button>
+                        </div> 
+                    </li>
+                </ul>
+
+                
+                <!-- Hamburger Menu -->
+                <button class="hamburger" id="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+                <div class="dm d-flex" data-aos="zoom-in" data-aos-duration="1000">
+                    <a href="register.html">
+                        <button class="btn btn-b reg">Register</button>
+                    </a>
+                    <div class="darkmode-toggle"> 
+                        <button class="btn btn-rounded toggle-dark-mode">
+                            <i class="bx bx-moon" id="icon-dark-mode"></i>
+                        </button>
+                    </div>                    
+                </div>
+            </div>
+        </nav>
+
+        <!-- Challenges Section -->
+        <section class="home">
+            <div class="container">
+                <div class="row">
+                    <div class="col-5 col-md-7 col-sm-12">
+                        <h1 class="title" data-aos="fade-up" data-aos-duration="500">Test Your Limits Take On Our Challenges</h1>
+                        <p class="desc" data-aos="fade-up" data-aos-duration="700">Take on exciting challenges and put your skills to the test. Whether you're a developer, designer, or cybersecurity enthusiast, our challenges provide a competitive platform to showcase your expertise and gain real-world experience. Compete with the best and win amazing prizes!</p>
+                        <div class="d-flex" data-aos="fade-up" data-aos-duration="900">
+                            <a href="challenges.html">
+                                <button class="btn btn-a">Solve Challenges</button>
+                            </a>
+                            <a href="challenges.html">
+                                <button class="btn btn-b">Explore Challenges</button>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-5 col-sm-0">
+                        <div class="banner center" data-aos="zoom-in" data-aos-duration="1000">
+                            <img class="img-banner-challenge" src="assets/challenge-banner.png" alt="Challenge Banner">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- New Challenge Section -->
+        <section class="challenges">
+            <div class="container">
+                <div class="">
+                    <h1 class="title section-title" data-aos="fade-up" data-aos-duration="500">New Challenge</h1> 
+                    <p class="desc" data-aos="fade-up" data-aos-duration="700"> Push your limits and tackle our latest challenges! Each challenge is designed to test and enhance your skills in various domains of technology. Whether you're a beginner or an expert, these challenges will push you to think critically and innovate solutions.</p>
+                </div>
+                <div class="course-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="challenge-box">
+                                <div class="box-challenge-img">
+                                    <img class="challenge-img" src="assets/challenge-1.png" alt="Full-Stack Development Challenge">
+                                </div>
+                                <h4>Full-Stack Development Challenge</h4>
+                                <p class="desc text-clamp">Build a complete web application from scratch. Showcase your front-end and back-end skills by creating a responsive, full-featured web solution.</p>
+                                <div class="d-flex mb">
+                                    <h5 class="text-clamp-1"><i class="bx bx-time-five"></i> Deadline: 30 May, 2025</h5>
+                                </div>
+                                <div class="d-flex mb">
+                                    <h5><i class="bx bx-user"></i> Hosted by CodeWarriors</h5>
+                                </div>
+                                <div class="d-block">
+                                    <a href="challenge.html">
+                                        <button class="btn btn-a">Join Now</button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="challenge-box">
+                                <div class="box-challenge-img">
+                                    <img class="challenge-img" src="assets/challenge-2.png" alt="AI & Machine Learning Challenge">
+                                </div>
+                                <h4>AI & Machine Learning Challenge</h4>
+                                <p class="desc text-clamp">Create a machine learning model that predicts outcomes using real-world datasets. Master Python, TensorFlow, and other essential tools to win this challenge.</p>
+                                <div class="d-flex mb">
+                                    <h5 class="text-clamp-1"><i class="bx bx-time-five"></i> Deadline: 15 June, 2025</h5>
+                                </div>
+                                <div class="d-flex mb">
+                                    <h5><i class="bx bx-user"></i> Hosted by AI Enthusiasts</h5>
+                                </div>
+                                <div class="d-block">
+                                    <a href="challenge.html">
+                                        <button class="btn btn-a">Join Now</button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="challenge-box">
+                                <div class="box-challenge-img">
+                                    <img class="challenge-img" src="assets/challenge-3.png" alt="Cybersecurity Capture the Flag">
+                                </div>
+                                <h4>Cybersecurity Capture the Flag</h4>
+                                <p class="desc text-clamp">Solve real-world security puzzles in this Capture the Flag challenge. Test your knowledge of ethical hacking, encryption, and secure coding practices.</p>
+                                <div class="d-flex mb">
+                                    <h5 class="text-clamp-1"><i class="bx bx-time-five"></i> Deadline: 1 July, 2025</h5>
+                                </div>
+                                <div class="d-flex mb">
+                                    <h5><i class="bx bx-user"></i> Hosted by SecureTech</h5>
+                                </div>
+                                <div class="d-block">
+                                    <a href="challenge.html">
+                                        <button class="btn btn-a">Join Now</button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="challenge-box">
+                                <div class="box-challenge-img">
+                                    <img class="challenge-img" src="assets/challenge-4.png" alt="Cloud Architecture Design Challenge">
+                                </div>
+                                <h4>Cloud Architecture Design Challenge</h4>
+                                <p class="desc text-clamp">Design and implement a scalable cloud architecture using AWS, Azure, or Google Cloud. Showcase your ability to create efficient and cost-effective cloud solutions.</p>
+                                <div class="d-flex mb">
+                                    <h5 class="text-clamp-1"><i class="bx bx-time-five"></i> Deadline: 10 August, 2025</h5>
+                                </div>
+                                <div class="d-flex mb">
+                                    <h5><i class="bx bx-user"></i> Hosted by CloudMasters</h5>
+                                </div>
+                                <div class="d-block">
+                                    <a href="challenge.html">
+                                        <button class="btn btn-a">Join Now</button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="challenge-box">
+                                <div class="box-challenge-img">
+                                    <img class="challenge-img" src="assets/challenge-5.png" alt="Data Science Innovation Challenge">
+                                </div>
+                                <h4>Data Science Innovation Challenge</h4>
+                                <p class="desc text-clamp">Use your data science skills to extract insights and create impactful visualizations from complex datasets. Tools include Python, SQL, and Tableau.</p>
+                                <div class="d-flex mb">
+                                    <h5 class="text-clamp-1"><i class="bx bx-time-five"></i> Deadline: 20 September, 2025</h5>
+                                </div>
+                                <div class="d-flex mb">
+                                    <h5><i class="bx bx-user"></i> Hosted by DataGenius</h5>
+                                </div>
+                                <div class="d-block">
+                                    <a href="challenge.html">
+                                        <button class="btn btn-a">Join Now</button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Popular Challenge Section -->
+        <section class="challenges">
+            <div class="container">
+                <div class="">
+                    <h1 class="title section-title" data-aos="fade-up" data-aos-duration="500">Popular Challenge</h1> 
+                    <p class="desc" data-aos="fade-up" data-aos-duration="700"> Take part in our most popular challenges and test your skills against the best! Whether you're honing your coding abilities or exploring new technologies, these challenges are a fun and competitive way to learn. Thousands of participants have joined, and now it's your turn to see how you stack up against the best. </p>
+                </div>
+                <div class="course-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="challenge-box">
+                                <div class="box-challenge-img">
+                                    <img class="challenge-img" src="assets/challenge-1.png" alt="Full Stack Development Challenge">
+                                </div>
+                                <h4>Full Stack Development Challenge</h4>
+                                <p class="desc text-clamp">Put your full-stack development skills to the test by building a full-fledged web application from front-end to back-end within 72 hours.</p>
+                                <div class="d-flex mb">
+                                    <h5 class="text-clamp-1"><i class="bx bx-time-five"></i> Joins: 15 May, 2025</h5>
+                                </div>
+                                <div class="d-flex mb">
+                                    <h5><i class="bx bx-trophy"></i> Prize: $3,000</h5>
+                                </div>
+                                <div class="d-block">
+                                    <a href="challenge.html">
+                                        <button class="btn btn-a">Join Now</button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="challenge-box">
+                                <div class="box-challenge-img">
+                                    <img class="challenge-img" src="assets/challenge-2.png" alt="AI & Machine Learning Competition">
+                                </div>
+                                <h4>AI & Machine Learning Competition</h4>
+                                <p class="desc text-clamp">Create an AI model that solves real-world problems. Compete with top data scientists in this exciting 48-hour challenge.</p>
+                                <div class="d-flex mb">
+                                    <h5 class="text-clamp-1"><i class="bx bx-time-five"></i> Joins: 1 June, 2025</h5>
+                                </div>
+                                <div class="d-flex mb">
+                                    <h5><i class="bx bx-trophy"></i> Prize: $5,000</h5>
+                                </div>
+                                <div class="d-block">
+                                    <a href="challenge.html">
+                                        <button class="btn btn-a">Join Now</button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="challenge-box">
+                                <div class="box-challenge-img">
+                                    <img class="challenge-img" src="assets/challenge-3.png" alt="Cybersecurity Capture the Flag (CTF)">
+                                </div>
+                                <h4>Cybersecurity Capture the Flag (CTF)</h4>
+                                <p class="desc text-clamp">Test your cybersecurity skills by solving security puzzles and challenges in this Capture the Flag competition.</p>
+                                <div class="d-flex mb">
+                                    <h5 class="text-clamp-1"><i class="bx bx-time-five"></i> Joins: 20 July, 2025</h5>
+                                </div>
+                                <div class="d-flex mb">
+                                    <h5><i class="bx bx-trophy"></i> Prize: $2,500</h5>
+                                </div>
+                                <div class="d-block">
+                                    <a href="challenge.html">
+                                        <button class="btn btn-a">Join Now</button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="challenge-box">
+                                <div class="box-challenge-img">
+                                    <img class="challenge-img" src="assets/challenge-4.png" alt="Game Development Challenge">
+                                </div>
+                                <h4>Game Development Challenge</h4>
+                                <p class="desc text-clamp">Create a playable game in just 48 hours! Compete with game developers worldwide to build the most creative and innovative game.</p>
+                                <div class="d-flex mb">
+                                    <h5 class="text-clamp-1"><i class="bx bx-time-five"></i> Joins: 10 August, 2025</h5>
+                                </div>
+                                <div class="d-flex mb">
+                                    <h5><i class="bx bx-trophy"></i> Prize: $4,000</h5>
+                                </div>
+                                <div class="d-block">
+                                    <a href="challenge.html">
+                                        <button class="btn btn-a">Join Now</button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <div class="container">
+                <div class="footer d-flex between">
+                    <div class="">
+                        <div class="d-flex center mb">
+                            <img src="assets/logo.png" alt="">
+                            <p class="">Sekolah Coding</p>
+                        </div>
+                        <div class="">
+                            <p class="desc">Address: <br>Imam Bonjol Street, 597</p>
+                        </div>
+                        <div class="">
+                            <p class="desc">Contact: <br>518-564-3200 <br> contact@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="d-flex mb">
+                        <div class="f-box">
+                            <p class="desc">About us</p>
+                            <p class="desc">Mentor</p>
+                            <p class="desc">Course</p>
+                            <p class="desc">Event</p>
+                            <p class="desc">Chalange</p>
+                        </div>
+                        <div class="f-box">
+                            <p class="desc">Features</p>
+                            <p class="desc">Sign In</p>
+                            <p class="desc">Sign Up</p>
+                        </div>
+                        <div class="f-box">
+                            <p class="desc">Style Guide</p>
+                            <p class="desc">Changelog</p>
+                            <p class="desc">Licenses</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer d-flex between">
+                    <div class="">
+                        <p class="desc">&copy; 2024 Sekolah Coding. All rights reserved.</p>
+                    </div>
+                    <div class="d-flex">
+                        <p class="desc"><a class="underline" href="index.html">Privacy Policy</a></p>
+                        <p class="desc"><a class="underline" href="index.html">Terms of Service</a></p>
+                        <p class="desc"><a class="underline" href="index.html">Cookies Settings</a></p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- External Scripts -->
+    <script src="lib/swiperjs v11.1.5/swiper-bundle.js"></script>
+    <script src="lib/Animate On Scroll v2.3.2/dist/aos.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -49,9 +49,10 @@
                     <li data-aos="fade-up-right" data-aos-duration="650"><a href="index.html">Programs</a></li>
                     <li data-aos="fade-up-right" data-aos-duration="800"><a href="courses.html">Courses</a></li>
                     <li data-aos="fade-up-right" data-aos-duration="950"><a href="events.html">Events</a></li>
+                    <li data-aos="fade-up-right" data-aos-duration="950"><a href="history.html">My Learning</a></li>
                     <li class="d-flex" id="btn">
-                        <a href="register.html">
-                            <button class="btn btn-b show">Register</button>
+                        <a href="profile.html">
+                            <button class="btn btn-rounded show"><i class='bx bxs-user'></i></button>
                         </a>
                         <div class="darkmode-toggle"> 
                             <button class="btn btn-rounded toggle-dark-mode">
@@ -60,7 +61,6 @@
                         </div> 
                     </li>
                 </ul>
-
                 
                 <!-- Hamburger Menu -->
                 <button class="hamburger" id="hamburger">
@@ -69,8 +69,8 @@
                     <span class="bar"></span>
                 </button>
                 <div class="dm d-flex" data-aos="zoom-in" data-aos-duration="1000">
-                    <a href="register.html">
-                        <button class="btn btn-b reg">Register</button>
+                    <a href="profile.html">
+                        <button class="btn btn-rounded reg"><i class='bx bxs-user'></i></button>
                     </a>
                     <div class="darkmode-toggle"> 
                         <button class="btn btn-rounded toggle-dark-mode">
@@ -79,54 +79,97 @@
                     </div>                    
                 </div>
             </div>
-        </nav>
+        </nav>    
 
-        <!-- Auth Section -->
-        <section class="auth">
+        <!-- Mentor Section -->
+        <section class="detail-course">
             <div class="container">
                 <div class="row">
-                    <div class="col-6 col-md-5 col-sm-0">
-                        <div class="auth center" data-aos="zoom-in" data-aos-duration="1000">
-                            <img class="img-auth" src="assets/auth.png" alt="Light Mode Auth">
+                    <div class="col-12">
+                        <div class="box-wrap box-img-course">
                         </div>
                     </div>
-                    <div class="col-5 col-md-7 col-sm-12">
-                        <h1 class="title" data-aos="fade-up" data-aos-duration="500">Create Your Account</h1>
-                        <div class="">
-                            <form action="#" method="post">
+                </div>
+                <div class="row start mb-2">
+                    <div class="col-4 col-md-12 col-sm-12 mb">
+                        <div class="box-mentor-img">
+                            <img class="mentor-img" src="assets/mentor-1.png" alt="John Doe - Web Development Mentor" class="img-fluid">
+                        </div>
+                        <!-- Mentorship Booking Section -->
+                        <div class="booking-section">
+                            <h3 class="mb">Book a Mentorship Session</h3>
+                            <form action="book-session.html" method="POST">
                                 <div class="form-group mb">
-                                    <label for="name">Name</label>
-                                    <input type="text" class="form-control input-style" id="name" name="name" placeholder="Input your name" required>
+                                    <label for="session-date">Select a Date</label>
+                                    <input type="date" class="form-control input-style" id="session-date" name="session-date" required>
                                 </div>
                                 <div class="form-group mb">
-                                    <label for="email">Email</label>
-                                    <input type="email" class="form-control input-style" id="email" name="email" placeholder="@gmail.com" required>
+                                    <label for="session-time">Select a Time</label>
+                                    <input type="time" class="form-control input-style" id="session-time" name="session-time" required>
                                 </div>
                                 <div class="form-group mb">
-                                    <label for="password">Password</label>
-                                    <input type="password" class="form-control input-style" id="password" name="password" placeholder="..........." required>
+                                    <label for="session-duration">Duration (in hours)</label>
+                                    <select id="session-duration" class="form-control input-style" name="session-duration" required>
+                                        <option value="1">1 Hour</option>
+                                        <option value="2">2 Hours</option>
+                                    </select>
+                                </div>
+                                <!-- Pricing (if applicable) -->
+                                <div class="form-group">
+                                    <p class="desc"><strong>Price:</strong> $50 per hour</p>
+                                </div>
+                                <div class="form-group">
+                                    <button type="submit" class="btn btn-a">Confirm Booking</button>
                                 </div>
                             </form>
                         </div>
+                    </div>
+                    <div class="vr"></div>
+                    <div class="col-7 col-md-12 col-sm-12">
+                        <div class="mentor-info">
+                            <h1 class="title">John Doe</h1>
+                            <p class="desc">
+                                John is a senior web developer with over 10 years of experience working with large-scale applications and websites. He specializes in JavaScript frameworks and enjoys helping students bridge the gap between theory and practical coding. John's teaching style is focused on hands-on learning and real-world applications, ensuring students are prepared for job roles.
+                            </p>
+                            <p class="desc"><strong>Expertise:</strong> Web Development, React, Node.js</p>
+                            <p class="desc mb">
+                                <strong>Notable Projects:</strong> John has worked with companies like XYZ Corp, ABC Innovations, and DEF Technologies, leading major web development projects and implementing scalable solutions.
+                            </p>
+                            <div class="d-flex">
+                                <div class="rating">
+                                    <i class='bx bxs-star'></i>
+                                    <i class='bx bxs-star'></i>
+                                    <i class='bx bxs-star'></i>
+                                    <i class='bx bxs-star'></i>
+                                    <i class='bx bxs-star-half'></i>
+                                </div>
+                                <p class="desc"><i class='bx bxs-group'></i> 900 Students Handled</p>
+                            </div>
+                            <hr>
+                            <div class="availability">
+                                <h3>Availability</h3>
+                                <p class="desc">Available for mentoring sessions on weekdays from 9:00 AM to 6:00 PM.</p>
+                                <h3>Upcoming Sessions</h3>
+                                <p class="desc nm">October 1, 2025 - 10:00 AM to 11:00 AM</p>
+                                <p class="desc">October 3, 2025 - 2:00 PM to 3:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-section">
+                    <h1 class="mb">Student Testimonials</h1>
+                    <div class="box testimonial d-flex">
                         <div class="">
-                            <a href="login.html">
-                                <button class="btn btn-a btn-w">Create account</button>
-                            </a>
+                            <img class="profile" src="assets/profile-anna.png" alt="">
                         </div>
-                        <div class="d-flex hr-with-text">
-                            <hr class="flex-grow"> 
-                            <p>Or</p> 
-                            <hr class="flex-grow">
-                        </div>                        
-                        <div class="mb">
-                            <a href="login.html">
-                                <button class="btn btn-b btn-w">Continue with Google <i class='bx bxl-google'></i></button>
-                            </a>
+                        <p class="desc nm"><strong>Alice Pally:</strong> "John is an amazing mentor! He helped me grasp difficult concepts in React, and thanks to him, I was able to land a job in web development."</p>
+                    </div>
+                    <div class="box testimonial d-flex">
+                        <div class="">
+                            <img class="profile" src="assets/profile-james.png" alt="">
                         </div>
-                        <div class="center">
-                            <a class="underline" href="login.html">Already have an account? Sign In</a>
-                        </div>
-                    </div>                    
+                        <p class="desc nm"><strong>Mark Tem:</strong> "I enjoyed working with John. His approach is hands-on, and he ensures that you understand not only the 'how' but also the 'why' behind each concept."</p>
+                    </div>
                 </div>
             </div>
         </section>

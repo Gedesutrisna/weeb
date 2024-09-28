@@ -199,11 +199,6 @@ body {
 .col-2 { width: 16.66666667%; }
 .col-1 { width: 8.33333333%; }
 
-.card {
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-}
 
 /* Input Styles */
 label {
@@ -503,7 +498,6 @@ section.home {
 }
 section.detail-course {
     margin-top: 80px;
-    overflow: hidden;
 }
 
 section.partner {
@@ -513,11 +507,7 @@ section.partner {
 }
 .course-container {
     overflow: hidden;
-    max-height: 450px;
-}
-.event-container {
-    overflow: hidden;
-    max-height: 450px;
+    max-height: 500px;
 }
 
 .img-banner {
@@ -1062,9 +1052,6 @@ footer {
     section.detail-course {
         margin-top: 80px;
     }
-    .blur {
-        display: none;
-    }
 
     .row {
         flex-direction: column;
@@ -1234,12 +1221,6 @@ footer {
     .box-img-course {
         height: 100px;
     }
-    .course-container {
-        max-height: 500px;
-    }
-    .event-container {
-        max-height: 500px;
-    }
 }
 @media (width: 640px) { 
     .why .box-img {
@@ -1270,18 +1251,7 @@ footer {
     .mx {
         padding: 0px;
     }   
-    .course-container {
-        max-height: 630px;
-    }
-    .event-container {
-        max-height: 650px;
-    }
-    .d-sm-none {
-        display: none;
-    }
-    .d-sm-block {
-        display: block;
-    }
+
 }
 
 @media (min-width: 688px) and (max-width: 899px) { 
@@ -1344,24 +1314,6 @@ footer {
         min-height: 200px;
     }
 
-    .mx {
-        padding: 0px;
-    }    
-
-    .course-container {
-        max-height: 500px;
-    }
-    .event-container {
-        max-height: 500px;
-    }
-
-    .d-md-none {
-        display: none;
-    }
-    .d-md-block {
-        display: block;
-    }
-
     .col-md-12 { width: 100%; }
     .col-md-11 { width: 91.66666667%; }
     .col-md-10 { width: 83.33333333%; }
@@ -1388,10 +1340,6 @@ footer {
     .img-banner {
         max-width: 400px;
     }
-
-    .mx {
-        padding: 0px;
-    }    
 
     section.home {
         margin-top: 80px;
@@ -1439,19 +1387,6 @@ footer {
 
     .faq-container {
         min-height: 200px;
-    }
-    .course-container {
-        max-height: 550px;
-    }
-    .event-container {
-        max-height: 630px;
-    }
-
-    .d-md-none {
-        display: none;
-    }
-    .d-md-block {
-        display: block;
     }
 
     .col-md-12 { width: 100%; }

@@ -142,10 +142,47 @@ var swipers = [
                 slidesPerView: 2,
             },
             1024: {
+                slidesPerView: 2,
+            },
+            1100: {
                 slidesPerView: 4,
             }
         }
-    })
+    }),
+
+    new Swiper('.event-container', {
+        slidesPerView: 4,
+        spaceBetween: 20,
+        loop: true,
+        autoplay: {
+            delay: 3500,
+            disableOnInteraction: false,
+        },
+        speed: 1000,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        effect: 'slide',
+        breakpoints: {
+            320: {
+                slidesPerView: 1,
+            },
+            768: {
+                slidesPerView: 2,
+            },
+            1024: {
+                slidesPerView: 2,
+            },
+            1100: {
+                slidesPerView: 4,
+            }
+        }
+    }),
 ];
 
 // Hide loader on page load

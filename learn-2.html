@@ -81,103 +81,138 @@
             </div>
         </nav>    
 
-        <!-- Courses Section -->
+        <!-- Learn Section -->
         <section class="detail-course">
             <div class="container">
                 <div class="row">
-                    <div class="col-12">
+                    <div class="col-12 ">
                         <div class="box-wrap box-img-course">
                         </div>
                     </div>
                 </div>
                 <div class="row start">
-                    <div class="col-5 col-md-12 col-sm-12">
+                    <div class="col-8 col-md-12 col-sm-12">
                         <div class="">
-                            <div class="breadcrumbs">
-                                <a href="events.html">
-                                    <p class=" mb-0">Events</p> 
-                                </a>
-                                <i class='bx bx-chevron-right'></i>
-                                <a href="event.html">
-                                    <p class=" mb-0">Web Development Workshop</p> 
-                                </a>
+                            <h1>Routing and Controllers</h1>
+                            <p class="learn-desc">
+                                Routing in Laravel allows you to define the endpoints of your application. Controllers handle the logic when these endpoints are reached.
+                            </p>
+                            <div class="video-container">
+                                <iframe width="100%" height="300" src="https://www.youtube.com/embed/youtube-link-here" title="Routing and Controllers in Laravel"></iframe>
                             </div>
-                        </div>
-                        <h1 class="title">Web Development Workshop</h1>
-                        <!-- <div class="box-wrap">
-                            <img class="img-course img-fit" src="assets/course-laravel.png" alt="">
-                        </div> -->
-                        <h3>Description</h3>
-                        <p class="desc">Discover a wide range of professional development courses designed to help you enhance your skills and advance your career in the tech industry. Whether you're just starting out or looking to deepen your knowledge, we have courses tailored to your needs.</p>
-                        <div class="d-flex mb">
-                            <h5 class="text-clamp-1"><i class="bx bx-time-five"></i> 25 May, 2025 - 09:00 AM to 05:00 PM</h5>
-                        </div>
-                        <div class="d-flex mb between d-sm-block">
-                            <h5><i class="bx bx-map mb"></i> Tech Innovation Hub, San Francisco</h5>
-                            <h5><i class="bx bx-user"></i> Organized by DevCon</h5>
+                            <h1>Example Code: Creating a Route</h1>
+                            <p class="learn-desc">Here's how to define a basic route and connect it to a controller:</p>
+                            <iframe class="carbon" src="https://carbon.now.sh/embed?bg=rgba(239%2C246%2C255%2C1)&t=material&wt=none&l=plaintext&ds=true&dsyoff=20px&dsblur=68px&wc=false&wa=true&pv=32px&ph=32px&ln=false&fm=JetBrains%20Mono&fs=14px&lh=133%25&si=false&code=%252F%252F%2520web.php%250ARoute::get(%27/home%27%2C%2520%5BHomeController::class%2C%2520%27index%27%5D)%253B" frameborder="0"></iframe>
+                            <p class="learn-desc">In the above code, we define a GET request for the `/home` URL, which triggers the `index` method of the `HomeController`.</p>
+                            <h1>Creating a Controller</h1>
+                            <iframe class="carbon" src="https://carbon.now.sh/embed?bg=rgba(239%2C246%2C255%2C1)&t=material&wt=none&l=plaintext&ds=true&dsyoff=20px&dsblur=68px&wc=false&wa=true&pv=32px&ph=32px&ln=false&fm=JetBrains%20Mono&fs=14px&lh=133%25&si=false&code=php%2520artisan%2520make%253Acontroller%2520HomeController" frameborder="0"></iframe>
+                            <p class="learn-desc">After running the command, you can define the logic in the `index` method:</p>
+                            <iframe class="carbon" src="https://carbon.now.sh/embed?bg=rgba(239%2C246%2C255%2C1)&t=material&wt=none&l=plaintext&ds=true&dsyoff=20px&dsblur=68px&wc=false&wa=true&pv=32px&ph=32px&ln=false&fm=JetBrains%20Mono&fs=14px&lh=133%25&si=false&code=%252F%252F%2520HomeController.php%250Apublic%2520function%2520index()%2520%257B%250A%2520%2520return%2520view(%27home%27)%253B%250A%257D" frameborder="0"></iframe>
+                            <h1>Additional Resources</h1>
+                            <ul>
+                                <li><a href="https://laravel.com/docs/9.x/routing" target="_blank">Routing Documentation</a></li>
+                                <li><a href="https://laracasts.com/series/laravel-from-scratch" target="_blank">Laracasts on Routing & Controllers</a></li>
+                            </ul>
                         </div>
                         <hr>
-                        <a href="event.html" class="">
-                            <button class="btn btn-a mb">
-                                Register now
-                                <i class='bx bx-play'></i>
-                            </button>
-                        </a>
+                        <div class="d-flex between">
+                            <a href="learn.html" class="btn btn-rounded"><i class='bx bx-chevron-left'></i></a>
+                            <a href="learn.html" class="btn btn-rounded"><i class='bx bx-chevron-right'></i></a>
+                        </div>
                     </div>
-                    <div class="vr d-sm-none"></div>
-                    <div class="col-6 col-md-12 col-sm-12">
+                    <div class="vr"></div>
+                    <div class="col-3 col-md-12 col-sm-12">
                         <div class="modul-container">
                             <div class="d-flex d-sm-block between">
-                                <h1 class="title">Event Rundown</h1>
+                                <h1 class="title">Module List</h1>
                             </div>
                             <div class="box modul" data-aos="fade-up" data-aos-duration="500">
                                 <div class="d-flex between center-nt">
-                                    <h5 class="modul-title">08:30 AM - Registration & Coffee</h5>
+                                    <h5 class="modul-title-2">Modul 1: Introduction to Laravel Framework</h5>
                                     <i class='bx bx-chevron-down'></i>
                                 </div>
-                                <p class="modul-desc">Participants arrive, register, and enjoy a welcome coffee before the event starts.</p>
+                                <a href="learn.html">
+                                    <p class="modul-desc">Pengenalan dasar tentang Laravel, instalasi framework, dan arsitektur MVC.</p>
+                                </a>
+                            </div>
+                            <div class="box modul active" data-aos="fade-up" data-aos-duration="500">
+                                <div class="d-flex between center-nt">
+                                    <h5 class="modul-title-2">Modul 2: Routing and Controllers</h5>
+                                    <i class='bx bx-chevron-down'></i>
+                                </div>
+                                <a href="learn-2.html">
+                                    <p class="modul-desc">Memahami konsep routing di Laravel dan pembuatan controller untuk mengelola logika aplikasi.</p>
+                                </a>
                             </div>
                             <div class="box modul" data-aos="fade-up" data-aos-duration="500">
                                 <div class="d-flex between center-nt">
-                                    <h5 class="modul-title">09:00 AM - Opening Ceremony & Keynote</h5>
+                                    <h5 class="modul-title-2">Modul 3: Blade Templating Engine</h5>
                                     <i class='bx bx-chevron-down'></i>
                                 </div>
-                                <p class="modul-desc">The event officially begins with a keynote speech covering the latest trends in web development.</p>
+                                <p class="modul-desc">Menggunakan Blade untuk mengelola tampilan di Laravel, termasuk directive dan inheritance.</p>
                             </div>
                             <div class="box modul" data-aos="fade-up" data-aos-duration="500">
                                 <div class="d-flex between center-nt">
-                                    <h5 class="modul-title">10:00 AM - Workshop: Laravel Basics</h5>
+                                    <h5 class="modul-title-2">Modul 4: Eloquent ORM and Database Management</h5>
                                     <i class='bx bx-chevron-down'></i>
                                 </div>
-                                <p class="modul-desc">An introductory workshop on Laravel, covering installation, basic features, and framework architecture.</p>
+                                <p class="modul-desc">Memahami bagaimana Eloquent ORM bekerja, relasi antar model, dan migrasi database.</p>
                             </div>
                             <div class="box modul" data-aos="fade-up" data-aos-duration="500">
                                 <div class="d-flex between center-nt">
-                                    <h5 class="modul-title">12:00 PM - Lunch Break</h5>
+                                    <h5 class="modul-title-2">Modul 5: Authentication and Authorization</h5>
                                     <i class='bx bx-chevron-down'></i>
                                 </div>
-                                <p class="modul-desc">Enjoy a catered lunch and network with fellow attendees.</p>
+                                <p class="modul-desc">Mengimplementasikan sistem login, registrasi, dan otorisasi pengguna di Laravel.</p>
                             </div>
                             <div class="box modul" data-aos="fade-up" data-aos-duration="500">
                                 <div class="d-flex between center-nt">
-                                    <h5 class="modul-title">01:00 PM - Advanced Laravel Techniques</h5>
+                                    <h5 class="modul-title-2">Modul 6: Form Handling and Validation</h5>
                                     <i class='bx bx-chevron-down'></i>
                                 </div>
-                                <p class="modul-desc">A deep dive into advanced features of Laravel, including Eloquent ORM, authentication, and middleware.</p>
+                                <p class="modul-desc">Membuat dan memvalidasi form di Laravel, menangani input pengguna, serta validasi server-side.</p>
                             </div>
                             <div class="box modul" data-aos="fade-up" data-aos-duration="500">
                                 <div class="d-flex between center-nt">
-                                    <h5 class="modul-title">03:00 PM - Hands-on Coding Session</h5>
+                                    <h5 class="modul-title-2">Modul 7: API Development with Laravel</h5>
                                     <i class='bx bx-chevron-down'></i>
                                 </div>
-                                <p class="modul-desc">A live coding session where participants can practice building a web app using Laravel.</p>
+                                <p class="modul-desc">Membuat RESTful API dengan Laravel, termasuk pengelolaan routing dan respon JSON.</p>
                             </div>
                             <div class="box modul" data-aos="fade-up" data-aos-duration="500">
                                 <div class="d-flex between center-nt">
-                                    <h5 class="modul-title">05:00 PM - Closing Remarks & Networking</h5>
+                                    <h5 class="modul-title-2">Modul 8: Middleware and Security</h5>
                                     <i class='bx bx-chevron-down'></i>
                                 </div>
-                                <p class="modul-desc">The event wraps up with closing remarks, followed by an open networking session.</p>
+                                <p class="modul-desc">Menerapkan middleware untuk keamanan aplikasi dan cara melindungi aplikasi dari serangan umum seperti CSRF dan XSS.</p>
+                            </div>
+                            <div class="box modul" data-aos="fade-up" data-aos-duration="500">
+                                <div class="d-flex between center-nt">
+                                    <h5 class="modul-title-2">Modul 9: Deploying Laravel Applications</h5>
+                                    <i class='bx bx-chevron-down'></i>
+                                </div>
+                                <p class="modul-desc">Mempelajari cara mendepoy aplikasi Laravel ke server produksi menggunakan tools seperti Forge atau Heroku.</p>
+                            </div>
+                            <div class="box modul" data-aos="fade-up" data-aos-duration="500">
+                                <div class="d-flex between center-nt">
+                                    <h5 class="modul-title-2">Modul 10: Task Scheduling and Queues</h5>
+                                    <i class='bx bx-chevron-down'></i>
+                                </div>
+                                <p class="modul-desc">Belajar tentang task scheduling untuk menjalankan tugas secara otomatis dan pengelolaan antrian untuk meningkatkan performa aplikasi.</p>
+                            </div>
+                            <div class="box modul" data-aos="fade-up" data-aos-duration="500">
+                                <div class="d-flex between center-nt">
+                                    <h5 class="modul-title-2">Modul 11: Testing in Laravel</h5>
+                                    <i class='bx bx-chevron-down'></i>
+                                </div>
+                                <p class="modul-desc">Memahami cara menulis dan menjalankan unit test, feature test, serta menggunakan Laravel Dusk untuk testing aplikasi berbasis browser.</p>
+                            </div>
+                            <div class="box modul" data-aos="fade-up" data-aos-duration="500">
+                                <div class="d-flex between center-nt">
+                                    <h5 class="modul-title-2">Modul 12: Advanced Laravel Features</h5>
+                                    <i class='bx bx-chevron-down'></i>
+                                </div>
+                                <p class="modul-desc">Menguasai fitur-fitur lanjutan Laravel seperti Event Broadcasting, Jobs, dan real-time notifications dengan Laravel Echo.</p>
                             </div>
                         </div>
                     </div>
