@@ -121,12 +121,12 @@
                             <h5><i class="bx bx-user"></i> Organized by DevCon</h5>
                         </div>
                         <hr>
-                        <a href="event.html" class="">
-                            <button class="btn btn-a mb">
+                        <!-- <a href="event.html" class=""> -->
+                            <button class="btn btn-a mb" id="startLearningBtn">
                                 Register now
                                 <i class='bx bx-play'></i>
                             </button>
-                        </a>
+                        <!-- </a> -->
                     </div>
                     <div class="vr d-sm-none"></div>
                     <div class="col-6 col-md-12 col-sm-12">
@@ -238,11 +238,32 @@
             </div>
         </footer>
     </div>
-
+    <!-- Modal -->
+    <div id="myModal" class="modal pay" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="title">Form Register</h3>
+                    <button type="button" class="close" id="closeModal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p class="desc mb">You're one step away from unlocking the full course!</p>
+                </div>
+                <div class="modal-footer">
+                    <a class="" href="history-event.html">
+                        <button class="btn btn-w btn-bk">Register</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- External Scripts -->
     <script src="lib/swiperjs v11.1.5/swiper-bundle.js"></script>
     <script src="lib/Animate On Scroll v2.3.2/dist/aos.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/modal.js"></script>
     <script>
         window.addEventListener('scroll', function () {
             const img = document.getElementById('imgCcDetail');

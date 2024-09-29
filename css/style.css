@@ -313,6 +313,10 @@ section.auth {
 .btn-w {
     width: 100%;
 }
+.btn-bk {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
 .hr-with-text {
     display: flex;
     align-items: center;
