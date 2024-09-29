@@ -46,11 +46,12 @@
                 <!-- UL Links -->
                 <ul class="nav-links" id="nav-links">
                     <li data-aos="fade-up-right" data-aos-duration="500"><a href="index.html">Home</a></li>
-                    <li data-aos="fade-up-right" data-aos-duration="650"><a href="index.html">Programs</a></li>
-                    <li data-aos="fade-up-right" data-aos-duration="800"><a href="courses.html">Courses</a></li>
+                    <li data-aos="fade-up-right" data-aos-duration="650"><a href="index.html#programs">Programs</a></li>
+                    <li data-aos="fade-up-right" data-aos-duration="800"><a class="active" href="courses.html">Courses</a></li>
                     <li data-aos="fade-up-right" data-aos-duration="950"><a href="events.html">Events</a></li>
+                    <li data-aos="fade-up-right" data-aos-duration="950"><a href="subscription.html">Subscription</a></li>
                     <li data-aos="fade-up-right" data-aos-duration="950"><a href="history.html">My Learning</a></li>
-                    <li class="d-flex" id="btn">
+                    <li class="d-flex center" id="btn">
                         <a href="profile.html">
                             <button class="btn btn-rounded show"><i class='bx bxs-user'></i></button>
                         </a>
@@ -93,25 +94,24 @@
                 <div class="row start">
                     <div class="col-8 col-md-12 col-sm-12">
                         <div class="">
-                            <h1>Routing and Controllers</h1>
+                            <h1>Blade Template Engine</h1>
                             <p class="learn-desc">
-                                Routing in Laravel allows you to define the endpoints of your application. Controllers handle the logic when these endpoints are reached.
+                                Blade is Laravel’s powerful templating engine, providing a simple yet flexible way to structure views and layouts in your application.
                             </p>
                             <div class="video-container">
-                                <iframe width="100%" height="300" src="https://www.youtube.com/embed/youtube-link-here" title="Routing and Controllers in Laravel"></iframe>
+                                <iframe width="100%" height="400" src="https://www.youtube.com/embed/vDx6VA-6a6Y?si=A1StrTb_YFyXKrzG" title="Introduction to Blade Template Engine"></iframe>
                             </div>
-                            <h1>Example Code: Creating a Route</h1>
-                            <p class="learn-desc">Here's how to define a basic route and connect it to a controller:</p>
-                            <iframe class="carbon" src="https://carbon.now.sh/embed?bg=rgba(239%2C246%2C255%2C1)&t=material&wt=none&l=plaintext&ds=true&dsyoff=20px&dsblur=68px&wc=false&wa=true&pv=32px&ph=32px&ln=false&fm=JetBrains%20Mono&fs=14px&lh=133%25&si=false&code=%252F%252F%2520web.php%250ARoute::get(%27/home%27%2C%2520%5BHomeController::class%2C%2520%27index%27%5D)%253B" frameborder="0"></iframe>
-                            <p class="learn-desc">In the above code, we define a GET request for the `/home` URL, which triggers the `index` method of the `HomeController`.</p>
-                            <h1>Creating a Controller</h1>
-                            <iframe class="carbon" src="https://carbon.now.sh/embed?bg=rgba(239%2C246%2C255%2C1)&t=material&wt=none&l=plaintext&ds=true&dsyoff=20px&dsblur=68px&wc=false&wa=true&pv=32px&ph=32px&ln=false&fm=JetBrains%20Mono&fs=14px&lh=133%25&si=false&code=php%2520artisan%2520make%253Acontroller%2520HomeController" frameborder="0"></iframe>
-                            <p class="learn-desc">After running the command, you can define the logic in the `index` method:</p>
-                            <iframe class="carbon" src="https://carbon.now.sh/embed?bg=rgba(239%2C246%2C255%2C1)&t=material&wt=none&l=plaintext&ds=true&dsyoff=20px&dsblur=68px&wc=false&wa=true&pv=32px&ph=32px&ln=false&fm=JetBrains%20Mono&fs=14px&lh=133%25&si=false&code=%252F%252F%2520HomeController.php%250Apublic%2520function%2520index()%2520%257B%250A%2520%2520return%2520view(%27home%27)%253B%250A%257D" frameborder="0"></iframe>
+                            <h1>Example Code: Using Blade Syntax</h1>
+                            <p class="learn-desc">Here's an example of how to use Blade to output data and control the structure of your views:</p>
+                            <iframe class="carbon" src="https://carbon.now.sh/embed?bg=rgba(239%2C246%2C255%2C1)&t=material&wt=none&l=plaintext&ds=true&dsyoff=20px&dsblur=68px&wc=false&wa=true&pv=32px&ph=32px&ln=false&fm=JetBrains%20Mono&fs=14px&lh=133%25&si=false&code=%257B%257B%2520%2524name%2520%257D%257D%250A%2540if(%2520%2524user-%253EisAdmin()%2520)%250A%2520%2520%253Cp%253EWelcome%252C%2520Admin%2521%253C%252Fp%253E%250A%2540endif" frameborder="0"></iframe>
+                            <p class="learn-desc">The above example shows how to print variables and use control structures in Blade using clean and easy-to-read syntax.</p>
+                            <h1>Using Layouts and Components</h1>
+                            <iframe class="carbon" src="https://carbon.now.sh/embed?bg=rgba(239%2C246%2C255%2C1)&t=material&wt=none&l=plaintext&ds=true&dsyoff=20px&dsblur=68px&wc=false&wa=true&pv=32px&ph=32px&ln=false&fm=JetBrains%20Mono&fs=14px&lh=133%25&si=false&code=%2540extends(%2520%27layouts.app%27%2520)%250A%2540section(%2520%27content%27%2520)%250A%2520%2520%253Ch1%253EHello%2520World%253C%252Fh1%253E%250A%2540endsection" frameborder="0"></iframe>
+                            <p class="learn-desc">With Blade, you can reuse templates and components, as shown in the example above using `@extends` and `@section` directives.</p>
                             <h1>Additional Resources</h1>
                             <ul>
-                                <li><a href="https://laravel.com/docs/9.x/routing" target="_blank">Routing Documentation</a></li>
-                                <li><a href="https://laracasts.com/series/laravel-from-scratch" target="_blank">Laracasts on Routing & Controllers</a></li>
+                                <li><a href="https://laravel.com/docs/9.x/blade" target="_blank">Blade Documentation</a></li>
+                                <li><a href="https://laracasts.com/series/laravel-from-scratch" target="_blank">Laracasts on Blade Templates</a></li>
                             </ul>
                         </div>
                         <hr>
@@ -119,7 +119,7 @@
                             <a href="learn.html" class="btn btn-rounded"><i class='bx bx-chevron-left'></i></a>
                             <a href="learn.html" class="btn btn-rounded"><i class='bx bx-chevron-right'></i></a>
                         </div>
-                    </div>
+                    </div>                    
                     <div class="vr"></div>
                     <div class="col-3 col-md-12 col-sm-12">
                         <div class="modul-container">
@@ -137,19 +137,19 @@
                             </div>
                             <div class="box modul active" data-aos="fade-up" data-aos-duration="500">
                                 <div class="d-flex between center-nt">
-                                    <h5 class="modul-title-2">Modul 2: Routing and Controllers</h5>
+                                    <h5 class="modul-title-2">Modul 2: Blade Templating Engine</h5>
                                     <i class='bx bx-chevron-down'></i>
                                 </div>
                                 <a href="learn-2.html">
-                                    <p class="modul-desc">Memahami konsep routing di Laravel dan pembuatan controller untuk mengelola logika aplikasi.</p>
+                                    <p class="modul-desc">Menggunakan Blade untuk mengelola tampilan di Laravel, termasuk directive dan inheritance.</p>
                                 </a>
                             </div>
                             <div class="box modul" data-aos="fade-up" data-aos-duration="500">
                                 <div class="d-flex between center-nt">
-                                    <h5 class="modul-title-2">Modul 3: Blade Templating Engine</h5>
+                                    <h5 class="modul-title-2">Modul 3: Routing and Controllers</h5>
                                     <i class='bx bx-chevron-down'></i>
                                 </div>
-                                <p class="modul-desc">Menggunakan Blade untuk mengelola tampilan di Laravel, termasuk directive dan inheritance.</p>
+                                <p class="modul-desc">Memahami konsep routing di Laravel dan pembuatan controller untuk mengelola logika aplikasi.</p>
                             </div>
                             <div class="box modul" data-aos="fade-up" data-aos-duration="500">
                                 <div class="d-flex between center-nt">
@@ -237,19 +237,19 @@
                         </div>
                     </div>
                     <div class="d-flex mb">
-                        <div class="f-box">
+                         <div class="f-box me">
                             <p class="desc">About us</p>
                             <p class="desc">Mentor</p>
                             <p class="desc">Course</p>
                             <p class="desc">Event</p>
                             <p class="desc">Chalange</p>
                         </div>
-                        <div class="f-box">
+                         <div class="f-box me">
                             <p class="desc">Features</p>
                             <p class="desc">Sign In</p>
                             <p class="desc">Sign Up</p>
                         </div>
-                        <div class="f-box">
+                         <div class="f-box me">
                             <p class="desc">Style Guide</p>
                             <p class="desc">Changelog</p>
                             <p class="desc">Licenses</p>

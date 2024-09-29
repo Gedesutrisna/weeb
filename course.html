@@ -46,11 +46,12 @@
                 <!-- UL Links -->
                 <ul class="nav-links" id="nav-links">
                     <li data-aos="fade-up-right" data-aos-duration="500"><a href="index.html">Home</a></li>
-                    <li data-aos="fade-up-right" data-aos-duration="650"><a href="index.html">Programs</a></li>
-                    <li data-aos="fade-up-right" data-aos-duration="800"><a href="courses.html">Courses</a></li>
+                    <li data-aos="fade-up-right" data-aos-duration="650"><a href="index.html#programs">Programs</a></li>
+                    <li data-aos="fade-up-right" data-aos-duration="800"><a class="active" href="courses.html">Courses</a></li>
                     <li data-aos="fade-up-right" data-aos-duration="950"><a href="events.html">Events</a></li>
+                    <li data-aos="fade-up-right" data-aos-duration="950"><a href="subscription.html">Subscription</a></li>
                     <li data-aos="fade-up-right" data-aos-duration="950"><a href="history.html">My Learning</a></li>
-                    <li class="d-flex" id="btn">
+                    <li class="d-flex center" id="btn">
                         <a href="profile.html">
                             <button class="btn btn-rounded show"><i class='bx bxs-user'></i></button>
                         </a>
@@ -87,6 +88,9 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="box-wrap box-img-course">
+                            <div class="w-full d-flex center">
+                                <img class="img-cc-detail" id="imgCcDetail" src="assets/course-laravel.png" alt="">
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -151,76 +155,82 @@
                         <div class="recourse-container d-md-none d-sm-none">
                             <h2 class="title mb">Course Recomendations</h2>
                             <div class="card mb" data-aos="fade-up" data-aos-duration="500">
-                                <div class="cardpp d-flex">
-                                    <div class="box-recourse-img">
-                                        <img class="recourse-img" src="assets/course-c.png" alt="">
-                                    </div>
-                                    <div class="">
-                                        <h4 class="title text-clamp-1">C# Programming for Beginners to Advanced</h4>
-                                        <div class="d-flex">
-                                            <div class="rating">
-                                                <i class='bx bxs-star'></i>
-                                                <i class='bx bxs-star'></i>
-                                                <i class='bx bxs-star'></i>
-                                                <i class='bx bxs-star'></i>
-                                                <i class='bx bxs-star'></i>
+                                <a href="course.html">
+                                    <div class="cardpp d-flex">
+                                        <div class="box-recourse-img">
+                                            <img class="recourse-img" src="assets/course-c.png" alt="">
+                                        </div>
+                                        <div class="">
+                                            <h4 class="title text-clamp-1">C# Programming for Beginners to Advanced</h4>
+                                            <div class="d-flex">
+                                                <div class="rating">
+                                                    <i class='bx bxs-star'></i>
+                                                    <i class='bx bxs-star'></i>
+                                                    <i class='bx bxs-star'></i>
+                                                    <i class='bx bxs-star'></i>
+                                                    <i class='bx bxs-star'></i>
+                                                </div>
+                                                <p class="student"><i class='bx bxs-group'></i> 1,200 Students</p>
                                             </div>
-                                            <p class="student"><i class='bx bxs-group'></i> 1,200 Students</p>
-                                        </div>
-                                        <div class="d-flex">
-                                            <p class="hour"><i class='bx bx-time-five'></i> 30 Hours</p>
-                                            <p class="modul"><i class='bx bx-book'></i> 15 Modules</p>
+                                            <div class="d-flex">
+                                                <p class="hour"><i class='bx bx-time-five'></i> 30 Hours</p>
+                                                <p class="modul"><i class='bx bx-book'></i> 15 Modules</p>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
+                                </a>
                             </div>
                             <div class="card mb" data-aos="fade-up" data-aos-duration="500">
-                                <div class="cardpp d-flex">
-                                    <div class="box-recourse-img">
-                                        <img class="recourse-img" src="assets/course-vue.png" alt="">
-                                    </div>
-                                    <div class="">
-                                        <h4 class="title text-clamp-1">Mastering Vue.js for Modern Web Development</h4>
-                                        <div class="d-flex">
-                                            <div class="rating">
-                                                <i class='bx bxs-star'></i>
-                                                <i class='bx bxs-star'></i>
-                                                <i class='bx bxs-star'></i>
-                                                <i class='bx bxs-star'></i>
-                                                <i class='bx bxs-star'></i>
+                                <a href="course.html">
+                                    <div class="cardpp d-flex">
+                                        <div class="box-recourse-img">
+                                            <img class="recourse-img" src="assets/course-vue.png" alt="">
+                                        </div>
+                                        <div class="">
+                                            <h4 class="title text-clamp-1">Mastering Vue.js for Modern Web Development</h4>
+                                            <div class="d-flex">
+                                                <div class="rating">
+                                                    <i class='bx bxs-star'></i>
+                                                    <i class='bx bxs-star'></i>
+                                                    <i class='bx bxs-star'></i>
+                                                    <i class='bx bxs-star'></i>
+                                                    <i class='bx bxs-star'></i>
+                                                </div>
+                                                <p class="student"><i class='bx bxs-group'></i> 850 Students</p>
                                             </div>
-                                            <p class="student"><i class='bx bxs-group'></i> 850 Students</p>
-                                        </div>
-                                        <div class="d-flex">
-                                            <p class="hour"><i class='bx bx-time-five'></i> 25 Hours</p>
-                                            <p class="modul"><i class='bx bx-book'></i> 12 Modules</p>
+                                            <div class="d-flex">
+                                                <p class="hour"><i class='bx bx-time-five'></i> 25 Hours</p>
+                                                <p class="modul"><i class='bx bx-book'></i> 12 Modules</p>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
+                                </a>
                             </div>
                             <div class="card mb" data-aos="fade-up" data-aos-duration="500">
-                                <div class="cardpp d-flex">
-                                    <div class="box-recourse-img">
-                                        <img class="recourse-img" src="assets/course-kotlin.png" alt="">
-                                    </div>
-                                    <div class="">
-                                        <h4 class="title text-clamp-1">Mastering Kotlin for Android Development</h4>
-                                        <div class="d-flex">
-                                            <div class="rating">
-                                                <i class='bx bxs-star'></i>
-                                                <i class='bx bxs-star'></i>
-                                                <i class='bx bxs-star'></i>
-                                                <i class='bx bxs-star'></i>
-                                                <i class='bx bxs-star'></i>
+                                <a href="course.html">
+                                    <div class="cardpp d-flex">
+                                        <div class="box-recourse-img">
+                                            <img class="recourse-img" src="assets/course-kotlin.png" alt="">
+                                        </div>
+                                        <div class="">
+                                            <h4 class="title text-clamp-1">Mastering Kotlin for Android Development</h4>
+                                            <div class="d-flex">
+                                                <div class="rating">
+                                                    <i class='bx bxs-star'></i>
+                                                    <i class='bx bxs-star'></i>
+                                                    <i class='bx bxs-star'></i>
+                                                    <i class='bx bxs-star'></i>
+                                                    <i class='bx bxs-star'></i>
+                                                </div>
+                                                <p class="student"><i class='bx bxs-group'></i> 1,500 Students</p>
                                             </div>
-                                            <p class="student"><i class='bx bxs-group'></i> 1,500 Students</p>
-                                        </div>
-                                        <div class="d-flex">
-                                            <p class="hour"><i class='bx bx-time-five'></i> 40 Hours</p>
-                                            <p class="modul"><i class='bx bx-book'></i> 20 Modules</p>
+                                            <div class="d-flex">
+                                                <p class="hour"><i class='bx bx-time-five'></i> 40 Hours</p>
+                                                <p class="modul"><i class='bx bx-book'></i> 20 Modules</p>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -230,10 +240,10 @@
                             <div class="d-flex d-sm-block between">
                                 <h1 class="title">Module List</h1>
                                 <a href="learn.html" class="">
-                                <button class="btn btn-a mb">
-                                    Start Learning
-                                    <i class='bx bx-play'></i>
-                                </button>
+                                    <button class="btn btn-a mb">
+                                        Start Learning
+                                        <i class='bx bx-play'></i>
+                                    </button>
                                 </a>
                             </div>
                             <div class="box modul" data-aos="fade-up" data-aos-duration="500">
@@ -245,17 +255,17 @@
                             </div>
                             <div class="box modul" data-aos="fade-up" data-aos-duration="500">
                                 <div class="d-flex between center-nt">
-                                    <h5 class="modul-title">Modul 2: Routing and Controllers</h5>
-                                    <i class='bx bx-chevron-down'></i>
-                                </div>
-                                <p class="modul-desc">Memahami konsep routing di Laravel dan pembuatan controller untuk mengelola logika aplikasi.</p>
-                            </div>
-                            <div class="box modul" data-aos="fade-up" data-aos-duration="500">
-                                <div class="d-flex between center-nt">
-                                    <h5 class="modul-title">Modul 3: Blade Templating Engine</h5>
+                                    <h5 class="modul-title">Modul 2: Blade Templating Engine</h5>
                                     <i class='bx bx-chevron-down'></i>
                                 </div>
                                 <p class="modul-desc">Menggunakan Blade untuk mengelola tampilan di Laravel, termasuk directive dan inheritance.</p>
+                            </div>
+                            <div class="box modul" data-aos="fade-up" data-aos-duration="500">
+                                <div class="d-flex between center-nt">
+                                    <h5 class="modul-title">Modul 3: Routing and Controllers</h5>
+                                    <i class='bx bx-chevron-down'></i>
+                                </div>
+                                <p class="modul-desc">Memahami konsep routing di Laravel dan pembuatan controller untuk mengelola logika aplikasi.</p>
                             </div>
                             <div class="box modul" data-aos="fade-up" data-aos-duration="500">
                                 <div class="d-flex between center-nt">
@@ -525,19 +535,19 @@
                         </div>
                     </div>
                     <div class="d-flex mb">
-                        <div class="f-box">
+                         <div class="f-box me">
                             <p class="desc">About us</p>
                             <p class="desc">Mentor</p>
                             <p class="desc">Course</p>
                             <p class="desc">Event</p>
                             <p class="desc">Chalange</p>
                         </div>
-                        <div class="f-box">
+                         <div class="f-box me">
                             <p class="desc">Features</p>
                             <p class="desc">Sign In</p>
                             <p class="desc">Sign Up</p>
                         </div>
-                        <div class="f-box">
+                         <div class="f-box me">
                             <p class="desc">Style Guide</p>
                             <p class="desc">Changelog</p>
                             <p class="desc">Licenses</p>
@@ -557,10 +567,17 @@
             </div>
         </footer>
     </div>
-
     <!-- External Scripts -->
     <script src="lib/swiperjs v11.1.5/swiper-bundle.js"></script>
     <script src="lib/Animate On Scroll v2.3.2/dist/aos.js"></script>
     <script src="js/script.js"></script>
+    <script>
+        window.addEventListener('scroll', function () {
+            const img = document.getElementById('imgCcDetail');
+            const scrollPosition = window.scrollY;
+
+            img.style.top = `${scrollPosition * 0.3}px`; 
+        });
+    </script>
 </body>
 </html>

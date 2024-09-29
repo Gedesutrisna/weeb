@@ -82,94 +82,82 @@
             </div>
         </nav>    
 
-        <!-- Mentor Section -->
+        <!-- Event Section -->
         <section class="detail-course">
             <div class="container">
                 <div class="row">
-                    <div class="col-12">
+                    <div class="col-12 d-sm-none">
                         <div class="box-wrap box-img-course">
                         </div>
                     </div>
                 </div>
-                <div class="row start mb-2">
-                    <div class="col-4 col-md-12 col-sm-12 mb">
-                        <div class="box-img-course mb">
-                            <img class="mentor-img" src="assets/mentor-1.png" alt="Ling Ling - Web Development Mentor" class="img-fluid">
-                        </div>
-                        <!-- Mentorship Booking Section -->
-                        <div class="booking-section">
-                            <h3 class="mb">Book a Mentorship Session</h3>
-                            <form action="book-session.html" method="POST">
-                                <div class="form-group mb">
-                                    <label for="session-date">Select a Date</label>
-                                    <input type="date" class="form-control input-style" id="session-date" name="session-date" required>
-                                </div>
-                                <div class="form-group mb">
-                                    <label for="session-time">Select a Time</label>
-                                    <input type="time" class="form-control input-style" id="session-time" name="session-time" required>
-                                </div>
-                                <div class="form-group mb">
-                                    <label for="session-duration">Duration (in hours)</label>
-                                    <select id="session-duration" class="form-control input-style" name="session-duration" required>
-                                        <option value="1">1 Hour</option>
-                                        <option value="2">2 Hours</option>
-                                    </select>
-                                </div>
-                                <!-- Pricing (if applicable) -->
-                                <div class="form-group">
-                                    <p class="desc"><strong>Price:</strong> $50 per hour</p>
-                                </div>
-                                <div class="form-group">
-                                    <button type="submit" class="btn btn-a">Confirm Booking</button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                    <div class="vr"></div>
-                    <div class="col-7 col-md-12 col-sm-12">
-                        <div class="mentor-info">
-                            <h1 class="title">Ling Ling</h1>
-                            <p class="desc">
-                                Ling Ling is a senior web developer with over 10 years of experience working with large-scale applications and websites. He specializes in JavaScript frameworks and enjoys helping students bridge the gap between theory and practical coding. Ling Ling's teaching style is focused on hands-on learning and real-world applications, ensuring students are prepared for job roles.
-                            </p>
-                            <p class="desc"><strong>Expertise:</strong> Web Development, React, Node.js</p>
-                            <p class="desc mb">
-                                <strong>Notable Projects:</strong> Ling Ling has worked with companies like XYZ Corp, ABC Innovations, and DEF Technologies, leading major web development projects and implementing scalable solutions.
-                            </p>
-                            <div class="d-flex">
-                                <div class="rating">
-                                    <i class='bx bxs-star'></i>
-                                    <i class='bx bxs-star'></i>
-                                    <i class='bx bxs-star'></i>
-                                    <i class='bx bxs-star'></i>
-                                    <i class='bx bxs-star-half'></i>
-                                </div>
-                                <p class="desc"><i class='bx bxs-group'></i> 900 Students Handled</p>
-                            </div>
-                            <hr>
-                            <div class="availability">
-                                <h3>Availability</h3>
-                                <p class="desc">Available for mentoring sessions on weekdays from 9:00 AM to 6:00 PM.</p>
-                                <h3>Upcoming Sessions</h3>
-                                <p class="desc nm">October 1, 2025 - 10:00 AM to 11:00 AM</p>
-                                <p class="desc">October 3, 2025 - 2:00 PM to 3:00 PM</p>
-                            </div>
-                        </div>
+                <div class="mx">
+                    <div class="center">
+                        <h1 class="title">My Event</h1>
                     </div>
                 </div>
-                <div class="testimonial-section">
-                    <h1 class="mb">Student Testimonials</h1>
-                    <div class="box testimonial d-flex" data-aos="fade-up" data-aos-duration="500">
-                        <div class="">
-                            <img class="profile" src="assets/profile-anna.png" alt="">
-                        </div>
-                        <p class="desc nm"><strong>Alice Pally:</strong> "Ling Ling is an amazing mentor! He helped me grasp difficult concepts in React, and thanks to him, I was able to land a job in web development."</p>
+                <div class="row">
+                    <div class="col-3 col-md-6 col-sm-12">
+                        <a href="event.html" data-aos="fade-up" data-aos-duration="700">
+                            <div class="event-box">
+                                <div class="box-event-img">
+                                    <img class="event-img" src="assets/event-1.png" alt="Web Development Workshop">
+                                </div>
+                                <h4>Web Development Workshop</h4>
+                                <p class="desc text-clamp">Join our hands-on workshop to learn full-stack development. From building responsive front-end to back-end integration, master the tools required for modern web development.</p>
+                                <div class="d-flex mb">
+                                    <h5 class="text-clamp-1"><i class="bx bx-time-five"></i> 25 May, 2025 - 09:00 AM to 05:00 PM</h5>
+                                </div>
+                                <div class="d-flex mb">
+                                    <h5><i class="bx bx-map"></i> Tech Innovation Hub, San Francisco</h5>
+                                </div>
+                                <div class="d-flex">
+                                    <h5><i class="bx bx-user"></i> Organized by DevCon</h5>
+                                </div>
+                            </div>
+                        </a>
                     </div>
-                    <div class="box testimonial d-flex" data-aos="fade-up" data-aos-duration="500">
-                        <div class="">
-                            <img class="profile" src="assets/profile-james.png" alt="">
-                        </div>
-                        <p class="desc nm"><strong>Mark Tem:</strong> "I enjoyed working with Ling Ling. His approach is hands-on, and he ensures that you understand not only the 'how' but also the 'why' behind each concept."</p>
+                    <div class="col-3 col-md-6 col-sm-12">
+                        <a href="event.html" data-aos="fade-up" data-aos-duration="800">
+                            <div class="event-box">
+                                <div class="box-event-img">
+                                    <img class="event-img" src="assets/event-2.png" alt="AI & Machine Learning Bootcamp">
+                                </div>
+                                <h4>AI & Machine Learning Bootcamp</h4>
+                                <p class="desc text-clamp">Dive into the world of artificial intelligence and machine learning with this intensive bootcamp. Get hands-on with Python, TensorFlow, and data science principles.</p>
+                                <div class="d-flex mb">
+                                    <h5 class="text-clamp-1"><i class="bx bx-time-five"></i> 10 June, 2025 - 10:00 AM to 06:00 PM</h5>
+                                </div>
+                                <div class="d-flex mb">
+                                    <h5><i class="bx bx-map"></i> AI Lab, New York</h5>
+                                </div>
+                                <div class="d-flex">
+                                    <h5><i class="bx bx-user"></i> Organized by AI Academy</h5>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-3 col-md-6 col-sm-12">
+                        <a href="event.html" data-aos="fade-up" data-aos-duration="500">
+                            <div class="event-box">
+                                <div class="box-event-img">
+                                    <img class="event-img" src="assets/event-3.png" alt="Cybersecurity Summit">
+                                </div>
+                                <h4>Cybersecurity Summit</h4>
+                                <p class="desc text-clamp">Gain insight into the latest cybersecurity threats and solutions in this exclusive summit, featuring industry leaders and hands-on workshops.</p>
+                                <div class="d-flex mb">
+                                    <h5 class="text-clamp-1"><i class="bx bx-time-five"></i> 18 July, 2025 - 09:00 AM to 04:00 PM</h5>
+                                </div>
+                                <div class="d-flex mb">
+                                    <h5><i class="bx bx-map"></i> Digital Security Hub, London</h5>
+                                </div>
+                                <div class="d-flex">
+                                    <h5><i class="bx bx-user"></i> Organized by SecureTech</h5>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-3 col-md-6 col-sm-12">
                     </div>
                 </div>
             </div>

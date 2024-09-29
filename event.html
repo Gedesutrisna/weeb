@@ -46,11 +46,12 @@
                 <!-- UL Links -->
                 <ul class="nav-links" id="nav-links">
                     <li data-aos="fade-up-right" data-aos-duration="500"><a href="index.html">Home</a></li>
-                    <li data-aos="fade-up-right" data-aos-duration="650"><a href="index.html">Programs</a></li>
+                    <li data-aos="fade-up-right" data-aos-duration="650"><a href="index.html#programs">Programs</a></li>
                     <li data-aos="fade-up-right" data-aos-duration="800"><a href="courses.html">Courses</a></li>
-                    <li data-aos="fade-up-right" data-aos-duration="950"><a href="events.html">Events</a></li>
+                    <li data-aos="fade-up-right" data-aos-duration="950"><a class="active" href="events.html">Events</a></li>
+                    <li data-aos="fade-up-right" data-aos-duration="950"><a href="subscription.html">Subscription</a></li>
                     <li data-aos="fade-up-right" data-aos-duration="950"><a href="history.html">My Learning</a></li>
-                    <li class="d-flex" id="btn">
+                    <li class="d-flex center" id="btn">
                         <a href="profile.html">
                             <button class="btn btn-rounded show"><i class='bx bxs-user'></i></button>
                         </a>
@@ -87,6 +88,9 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="box-wrap box-img-course">
+                            <div class="w-full d-flex center">
+                                <img class="img-cc-detail" id="imgCcDetail" src="assets/event-1.png" alt="Event Image">
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -202,19 +206,19 @@
                         </div>
                     </div>
                     <div class="d-flex mb">
-                        <div class="f-box">
+                         <div class="f-box me">
                             <p class="desc">About us</p>
                             <p class="desc">Mentor</p>
                             <p class="desc">Course</p>
                             <p class="desc">Event</p>
                             <p class="desc">Chalange</p>
                         </div>
-                        <div class="f-box">
+                         <div class="f-box me">
                             <p class="desc">Features</p>
                             <p class="desc">Sign In</p>
                             <p class="desc">Sign Up</p>
                         </div>
-                        <div class="f-box">
+                         <div class="f-box me">
                             <p class="desc">Style Guide</p>
                             <p class="desc">Changelog</p>
                             <p class="desc">Licenses</p>
@@ -239,5 +243,13 @@
     <script src="lib/swiperjs v11.1.5/swiper-bundle.js"></script>
     <script src="lib/Animate On Scroll v2.3.2/dist/aos.js"></script>
     <script src="js/script.js"></script>
+    <script>
+        window.addEventListener('scroll', function () {
+            const img = document.getElementById('imgCcDetail');
+            const scrollPosition = window.scrollY;
+
+            img.style.top = `${scrollPosition * 0.3}px`; 
+        });
+    </script>
 </body>
 </html>

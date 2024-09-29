@@ -33,7 +33,7 @@ var swipers = [
         spaceBetween: 20,
         loop: true,
         autoplay: {
-            delay: 3500,
+            delay: 1500,
             disableOnInteraction: false,
         },
         speed: 1000,
@@ -48,12 +48,15 @@ var swipers = [
         effect: 'slide',
         breakpoints: {
             320: {
-                slidesPerView: 3,
-                spaceBetween: 5,
+                slidesPerView: 2,
+                spaceBetween: 10,
             },
             768: {
-                slidesPerView: 6,
-            }
+                slidesPerView: 4,
+            },
+            1024: {
+                slidesPerView: 5,
+            },
         }
     }),
 
@@ -81,7 +84,7 @@ var swipers = [
             },
             768: {
                 slidesPerView: 2,
-            }
+            },
         }
     }),
 
@@ -105,12 +108,15 @@ var swipers = [
         effect: 'slide',
         breakpoints: {
             320: {
-                slidesPerView: 1,
+                slidesPerView: 1.2,
             },
             768: {
                 slidesPerView: 2,
             },
             1024: {
+                slidesPerView: 3,
+            },
+            1100: {
                 slidesPerView: 3.5,
             }
         }
@@ -276,3 +282,8 @@ document.querySelectorAll('.modul').forEach(item => {
 
 // Initialize AOS (Animate On Scroll)
 AOS.init();
+
+
+
+
+
