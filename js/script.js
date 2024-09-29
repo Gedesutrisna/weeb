@@ -214,6 +214,7 @@ const registerBtn = document.querySelector('#btn');
 hamburger.addEventListener('click', function () {
     navLinks.classList.toggle('active');
     registerBtn.classList.toggle('show');
+    hamburger.classList.toggle('active'); 
 });
 
 // Dark mode toggle functionality

@@ -15,6 +15,9 @@
     /* Animation */
     --transition-speed: 0.7s;
 }
+html {
+    scroll-behavior: smooth;
+}
 
 /* Dark Mode */
 body.dark-mode {
@@ -286,6 +289,10 @@ section.auth {
     overflow: hidden;
     border: 1px solid var(--primary-color);
     transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease, box-shadow 0.3s ease;
+
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis;
 }
 
 .p {
@@ -461,6 +468,7 @@ nav.scroll a {
     color: var(--primary-color);
 }
 
+/* Styling hamburger for transition */
 .hamburger {
     display: none;
     flex-direction: column;
@@ -468,14 +476,29 @@ nav.scroll a {
     background: none;
     border: none;
     cursor: pointer;
+    z-index: 101;
 }
 
 .hamburger .bar {
     width: 25px;
     height: 3px;
     background-color: var(--primary-color);
-    transition: background-color 0.3s;
+    transition: all 0.3s ease-in-out;
 }
+
+/* Transform hamburger to X when active */
+.hamburger.active .bar:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active .bar:nth-child(2) {
+    opacity: 0; 
+}
+
+.hamburger.active .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -6.5px);
+}
+
 
 nav.scroll .hamburger .bar {
     background-color: var(--primary-color);
@@ -1279,9 +1302,7 @@ footer {
     .col-sm-2 { width: 16.66666667%; }
     .col-sm-1 { width: 8.33333333%; }
     .col-sm-0 { display:none; }
-
     .nav-links {
-        display: none;
         flex-direction: column;
         position: absolute;
         top: 90%;
@@ -1290,13 +1311,19 @@ footer {
         background-color: var(--bg-color);
         text-align: center;
         padding: 20px 0px 50px 0px;
-        transition: all 0.5s ease-in-out; 
+        max-height: 0;
+        opacity: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease, opacity 0.5s ease;
+        visibility: hidden;
     }
 
-    nav .nav-links {
-        display: none;
-        gap: 2rem;
+    .nav-links.active {
+        max-height: 1000px; 
+        opacity: 1;
+        visibility: visible;
     }
+
     
     .btn {
         padding: 9px 20px;
@@ -1309,9 +1336,6 @@ footer {
     
     .btn-b.show {
         display: block;
-    }
-    .nav-links.active {
-        display: flex;
     }
 
     .hamburger {
@@ -1438,6 +1462,14 @@ footer {
     }
     .review-container {
         max-height: 310px;
+    }
+
+    .box-upload-image-custom {
+        width: 85px;
+        height: 85px;
+    }
+    .box-upload-image-custom .upload-icon {
+        font-size: 15px;
     }
     
 }
