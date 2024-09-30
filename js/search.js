@@ -111,31 +111,33 @@
         
                 courseResults.innerHTML += `
                     <div class="col-3 col-md-6 col-sm-12 mb">
-                        <div class="card course">
-                            <img class="img-course" src="${course.image}" alt="${course.title}">
-                            <div class="cardp">
-                                <div class="tag-slide">
-                                    <p class="tag">${course.category}</p>
-                                </div>
-                                <h4 class="text-clamp">${course.title}</h4>
-                                <div class="d-flex mb">
-                                    <div class="rating">
-                                        ${generateStars(course.rating)}
+                        <a href="course.html">
+                            <div class="card course">
+                                <img class="img-course" src="${course.image}" alt="${course.title}">
+                                <div class="cardp">
+                                    <div class="tag-slide">
+                                        <p class="tag">${course.category}</p>
                                     </div>
-                                    <p class="student"><i class='bx bxs-group'></i> ${course.students}</p>
-                                </div>
-                                <div class="d-flex mb">
-                                    <p class="hour"><i class='bx bx-time-five'></i> ${course.hours}</p>
-                                    <p class="modul"><i class='bx bx-book'></i> ${course.modules}</p>
-                                </div>
-                                <div class="d-flex center">
-                                    <div class="">
-                                        <img class="profile" src="${course.instructorImage}" alt="${course.instructor}">
+                                    <h4 class="text-clamp">${course.title}</h4>
+                                    <div class="d-flex mb">
+                                        <div class="rating">
+                                            ${generateStars(course.rating)}
+                                        </div>
+                                        <p class="student"><i class='bx bxs-group'></i> ${course.students}</p>
                                     </div>
-                                    <h5>${course.instructor}</h5>
+                                    <div class="d-flex mb">
+                                        <p class="hour"><i class='bx bx-time-five'></i> ${course.hours}</p>
+                                        <p class="modul"><i class='bx bx-book'></i> ${course.modules}</p>
+                                    </div>
+                                    <div class="d-flex center">
+                                        <div class="">
+                                            <img class="profile" src="${course.instructorImage}" alt="${course.instructor}">
+                                        </div>
+                                        <h5>${course.instructor}</h5>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
                 `;
             });

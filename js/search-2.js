@@ -78,44 +78,46 @@ function searchCourses() {
 
             courseResults.innerHTML += `
                 <div class="col-3 col-md-6 col-sm-12">
-                    <div class="card course">
-                        <div class="">
-                            <img class="img-course" src="${course.image}" alt="${course.title}">
-                        </div>
-                        <div class="cardp">
-                            <a href="course.html">
-                                <div class="tag-slide">
-                                    <p class="tag">${course.category}</p>
-                                </div>
-                                <h4 class="text-clamp">${course.title}</h4>
-                                <div class="d-flex mb">
-                                    <div class="rating">
-                                        ${generateStars(course.rating)}
-                                    </div>
-                                    <p class="student"><i class='bx bxs-group'></i> ${course.students}</p>
-                                </div>
-                                <div class="d-flex mb">
-                                    <p class="hour"><i class='bx bx-time-five'></i> ${course.hours}</p>
-                                    <p class="modul"><i class='bx bx-book'></i> ${course.modules}</p>
-                                </div>
-                            </a>
+                    <a href="course.html">
+                        <div class="card course">
                             <div class="">
-                                <div class="progress-bar">
-                                    <div class="bar" style="width: ${course.progress}%"></div> <!-- Progress bar dinamis -->
-                                </div>
-                                <div class="d-flex between center">
-                                    <h5>${course.progress}%</h5> <!-- Persentase progress dinamis -->
-                                    <div class="rating" id="rating-system">
-                                        <i class='bx bx-star star' data-value="1"></i>
-                                        <i class='bx bx-star star' data-value="2"></i>
-                                        <i class='bx bx-star star' data-value="3"></i>
-                                        <i class='bx bx-star star' data-value="4"></i>
-                                        <i class='bx bx-star star' data-value="5"></i>
+                                <img class="img-course" src="${course.image}" alt="${course.title}">
+                            </div>
+                            <div class="cardp">
+                                <a href="course.html">
+                                    <div class="tag-slide">
+                                        <p class="tag">${course.category}</p>
+                                    </div>
+                                    <h4 class="text-clamp">${course.title}</h4>
+                                    <div class="d-flex mb">
+                                        <div class="rating">
+                                            ${generateStars(course.rating)}
+                                        </div>
+                                        <p class="student"><i class='bx bxs-group'></i> ${course.students}</p>
+                                    </div>
+                                    <div class="d-flex mb">
+                                        <p class="hour"><i class='bx bx-time-five'></i> ${course.hours}</p>
+                                        <p class="modul"><i class='bx bx-book'></i> ${course.modules}</p>
+                                    </div>
+                                </a>
+                                <div class="">
+                                    <div class="progress-bar">
+                                        <div class="bar" style="width: ${course.progress}%"></div> <!-- Progress bar dinamis -->
+                                    </div>
+                                    <div class="d-flex between center">
+                                        <h5>${course.progress}%</h5> <!-- Persentase progress dinamis -->
+                                        <div class="rating" id="rating-system">
+                                            <i class='bx bx-star star' data-value="1"></i>
+                                            <i class='bx bx-star star' data-value="2"></i>
+                                            <i class='bx bx-star star' data-value="3"></i>
+                                            <i class='bx bx-star star' data-value="4"></i>
+                                            <i class='bx bx-star star' data-value="5"></i>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
             `;
         });
