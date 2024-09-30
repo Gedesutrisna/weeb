@@ -73,7 +73,7 @@ function searchCourses() {
         searchResultsSection.classList.remove('hidden');
         disSections.forEach(section => section.classList.add('hidden'));
 
-        filteredCourses.forEach(course => {
+        filteredCourses.forEach((course, index) => {
             const courseIndex = index + 1; 
 
             courseResults.innerHTML += `
