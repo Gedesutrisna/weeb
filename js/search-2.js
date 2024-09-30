@@ -3,7 +3,7 @@ const courses = [
         title: "Mastering Laravel for Web Development",
         category: "Web Developer",
         image: "assets/course-laravel.png",
-        instructor: "Budi Santos",
+        instructor: "Sandhika Galih",
         hours: "25 Hours",
         students: "1,200 Students",
         rating: 5,
