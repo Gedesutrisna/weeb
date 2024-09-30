@@ -1726,13 +1726,59 @@ footer {
         margin-top: 0px; 
         border: none;
         border-radius: 0px;
-        padding: 170px 15px 15px 15px;
+        padding: 133px 15px 15px 15px;
         overflow-y: auto;
         max-height: none;
     }
 
     .hamburger-sidebar {
         display: flex;
+    }
+    .nav-links {
+        flex-direction: column;
+        position: absolute;
+        top: 90%;
+        left: 0;
+        width: 100%;
+        background-color: var(--bg-color);
+        text-align: center;
+        padding: 20px 0px 50px 0px;
+        max-height: 0;
+        opacity: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease, opacity 0.5s ease;
+        visibility: hidden;
+    }
+    .nav-links.active {
+        max-height: 1000px; 
+        opacity: 1;
+        visibility: visible;
+    }
+    nav .dm.d-flex,
+    .dm .btn-b.reg {
+        display: none;
+    }
+    .hamburger {
+        display: flex;
+    }
+    #btn.show {
+        display: flex;
+        justify-content: center;
+    }
+    #navbar {
+        background-color: var(--bg-color);
+        color: var(--primary-color);
+        padding: 10px 0px;
+    }
+    #navbar.scroll {
+        background-color: var(--bg-color);
+        color: var(--primary-color);
+    }
+    nav.scroll a {
+        color: var(--primary-color);
+    }
+    nav.scroll .hamburger .bar {
+        background-color: var(--primary-color);
     }
 }
 
@@ -1838,12 +1884,58 @@ footer {
         margin-top: 0px; 
         border: none;
         border-radius: 0px;
-        padding: 70px 15px 15px 15px;
+        padding: 133px 15px 15px 15px;
         overflow-y: auto;
         max-height: none;
     }
     .hamburger-sidebar {
         display: flex;
+    }
+    .nav-links {
+        flex-direction: column;
+        position: absolute;
+        top: 90%;
+        left: 0;
+        width: 100%;
+        background-color: var(--bg-color);
+        text-align: center;
+        padding: 20px 0px 50px 0px;
+        max-height: 0;
+        opacity: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease, opacity 0.5s ease;
+        visibility: hidden;
+    }
+    .nav-links.active {
+        max-height: 1000px; 
+        opacity: 1;
+        visibility: visible;
+    }
+    nav .dm.d-flex,
+    .dm .btn-b.reg {
+        display: none;
+    }
+    .hamburger {
+        display: flex;
+    }
+    #btn.show {
+        display: flex;
+        justify-content: center;
+    }
+    #navbar {
+        background-color: var(--bg-color);
+        color: var(--primary-color);
+        padding: 10px 0px;
+    }
+    #navbar.scroll {
+        background-color: var(--bg-color);
+        color: var(--primary-color);
+    }
+    nav.scroll a {
+        color: var(--primary-color);
+    }
+    nav.scroll .hamburger .bar {
+        background-color: var(--primary-color);
     }
 }
 
