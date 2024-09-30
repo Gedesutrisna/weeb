@@ -2,7 +2,7 @@ const courses = [
     {
         title: "Mastering Laravel for Web Development",
         category: "Web Developer",
-        image: "assets/course-laravel.png",
+        image: "assets/course-laravel.webp",
         instructor: "Sandhika Galih",
         hours: "25 Hours",
         students: "1,200 Students",
@@ -13,7 +13,7 @@ const courses = [
     {
         title: "React.js Fundamentals and Advanced Concepts",
         category: "Web Developer",
-        image: "assets/course-react.png",
+        image: "assets/course-react.webp",
         instructor: "Sarah Lee",
         hours: "20 Hours",
         students: "900 Students",
@@ -24,7 +24,7 @@ const courses = [
     {
         title: "Python for Data Science and Machine Learning",
         category: "Data Science",
-        image: "assets/course-phyton.png",
+        image: "assets/course-phyton.webp",
         instructor: "John Doe",
         hours: "40 Hours",
         students: "1,500 Students",
@@ -35,7 +35,7 @@ const courses = [
     {
         title: "UI/UX Design for Web and Mobile Apps",
         category: "Graphic Design",
-        image: "assets/course-uiux.png",
+        image: "assets/course-uiux.webp",
         instructor: "Mike Johnson",
         hours: "30 Hours",
         students: "1,100 Students",
@@ -46,7 +46,7 @@ const courses = [
     {
         title: "Mastering Vue.js for Modern Web Development",
         category: "Web Developer",
-        image: "assets/course-vue.png",
+        image: "assets/course-vue.webp",
         instructor: "Jane Smith",
         hours: "25 Hours",
         students: "850 Students",

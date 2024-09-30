@@ -156,7 +156,7 @@
         opacity: 0;
     }
 }
-@-webkit-keyframes fade
+@-webkit-keyframes fade-up
 {
     0%
     {
@@ -173,7 +173,7 @@
         opacity: 0;
     }
 }
-@keyframes fade
+@keyframes fade-up
 {
     0%
     {
@@ -344,15 +344,15 @@
     -webkit-animation: burst 1.5s infinite linear;
             animation: burst 1.5s infinite linear;
 }
-.bx-fade
+.bx-fade-up
 {
-    -webkit-animation: fade 1.5s infinite linear;
-            animation: fade 1.5s infinite linear;
+    -webkit-animation: fade-up 1.5s infinite linear;
+            animation: fade-up 1.5s infinite linear;
 }
-.bx-fade-hover:hover
+.bx-fade-up-hover:hover
 {
-    -webkit-animation: fade 1.5s infinite linear;
-            animation: fade 1.5s infinite linear;
+    -webkit-animation: fade-up 1.5s infinite linear;
+            animation: fade-up 1.5s infinite linear;
 }
 .bx-fade-down
 {
