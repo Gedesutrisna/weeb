@@ -1954,4 +1954,10 @@ footer {
     .event .box-img{
         height: 470px;
     }
+    .event-container {
+        max-height: 480px;
+    }
+    .course-container {
+        max-height: 480px;
+    }
 }

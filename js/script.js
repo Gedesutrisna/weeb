@@ -19,7 +19,7 @@ var swipers = [
         },
         effect: 'slide',
         breakpoints: {
-            320: {
+            220: {
                 slidesPerView: 3,
             },
             768: {
@@ -47,7 +47,7 @@ var swipers = [
         },
         effect: 'slide',
         breakpoints: {
-            320: {
+            220: {
                 slidesPerView: 2,
                 spaceBetween: 10,
             },
@@ -79,7 +79,7 @@ var swipers = [
         },
         effect: 'slide',
         breakpoints: {
-            320: {
+            220: {
                 slidesPerView: 1,
             },
             768: {
@@ -107,7 +107,7 @@ var swipers = [
         },
         effect: 'slide',
         breakpoints: {
-            320: {
+            220: {
                 slidesPerView: 1.2,
             },
             768: {
@@ -141,7 +141,7 @@ var swipers = [
         },
         effect: 'slide',
         breakpoints: {
-            320: {
+            220: {
                 slidesPerView: 1,
             },
             768: {
@@ -175,7 +175,7 @@ var swipers = [
         },
         effect: 'slide',
         breakpoints: {
-            320: {
+            220: {
                 slidesPerView: 1,
             },
             768: {
