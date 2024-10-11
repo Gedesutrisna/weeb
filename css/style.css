@@ -347,7 +347,7 @@ hr {
 .btn-a {
     background-color: var(--primary-color);
     color: var(--secondary-color);
-    border: 1px solid var(--border-color);
+    border: 1px solid var(--primary-color);
 }
 
 
