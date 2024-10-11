@@ -3,6 +3,7 @@
     --primary-color: #111111; /* Lembutkan hitam */
     --secondary-color: #f0f0f0; /* Lembutkan putih */
     --accent-color: #6366F1;
+    --border-color: #c3c3c3;
     --text-color: #333;
     --bg-color: #f8f9fa;
     --scroll-bg-color: rgba(240, 240, 240, 0.8); /* Sesuaikan dengan warna lembut */
@@ -24,6 +25,7 @@ body.dark-mode {
     --primary-color: #f0f0f0; /* Lembutkan putih di dark mode */
     --secondary-color: #1a1a1a; /* Lembutkan hitam */
     --accent-color: #6366F1;
+    --border-color: #c3c3c3;
     --text-color: #c6c6c6;
     --bg-color: #121212;
     --scroll-bg-color: rgba(26, 26, 26, 0.8); /* Sesuaikan dengan warna dark mode */
@@ -222,7 +224,7 @@ label {
 .input-style {
     width: 100%;
     padding: 12px;
-    border: 1px solid var(--primary-color);
+    border: 1px solid var(--border-color);
     border-radius: var(--border-radius);
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
@@ -233,7 +235,7 @@ textarea {
     height: 300px;
     width: 100%;
     padding: 12px;
-    border: 1px solid var(--primary-color);
+    border: 1px solid var(--border-color);
     border-radius: 15px;
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
@@ -255,7 +257,7 @@ section.auth {
 .progress-bar {
     width: 100%;
     height: 6px;
-    border: 1px solid var(--primary-color);
+    border: 1px solid var(--border-color);
     background-color: var(--bg-color);
     border-radius: 5px;
 }
@@ -287,7 +289,7 @@ section.auth {
     cursor: pointer;
     position: relative;
     overflow: hidden;
-    border: 1px solid var(--primary-color);
+    border: 1px solid var(--border-color);
     transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease, box-shadow 0.3s ease;
 
     white-space: nowrap; 
@@ -345,7 +347,7 @@ hr {
 .btn-a {
     background-color: var(--primary-color);
     color: var(--secondary-color);
-    border: 1px solid var(--primary-color);
+    border: 1px solid var(--border-color);
 }
 
 
@@ -369,7 +371,7 @@ hr {
 .btn-b {
     background-color: var(--bg-color);
     color: var(--primary-color);
-    border: 1px solid var(--primary-color);
+    border: 1px solid var(--border-color);
 }
 
 
@@ -391,7 +393,7 @@ hr {
 .btn-rounded {
     background-color: var(--bg-color);
     color: var(--primary-color);
-    border: 1px solid var(--primary-color);
+    border: 1px solid var(--border-color);
     border-radius: 50%;
     padding: 12px;
 }
@@ -842,7 +844,7 @@ body.dark-mode .box-img-course {
 
 
 .card {
-    border: 1px solid var(--text-color);
+    border: 1px solid var(--border-color);
     border-radius: 16px;
     overflow: hidden;
 }
@@ -917,7 +919,7 @@ section.why .row.start .col-5 {
 
 .box {
     padding: 16px 12px;
-    border: 1px solid var(--text-color);
+    border: 1px solid var(--border-color);
     border-radius: 16px;
     margin-bottom: 10px;
     background-size: 200px;
@@ -930,7 +932,7 @@ section.why .row.start .col-5 {
 }
 body.dark-mode .box {
     padding: 16px 12px;
-    border: 1px solid var(--text-color);
+    border: 1px solid var(--border-color);
     border-radius: 16px;
     margin-bottom: 10px;
     background-size: 200px;
@@ -1053,7 +1055,7 @@ iframe.carbon {
 }
 
 .sidebar {
-    border: 1px solid var(--primary-color);
+    border: 1px solid var(--border-color);
     border-radius: 15px;
     padding: 20px;
     background-color: transparent;
