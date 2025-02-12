@@ -139,23 +139,45 @@ window.addEventListener('scroll', () => {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-    const toggleButton = document.querySelector(".toggle-dark-mode");
+    const toggleButtons = document.querySelectorAll(".toggle-dark-mode"); // Pilih semua tombol toggle
     const body = document.body;
 
     // Cek apakah ada preferensi dark mode di Local Storage
     if (localStorage.getItem("darkMode") === "enabled") {
         body.classList.add("dark-mode");
+        // Update ikon untuk dark mode aktif
+        toggleButtons.forEach(button => {
+            const icon = button.querySelector("i");
+            icon.classList.remove("fa-moon");
+            icon.classList.add("fa-sun");
+        });
+    } else {
+        body.classList.remove("dark-mode");
+        // Update ikon untuk mode terang
+        toggleButtons.forEach(button => {
+            const icon = button.querySelector("i");
+            icon.classList.remove("fa-sun");
+            icon.classList.add("fa-moon");
+        });
     }
 
-    // Event listener untuk tombol toggle dark mode
-    toggleButton.addEventListener("click", function () {
-        body.classList.toggle("dark-mode");
+    // Event listener untuk semua tombol toggle dark mode
+    toggleButtons.forEach(button => {
+        button.addEventListener("click", function () {
+            body.classList.toggle("dark-mode");
 
-        // Simpan status dark mode di Local Storage
-        if (body.classList.contains("dark-mode")) {
-            localStorage.setItem("darkMode", "enabled");
-        } else {
-            localStorage.setItem("darkMode", "disabled");
-        }
+            // Update ikon berdasarkan mode yang aktif
+            const icon = button.querySelector("i");
+            if (body.classList.contains("dark-mode")) {
+                localStorage.setItem("darkMode", "enabled");
+                icon.classList.remove("fa-moon");
+                icon.classList.add("fa-sun");
+            } else {
+                localStorage.setItem("darkMode", "disabled");
+                icon.classList.remove("fa-sun");
+                icon.classList.add("fa-moon");
+            }
+        });
     });
 });
+

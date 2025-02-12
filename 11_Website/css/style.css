@@ -35,12 +35,12 @@
 }
 /* Dark Mode */
 .dark-mode {
-    --primary-color: #D28F51;
+    --primary-color: #d28f51d3;
     --white-color: #111111;
-    --black-color: #ffffff;
-    --text-color: #faf5eec3;
-    --text-white-color: #12101672;
-    --border-color-primary: rgba(241, 175, 99, 0.7);
+    --black-color: #fffffffa;
+    --text-color: #faf5ee91;
+    --text-white-color: #121016b1;
+    --border-color-primary: rgba(241, 175, 99, 0.214) ;
     --border-color: #666666;
     --scroll-bg-color: #D28F51;
     background-color: var(--black-color);
@@ -64,7 +64,7 @@ html {
 body {
     font-family: var(--font-family);
     color: var(--accent-color);
-    /* background-color: var(--black-color); */
+    background-color: var(--white-color);
 }
 
 img {
@@ -542,10 +542,6 @@ section.login .container{
     justify-content: center;
 }
 
-section.hero .hero-left {
-    background: center no-repeat url('../assets/vector.png') var(--white-color);
-    background-size: cover;
-}
 
 section.banner .container-b {
     background: linear-gradient(
