@@ -559,7 +559,7 @@ section.banner .container-b {
 
 footer {
     /* background-color: var(--black-color); */
-    background-color: var(--primary-color);
+    background-color: var(--scroll-bg-color);
 }
 
 footer .container {
@@ -731,12 +731,13 @@ footer .container {
 .icon.white {
     background-color: var(--white-color);
     transition: background-color 0.3s ease, transform 0.3s ease;
+    color: var(--black-color);
 }
 
 .icon.white:hover {
     background-color: var(--primary-color);
     transform: translateY(-5px);
-    color: var(--white-color);
+    color: var(--black-color);
 }
 
 /* swiper */
