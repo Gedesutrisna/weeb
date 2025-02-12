@@ -141,13 +141,10 @@ window.addEventListener('scroll', () => {
 document.addEventListener("DOMContentLoaded", function () {
     const toggleButtons = document.querySelectorAll(".toggle-dark-mode");
     const body = document.body;
-    const aboutImage = document.getElementById("about-image"); // Pilih gambar berdasarkan ID
 
     // Cek apakah ada preferensi dark mode di Local Storage
     if (localStorage.getItem("darkMode") === "enabled") {
         body.classList.add("dark-mode");
-        // Ganti gambar sesuai mode gelap
-        aboutImage.src = "11_Bahan/assets/about-image-1.png";
         // Update ikon untuk dark mode aktif
         toggleButtons.forEach(button => {
             const icon = button.querySelector("i");
@@ -156,8 +153,6 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     } else {
         body.classList.remove("dark-mode");
-        // Ganti gambar untuk mode terang
-        aboutImage.src = "11_Bahan/assets/about-image-2.png";
         // Update ikon untuk mode terang
         toggleButtons.forEach(button => {
             const icon = button.querySelector("i");
@@ -174,13 +169,11 @@ document.addEventListener("DOMContentLoaded", function () {
             // Ganti gambar sesuai mode
             if (body.classList.contains("dark-mode")) {
                 localStorage.setItem("darkMode", "enabled");
-                aboutImage.src = "11_Bahan/assets/about-image-1.png"; // Gambar mode gelap
                 const icon = button.querySelector("i");
                 icon.classList.remove("fa-moon");
                 icon.classList.add("fa-sun");
             } else {
                 localStorage.setItem("darkMode", "disabled");
-                aboutImage.src = "11_Bahan/assets/about-image-2.png"; // Gambar mode terang
                 const icon = button.querySelector("i");
                 icon.classList.remove("fa-sun");
                 icon.classList.add("fa-moon");

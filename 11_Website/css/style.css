@@ -715,6 +715,19 @@ footer .container {
     padding-top: .5rem; /* Tambahkan padding untuk spasi */
 }
 
+/* Gambar default, tampilkan untuk mode biasa */
+#about-image-dark {
+    display: none;
+}
+
+/* Tampilkan gambar untuk mode gelap */
+body.dark-mode #about-image-light {
+    display: none;
+}
+
+body.dark-mode #about-image-dark {
+    display: block;
+}
 
 /* icon */
 .icon {
