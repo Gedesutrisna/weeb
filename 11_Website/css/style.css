@@ -64,7 +64,7 @@ html {
 body {
     font-family: var(--font-family);
     color: var(--accent-color);
-    background-color: var(--white-color);
+    background-color: var(--white-color) !important;
 }
 
 img {
