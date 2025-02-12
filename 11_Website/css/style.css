@@ -33,6 +33,20 @@
     --btn-padding-medium: 6px 28px;
     --btn-padding-small: 4px 22px;
 }
+/* Dark Mode */
+.dark-mode {
+    --primary-color: #D28F51;
+    --white-color: #111111;
+    --black-color: #ffffff;
+    --text-color: #faf5eec3;
+    --text-white-color: #12101672;
+    --border-color-primary: rgba(241, 175, 99, 0.7);
+    --border-color: #666666;
+    --scroll-bg-color: #D28F51;
+    background-color: var(--black-color);
+    color: var(--text-white-color);
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -415,7 +429,7 @@ button.btn:hover::after {
     background-color: var(--primary-color);
     color: var(--white-color);
     border: 1px solid var(--border-color-primary);
-    --hover-color: white; /* Warna sunrise */
+    --hover-color: var(--white-color); /* Warna sunrise */
 }
 
 /* Hover effect for btn-a */
@@ -430,6 +444,9 @@ button.btn:hover::after {
     border: 1px solid var(--border-color-primary);
     --hover-color: var(--primary-color);
 }
+.btn-b.toggle-dark-mode {
+    padding: 11px 14px;
+}
 
 /* Hover effect for btn-b */
 .btn-b:hover {
@@ -441,7 +458,7 @@ button.btn:hover::after {
     background-color: var(--primary-color);
     color: var(--white-color);
     border: 1px solid var(--border-color-primary);
-    --hover-color: white; /* Warna sunrise */
+    --hover-color: var(--white-color); /* Warna sunrise */
 }
 
 /* Hover effect for btn-c */
@@ -497,14 +514,14 @@ li#btn{
 }
 
 .container-footer {
-    background-color: white;
+    background-color: var(--white-color);
     border-radius: 0px 0px 40px 40px;
     padding: 50px;
 }
 
 /* Section Styles */
 section {
-    background-color: white;
+    background-color: var(--white-color);
     overflow: hidden;
 }
 
@@ -545,7 +562,8 @@ section.banner .container-b {
 }
 
 footer {
-    background-color: var(--black-color);
+    /* background-color: var(--black-color); */
+    background-color: var(--primary-color);
 }
 
 footer .container {
@@ -955,10 +973,6 @@ img.img-hero-sm {
     .dm .btn-b.reg {
         display: none;
     }
-    
-    .btn-b.show {
-        display: block;
-    }
 
     .hamburger {
         display: flex;
@@ -990,7 +1004,10 @@ img.img-hero-sm {
         aspect-ratio: 100 / 50;
         margin-bottom: 1.5rem;
     }
-
+    li#btn {
+        display: flex !important;
+        justify-content: center;
+    }
 }
 @media (min-width: 689px) and (max-width: 1200px) {
     .container-footer {
@@ -1136,6 +1153,9 @@ img.img-hero-sm {
     .col-md-2 { width: 16.66666667%; }
     .col-md-1 { width: 8.33333333%; }
     
+    .card-img-blog {
+        height: 160px;
+    }
 }
 
 @media (min-width: 689px) and (max-width: 800px) {
