@@ -182,3 +182,26 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+
+document.addEventListener("DOMContentLoaded", function () {
+    const hiddenElements = document.querySelectorAll(".aos");
+
+    function checkElements() {
+        hiddenElements.forEach((el) => {
+            const rect = el.getBoundingClientRect();
+            const delay = el.dataset.delay || "0"; // Ambil delay dari atribut data, default 0 ms
+
+            // if (rect.top < window.innerHeight * 0.85 && rect.bottom > 0) {
+            if (rect.top < window.innerHeight * 0.85) {
+                setTimeout(() => {
+                    el.classList.add("aos-show");
+                }, parseInt(delay));
+            } else {
+                el.classList.remove("aos-show"); // Menghapus class agar animasi bisa terjadi lagi
+            }
+        });
+    }
+
+    window.addEventListener("scroll", checkElements);
+    checkElements(); // Panggil saat halaman dimuat agar animasi langsung aktif jika ada elemen dalam viewport
+});
