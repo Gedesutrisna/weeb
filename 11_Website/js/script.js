@@ -31,6 +31,37 @@ var swipers = [
             }
         }
     }),
+    new Swiper('.swiper-container-video', {
+        loop: true,
+        autoplay: {
+            delay: 3500,
+            disableOnInteraction: false,
+        },
+        speed: 1000,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        effect: 'slide',
+        breakpoints: {
+            220: {
+                slidesPerView: 1.1,
+                spaceBetween: 10,
+            },
+            768: {
+                slidesPerView: 2,
+                spaceBetween: 10,
+            },
+            1028: {
+                slidesPerView: 2,
+                spaceBetween: 16,
+            }
+        }
+    }),
     new Swiper('.swiper-container', {
         loop: true,
         autoplay: {
@@ -192,7 +223,7 @@ document.addEventListener("DOMContentLoaded", function () {
             const delay = el.dataset.delay || "0"; // Ambil delay dari atribut data, default 0 ms
 
             // if (rect.top < window.innerHeight * 0.85 && rect.bottom > 0) {
-            if (rect.top < window.innerHeight * 0.85) {
+            if (rect.top < window.innerHeight * 0.9) {
                 setTimeout(() => {
                     el.classList.add("aos-show");
                 }, parseInt(delay));
@@ -205,3 +236,18 @@ document.addEventListener("DOMContentLoaded", function () {
     window.addEventListener("scroll", checkElements);
     checkElements(); // Panggil saat halaman dimuat agar animasi langsung aktif jika ada elemen dalam viewport
 });
+
+
+function loadVideo(container, videoId) {
+    var iframe = document.createElement("iframe");
+    iframe.width = "530";
+    iframe.height = "305";
+    iframe.src = "https://www.youtube.com/embed/" + videoId + "?autoplay=1";
+    iframe.frameBorder = "0";
+    iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
+    iframe.allowFullscreen = true;
+
+    // Hapus konten sebelumnya (thumbnail + tombol play) dan tambahkan iframe
+    container.innerHTML = "";
+    container.appendChild(iframe);
+}
