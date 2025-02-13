@@ -1,11 +1,11 @@
 // Initialize Swipers for various containers
 var swipers = [
     new Swiper('.swiper-container-category', {
-        loop: true,
-        autoplay: {
-            delay: 3500,
-            disableOnInteraction: false,
-        },
+        // loop: true,
+        // autoplay: {
+        //     delay: 3500,
+        //     disableOnInteraction: false,
+        // },
         speed: 1000,
         pagination: {
             el: '.swiper-pagination',
