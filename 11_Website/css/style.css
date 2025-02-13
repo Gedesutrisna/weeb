@@ -877,16 +877,7 @@ img.img-hero-sm {
     justify-content: center;
     opacity: 0;
     transition: opacity 0.3s ease;
-}
-
-.play-button::after {
-    content: "";
-    display: block;
-    width: 0;
-    height: 0;
-    border-left: 20px solid var(--white-color);
-    border-top: 12px solid transparent;
-    border-bottom: 12px solid transparent;
+    color: var(--white-color);
 }
 
 .video-container {
@@ -902,6 +893,15 @@ img.img-hero-sm {
     object-fit: cover;
     transition: filter 0.3s ease, transform 0.3s ease;
     filter: brightness(90%);
+}
+
+.video-container:hover .video-thumbnail {
+    filter: brightness(40%); 
+    transform: scale(1.05); 
+}
+.video-container:hover .img-caption {
+    opacity: 1;
+    bottom: 5%;
 }
 
 .video-container:hover .video-thumbnail {
