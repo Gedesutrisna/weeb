@@ -4,7 +4,7 @@
     --primary-color: #D28F51;
     --white-color: #ffffff;
     --black-color: #111111;
-    --text-color: #12101672;
+    --text-color: #12101684;
     --text-white-color: #faf5eec3;
     --border-color-primary: rgba(241, 175, 99, 0.429) ;
     --border-color: rgba(241, 175, 99, 0.147);
@@ -106,12 +106,22 @@ h1.title.small.white {
     font-weight: 600;
     margin-bottom: .5rem;
 }
+a.text,
 p.text {
     color: var(--text-color);
     font-size: var(--font-size-p-medium);
     font-weight: 400;
     margin-bottom: 1rem;
     line-height: 24px;
+    text-align: justify;
+}
+a.text:hover {
+    color: var(--primary-color);
+}
+p.indent {
+    text-indent: 3rem;
+}
+.justify {
     text-align: justify;
 }
 p.center {
@@ -210,8 +220,12 @@ p.text.white {
     margin-bottom: 1rem !important;
 }
 
-.mb-3 {
+.mb-1 {
     margin-bottom: 1.5rem !important;
+}
+
+.mb-4 {
+    margin-bottom: 2rem !important;
 }
 
 .mb-2 {
@@ -354,8 +368,6 @@ nav.scroll .hamburger .bar {
     background-color: var(--primary-color);
 }
 
-
-
 /* Tag */
 .tag {
     padding: var(--btn-padding-medium);
@@ -374,6 +386,15 @@ nav.scroll .hamburger .bar {
     font-size: 12px;
 }
 
+#no-results.none {
+    color: var(--primary-color);
+    display: none;
+}
+#no-results {
+    color: var(--primary-color);
+    display: block;
+}
+
 /* Input styles */
 input.form-input {
     padding: var(--btn-padding);
@@ -383,6 +404,10 @@ input.form-input {
     font-weight: 400;
     font-family: var(--font-family);
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    background: transparent;
+}
+input.form-input.search {
+    width: 80%;
 }
 
 /* Focused input style */
@@ -448,6 +473,7 @@ button.btn:hover::after {
     border: 1px solid var(--border-color-primary);
     --hover-color: var(--primary-color);
 }
+.btn-a.search,
 .btn-b.toggle-dark-mode {
     padding: 11px 14px;
 }
@@ -469,7 +495,6 @@ button.btn:hover::after {
 .btn-c:hover {
     color: var(--primary-color);
 }
-
 
 button.btn-w {
     width: 100%;
@@ -533,6 +558,9 @@ li#btn{
     padding: var(--container-padding);
 }
 
+.container-toples {
+    padding: 0px 80px 80px 80px !important;
+}
 .container-footer {
     background-color: var(--white-color);
     border-radius: 0px 0px 40px 40px;
@@ -562,6 +590,12 @@ section.login .container{
     justify-content: center;
 }
 
+section.hero-nd {
+    padding: 50px 120px 0px 120px;
+}
+section.detail-blog {
+    padding: 50px 120px 0px 120px;
+}
 
 section.banner .container-b {
     background: linear-gradient(
@@ -778,7 +812,7 @@ img.profile {
 }
 
 /* swiper */
-.swiper-container, .swiper-container-category, .swiper-container-video {
+.swiper-container, .swiper-container-category, .swiper-container-video, .swiper-container-4 {
     max-width: 100%;
     overflow: hidden;
     position: relative;
@@ -809,6 +843,7 @@ img.profile {
     display: inline-block;
     overflow: hidden;
     border-radius: var(--border-radius-small);
+    width: 100%;
 }
 
 .img-hero {
@@ -855,6 +890,11 @@ img.profile {
 }
 img.img-hero-sm {
     display: none;
+}
+
+img.img-artikel {
+    height: 300px;
+    border-radius: var(--border-radius-small);
 }
 
 .video-thumbnail {
@@ -962,11 +1002,18 @@ iframe {
     section.login .container{
         padding: 1rem !important;
     }
-    
-    section.banner .container-b {
-        padding: 2rem 1rem;
+    section.hero-nd {
+        padding: 140px 1rem 0px 1rem;
     }
-
+    section.detail-blog {
+        padding: 100px 1rem 0px 1rem;
+    }    
+    section.banner .container-b {
+        padding: 120px 1rem;
+    }
+    input.form-input.search {
+        width: 100% !important;
+    }
     .row {
         flex-direction: column;
     }

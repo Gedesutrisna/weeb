@@ -93,6 +93,37 @@ var swipers = [
             }
         }
     }),
+    new Swiper('.swiper-container-4', {
+        loop: true,
+        autoplay: {
+            delay: 3500,
+            disableOnInteraction: false,
+        },
+        speed: 1000,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        effect: 'slide',
+        breakpoints: {
+            220: {
+                slidesPerView: 1.1,
+                spaceBetween: 10,
+            },
+            768: {
+                slidesPerView: 3,
+                spaceBetween: 10,
+            },
+            1028: {
+                slidesPerView: 4,
+                spaceBetween: 16,
+            }
+        }
+    }),
 ];
 // Navbar scroll behavior
 window.addEventListener('scroll', function () {
@@ -141,33 +172,40 @@ function isInViewport(element) {
 }
 
 // Counter function to animate from 0 to target value
-function animateCounter(counter) {
-    const target = +counter.getAttribute('data-target');
-    let count = 0;
-    const increment = target / 100; // Adjust this value to control speed
-
-    const updateCounter = () => {
-        count += increment;
-        if (count < target) {
-            counter.innerText = Math.ceil(count) + '+'; // Update text with +
-            requestAnimationFrame(updateCounter);
-        } else {
-            counter.innerText = target + '+'; // Ensure final target shows +
-        }
-    };
-    updateCounter();
-}
-
-// Event listener for scrolling
-window.addEventListener('scroll', () => {
+document.addEventListener("DOMContentLoaded", function () {
     const counters = document.querySelectorAll('.counter');
-    counters.forEach(counter => {
-        if (isInViewport(counter) && !counter.classList.contains('animated')) {
-            counter.classList.add('animated'); // To prevent re-triggering
-            animateCounter(counter);
-        }
-    });
+
+    function animateCounter(counter) {
+        const target = +counter.getAttribute('data-target');
+        let count = 0;
+        const increment = target / 100; // Atur kecepatan animasi
+
+        const updateCounter = () => {
+            count += increment;
+            if (count < target) {
+                counter.innerText = Math.ceil(count) + '+'; 
+                requestAnimationFrame(updateCounter);
+            } else {
+                counter.innerText = target + '+'; // Pastikan angka final muncul
+            }
+        };
+        updateCounter();
+    }
+
+    function checkCounters() {
+        counters.forEach(counter => {
+            const rect = counter.getBoundingClientRect();
+            if (rect.top < window.innerHeight * 0.98 && !counter.classList.contains('animated')) {
+                counter.classList.add('animated');
+                animateCounter(counter);
+            }
+        });
+    }
+
+    window.addEventListener("scroll", checkCounters);
+    checkCounters(); // Jalankan saat halaman pertama dimuat
 });
+
 
 document.addEventListener("DOMContentLoaded", function () {
     const toggleButtons = document.querySelectorAll(".toggle-dark-mode");
@@ -223,7 +261,7 @@ document.addEventListener("DOMContentLoaded", function () {
             const delay = el.dataset.delay || "0"; // Ambil delay dari atribut data, default 0 ms
 
             // if (rect.top < window.innerHeight * 0.85 && rect.bottom > 0) {
-            if (rect.top < window.innerHeight * 0.9) {
+            if (rect.top < window.innerHeight * 0.98) {
                 setTimeout(() => {
                     el.classList.add("aos-show");
                 }, parseInt(delay));
@@ -251,3 +289,42 @@ function loadVideo(container, videoId) {
     container.innerHTML = "";
     container.appendChild(iframe);
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+    const searchInput = document.querySelector(".form-input.search");
+    const searchButton = document.querySelector(".btn-a.search");
+    const cards = document.querySelectorAll(".card");
+    const noResultsMessage = document.getElementById("no-results");
+
+    function filterArticles() {
+        const searchText = searchInput.value.toLowerCase().trim();
+        let hasResults = false;
+
+        cards.forEach(card => {
+            const title = card.querySelector(".card-title").textContent.toLowerCase();
+            const description = card.querySelector(".card-text").textContent.toLowerCase();
+            
+            if (title.includes(searchText) || description.includes(searchText)) {
+                card.style.display = "block";
+                hasResults = true;
+            } else {
+                card.style.display = "none";
+            }
+        });
+
+
+        if (hasResults) {
+            noResultsMessage.classList = "text center mt-4 mb none";
+        } else {
+            noResultsMessage.classList = "text center mt-4 mb block";
+        }
+
+    }
+
+    searchButton.addEventListener("click", filterArticles);
+    searchInput.addEventListener("keyup", function (event) {
+        if (event.key === "Enter") {
+            filterArticles();
+        }
+    });
+});
