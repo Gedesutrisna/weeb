@@ -1,11 +1,11 @@
 // Initialize Swipers for various containers
 var swipers = [
     new Swiper('.swiper-container-category', {
-        // loop: true,
-        // autoplay: {
-        //     delay: 3500,
-        //     disableOnInteraction: false,
-        // },
+        loop: true,
+        autoplay: {
+            delay: 3500,
+            disableOnInteraction: false,
+        },
         speed: 1000,
         pagination: {
             el: '.swiper-pagination',
@@ -32,12 +32,12 @@ var swipers = [
         }
     }),
     new Swiper('.swiper-container-video', {
-        loop: true,
-        autoplay: {
-            delay: 3500,
-            disableOnInteraction: false,
-        },
-        speed: 1000,
+        // loop: true,
+        // autoplay: {
+        //     delay: 3500,
+        //     disableOnInteraction: false,
+        // },
+        // speed: 1000,
         pagination: {
             el: '.swiper-pagination',
             clickable: true,
@@ -46,7 +46,7 @@ var swipers = [
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
         },
-        effect: 'slide',
+        // effect: 'slide',
         breakpoints: {
             220: {
                 slidesPerView: 1.1,
@@ -240,8 +240,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
 function loadVideo(container, videoId) {
     var iframe = document.createElement("iframe");
-    iframe.width = "530";
-    iframe.height = "305";
+    // iframe.width = "530";
+    // iframe.height = "305";
     iframe.src = "https://www.youtube.com/embed/" + videoId + "?autoplay=1";
     iframe.frameBorder = "0";
     iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";

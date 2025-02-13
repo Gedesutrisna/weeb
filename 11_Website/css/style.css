@@ -913,6 +913,10 @@ img.img-hero-sm {
     opacity: 1;
 }
 
+iframe {
+    width: 530px;
+    height: 305px;
+}
 
 .img-category-container {
     position: relative;
@@ -1103,6 +1107,11 @@ img.img-hero-sm {
         display: flex !important;
         justify-content: center;
     }
+    iframe {
+        max-width: 100%;
+        height: 182px;
+    }
+    
 }
 @media (min-width: 689px) and (max-width: 1200px) {
     .container-footer {
