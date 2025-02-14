@@ -1068,7 +1068,7 @@ iframe {
     }
 
     p.text {
-        font-size: calc(var(--font-size-p-medium)); /* Skala sekitar 90% */
+        font-size: calc(var(--font-size-p-medium) * 1.2); /* Skala sekitar 90% */
         line-height: 1.4; /* Menyesuaikan jarak baris pada ukuran mobile */
     }
     .text-sm-center {
