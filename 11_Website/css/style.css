@@ -106,6 +106,7 @@ h1.title.small.white {
     font-weight: 600;
     margin-bottom: .5rem;
 }
+label,
 a.text,
 p.text {
     color: var(--text-color);
@@ -169,6 +170,16 @@ p.text.white {
     background-color: rgba(253, 246, 236, 0.1); 
 }
 
+.relative {
+    position: relative;
+}
+
+.btn-absolute {
+    position: absolute;
+    top: 20;
+    right: 20;
+    z-index: 9;
+}
 
 /* Display Styles */
 .d-flex {
@@ -420,7 +431,7 @@ textarea {
     height: 120px;
 }
 /* Focused input style */
-textarea,
+textarea:focus,
 input.form-input:focus {
     border-color: var(--primary-color);
     outline: none; /* Remove default focus outline */
@@ -590,6 +601,9 @@ section {
 }
 body.auth {
     overflow: hidden;
+}
+section.login {
+    margin-bottom: 0px !important;
 }
 section.login .container{
     /* overflow: hidden; */
