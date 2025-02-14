@@ -400,6 +400,7 @@ nav.scroll .hamburger .bar {
 }
 
 /* Input styles */
+textarea,
 input.form-input {
     padding: var(--btn-padding);
     border-radius: var(--border-radius-small);
@@ -409,12 +410,17 @@ input.form-input {
     font-family: var(--font-family);
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
     background: transparent;
+    resize: none;
+    width: 100%;
 }
 input.form-input.search {
-    width: 80%;
+    width: 80% !important;
 }
-
+textarea {
+    height: 120px;
+}
 /* Focused input style */
+textarea,
 input.form-input:focus {
     border-color: var(--primary-color);
     outline: none; /* Remove default focus outline */
