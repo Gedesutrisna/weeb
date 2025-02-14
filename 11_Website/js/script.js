@@ -62,6 +62,37 @@ var swipers = [
             }
         }
     }),
+    new Swiper('.swiper-container-no-auto', {
+        // loop: true,
+        // autoplay: {
+        //     delay: 3500,
+        //     disableOnInteraction: false,
+        // },
+        // speed: 1000,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        effect: 'slide',
+        breakpoints: {
+            220: {
+                slidesPerView: 1.1,
+                spaceBetween: 10,
+            },
+            768: {
+                slidesPerView: 2,
+                spaceBetween: 10,
+            },
+            1028: {
+                slidesPerView: 3,
+                spaceBetween: 16,
+            }
+        }
+    }),
     new Swiper('.swiper-container', {
         loop: true,
         autoplay: {
