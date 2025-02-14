@@ -127,6 +127,9 @@ p.indent {
 p.center {
     text-align: center;
 }
+.c-primary {
+    color: var(--primary-color) !important;
+}
 
 p.text.white {
     font-size: var(--font-size-p-medium);
@@ -186,6 +189,9 @@ p.text.white {
 
 .center {
     justify-content: center;
+}
+.row.items-top {
+    align-items: start !important;
 }
 .text-center {
     text-align: center;
@@ -639,6 +645,10 @@ footer .container {
 .card:hover {
     background-color: var(--primary-color); 
 }
+.card:hover i.fa-heart.fa-solid,
+.card:hover i.fa-regular.fa-heart {
+    color: var(--white-color) !important;
+}
 .card:hover .card-title,
 .card:hover .card-title-nd {
     color: var(--white-color); 
@@ -744,28 +754,26 @@ footer .container {
 }
 
 
-/* Faq */
-.faq-container {
-    width: 100%;
-    min-height: 320px;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    gap: .5rem;
-}
-
-.faq-answer {
+/* Reply section - Smooth transition */
+.reply {
     max-height: 0;
+    opacity: 0;
     overflow: hidden;
-    transition: max-height 0.4s ease-in-out, padding 0.4s ease-in-out;
-    padding-top: 0;
-    margin: 0;
+    transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
 }
 
-.faq.active .faq-answer {
-    max-height: 100px; /* Atur lebih tinggi jika diperlukan */
-    padding-top: .5rem; /* Tambahkan padding untuk spasi */
+/* When reply is active */
+.reply.show {
+    max-height: 200px; /* Sesuaikan tinggi maksimal yang cukup */
+    opacity: 1;
 }
+
+/* Change cursor on hover over reply text */
+.reply-btn {
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
 
 /* Gambar default, tampilkan untuk mode biasa */
 #about-image-dark {
@@ -1004,7 +1012,7 @@ iframe {
         padding: 140px 1rem 0px 1rem;
     }
     section.detail-blog {
-        padding: 100px 1rem 0px 1rem;
+        padding: 100px 0px 0px 0px;
     }    
     section.banner .container-b {
         padding: 120px 1rem;

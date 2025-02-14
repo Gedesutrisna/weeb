@@ -138,3 +138,36 @@ document.addEventListener("DOMContentLoaded", () => {
         if (event.key === "Enter") filterArticles();
     });
 });
+
+//comments
+document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll(".reply-btn").forEach(button => {
+        button.addEventListener("click", function () {
+            const replySection = this.closest(".card").querySelector(".reply");
+            replySection.classList.toggle("show");
+        });
+    });
+
+    // Like komentar
+    document.querySelectorAll(".like-btn").forEach(button => {
+        button.addEventListener("click", function () {
+            const icon = this.querySelector("i");
+            const count = this.querySelector(".like-count");
+            let likes = parseInt(this.getAttribute("data-likes"));
+
+            if (icon.classList.contains("fa-regular")) {
+                icon.classList.remove("fa-regular");
+                icon.classList.add("fa-solid");
+                icon.classList.add("fa-heart");
+                likes += 1;
+            } else {
+                icon.classList.remove("fa-solid");
+                icon.classList.add("fa-regular");
+                likes -= 1;
+            }
+
+            count.textContent = likes;
+            this.setAttribute("data-likes", likes);
+        });
+    });
+});
