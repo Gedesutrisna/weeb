@@ -270,8 +270,8 @@ img.img-gallery {
     transition: filter 0.3s ease, transform 0.3s ease;
 }
 img.img-gallery:hover {
-    transform: scale(1.05);
-    filter: brightness(50%);
+    transform: scale(1.1);
+    /* filter: brightness(50%); */
 }
 
 
@@ -439,8 +439,8 @@ button.btn::after {
     background: var(--hover-color, var(--primary-color));
     transition: width 0.4s ease-in-out, height 0.4s ease-in-out;
     transform: translateX(-50%);
-    border-top-left-radius: 100%;
-    border-top-right-radius: 100%;
+    border-top-left-radius: 10%;
+    border-top-right-radius: 10%;
     border-bottom-left-radius: 0%;
     border-bottom-right-radius: 0%;
     z-index: -1;
@@ -613,7 +613,7 @@ section.banner .container-b {
 
 footer {
     /* background-color: var(--black-color); */
-    background-color: var(--scroll-bg-color);
+    background-color: var(--primary-color);
 }
 
 footer .container {
