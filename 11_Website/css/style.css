@@ -19,6 +19,7 @@
     --font-size-p-large: 17px;
     --font-size-h1: 68px;
     --font-size-h2: 52px;
+    --font-size-h2-custom: 49px;
     --font-size-h3: 24px;
     --font-size-h4: 20px;
     --font-size-h5: 18px;
@@ -95,7 +96,7 @@ h1.title.white {
 }
 h1.title-custom {
     color: var(--primary-color);
-    font-size: var(--font-size-h2);
+    font-size: var(--font-size-h2-custom);
     font-weight: 700;
     margin-bottom: 1rem;
     -webkit-text-stroke: .5px black;
@@ -1417,7 +1418,7 @@ iframe {
     }
     h1.title-custom {
         color: var(--black-color);
-        font-size: calc(var(--font-size-h1) * .7); /* Skala sekitar 70% */
+        font-size: calc(var(--font-size-h2) * .7); /* Skala sekitar 70% */
         font-weight: 600;
         margin-bottom: 1rem;
     }
