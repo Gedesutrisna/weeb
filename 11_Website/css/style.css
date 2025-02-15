@@ -131,6 +131,9 @@ p.center {
 .c-primary {
     color: var(--primary-color) !important;
 }
+.b-primary {
+    color: #d28f5193 !important;
+}
 
 p.text.white {
     font-size: var(--font-size-p-medium);
@@ -441,6 +444,9 @@ input.form-input.comment {
 .card:hover .c-primary {
     color: var(--white-color) !important;
 }
+.card:hover .b-primary {
+    color: var(--text-white-color) !important;
+}
 input.form-input.search {
     width: 80% !important;
 }
@@ -682,7 +688,10 @@ footer .container {
     justify-content: space-between;
     transition: background-color 0.3s ease, border-color 0.3s ease;
 }
-
+.card.card-flex {
+    flex-direction: row !important;
+    gap: 1rem;
+}
 .card.card-no {
     border: none !important;
     padding: 0px;
@@ -763,6 +772,14 @@ footer .container {
     transition: transform 0.3s ease-in-out;
 }
 
+.card-img-event {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: var(--border-radius-small);
+    transition: transform 0.3s ease-in-out;
+}
+
 .card:hover .card-img-blog {
     transform: scale(1.05);
 }
@@ -799,7 +816,10 @@ footer .container {
     overflow: hidden;
     text-overflow: ellipsis;
 }
-
+ul.event-details i.fa {
+    text-align: center;
+    width: 18px;
+}
 
 /* Reply section - Smooth transition */
 .reply {
@@ -865,7 +885,7 @@ img.profile {
 }
 
 /* swiper */
-.swiper-container, .swiper-container-category, .swiper-container-video, .swiper-container-4, .swiper-container-no-auto {
+.swiper-container, .swiper-container-category, .swiper-container-video, .swiper-container-2,.swiper-container-4, .swiper-container-no-auto {
     max-width: 100%;
     overflow: hidden;
     position: relative;
@@ -1038,9 +1058,9 @@ iframe {
 /* Resposive */
 @media (max-width: 330px) {
     :root {
-        --font-size-p-small: 12px;
-        --font-size-p-medium: 14px;
-        --font-size-p-large: 16px;
+        --font-size-p-small: 11px;
+        --font-size-p-medium: 13px;
+        --font-size-p-large: 15px;
         --font-size-h1: 52px;
         --font-size-h2: 40px;
         --font-size-h3: 24px;

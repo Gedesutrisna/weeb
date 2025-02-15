@@ -4,12 +4,13 @@ const swiperConfigs = [
     { selector: '.swiper-container-no-auto', slides1028: 3 },
     { selector: '.swiper-container', slides1028: 3 },
     { selector: '.swiper-container-4', slides1028: 4 },
+    { selector: '.swiper-container-2', slides1028: 2 },
 ];
 
 swiperConfigs.forEach(({ selector, slides1028 }) => {
     new Swiper(selector, {
         loop: true,
-        autoplay: { delay: 3500, disableOnInteraction: false },
+        // autoplay: { delay: 3500, disableOnInteraction: false },
         speed: 1000,
         pagination: { el: '.swiper-pagination', clickable: true },
         navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
