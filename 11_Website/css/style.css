@@ -326,6 +326,7 @@ nav .nav-links {
 }
 
 .sidebar a,
+.sidebar li,
 nav a {
     color: var(--text-color);
     text-decoration: none;
@@ -333,6 +334,7 @@ nav a {
 }
 
 .sidebar a:hover,
+.sidebar li:hover,
 .sidebar a.active,
 nav a:hover,
 nav a.active {

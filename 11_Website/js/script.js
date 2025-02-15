@@ -186,40 +186,46 @@ document.addEventListener("DOMContentLoaded", function () {
 
 document.addEventListener("DOMContentLoaded", function () {
     const loginButton = document.getElementById("loginButton");
+    const logoutButtons = document.querySelectorAll(".logout"); // Ambil semua tombol logout
 
     if (loginButton) {
         loginButton.addEventListener("click", function (event) {
-            event.preventDefault(); // Mencegah form melakukan submit
+            event.preventDefault();
 
             const emailInput = document.querySelector("input[type='email']");
             const passwordInput = document.querySelector("input[type='password']");
 
             if (emailInput.value.trim() !== "" && passwordInput.value.trim() !== "") {
                 localStorage.setItem("isLogin", "true");
-                // Tambahkan sedikit delay untuk memastikan perubahan link berlaku
-                setTimeout(function() {
-                    window.location.href = "index.html"; // Redirect ke halaman utama setelah login berhasil
-                }, 100); // Delay 100ms
+                console.log("Login berhasil! Redirect ke index.html");
+                setTimeout(() => window.location.href = "index.html", 100);
             } else {
                 alert("Harap masukkan email dan password!");
             }
         });
     }
 
+    // Fungsi Logout
+    logoutButtons.forEach((btn) => {
+        btn.addEventListener("click", function () {
+            console.log("Tombol logout diklik"); // Cek apakah tombol di-klik
+            localStorage.setItem("isLogin", "false"); // Set isLogin menjadi false
+            window.location.href = "index.html"; // Redirect ke halaman utama
+        });
+    });
+
+    // Cek apakah tombol logout ditemukan
+    if (logoutButtons.length === 0) {
+        console.error("Tombol logout tidak ditemukan!");
+    }
+
     // Script untuk mengubah href semua elemen dengan id "user"
-    const userLinks = document.querySelectorAll("#user"); // Mengambil semua elemen dengan id "user"
+    const userLinks = document.querySelectorAll("#user");
 
     if (userLinks.length > 0) {
         let isLogin = localStorage.getItem("isLogin") === "true";
-        console.log(isLogin, userLinks);
-
-        // Loop melalui semua elemen dan ubah href-nya
         userLinks.forEach(userLink => {
-            if (isLogin) {
-                userLink.setAttribute("href", "profile.html");
-            } else {
-                userLink.setAttribute("href", "login.html");
-            }
+            userLink.setAttribute("href", isLogin ? "profile.html" : "login.html");
         });
     }
 });
