@@ -47,7 +47,6 @@
     background-color: var(--black-color);
     color: var(--text-white-color);
     --border-color: rgba(241, 175, 99, 0.229);
-
 }
 
 html {
@@ -920,6 +919,32 @@ footer .container {
     overflow: hidden;
     text-overflow: ellipsis;
 }
+
+/* Gaya untuk alert */
+.alert {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #4CAF50; /* Warna hijau untuk sukses */
+    color: white;
+    padding: var(--btn-padding);
+    border-radius: var(--border-radius-small);
+    z-index: 1000;
+    font-size: 16px;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.alert.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.alert.error {
+    background-color: #f44336; /* Merah untuk error */
+}
+
+
 ul.side-links i.fa,
 ul.event-details i.fa {
     text-align: center;
