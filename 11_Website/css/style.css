@@ -424,6 +424,23 @@ input.form-input {
     resize: none;
     width: 100%;
 }
+input.form-input.comment {
+    color: var(--text-color);
+    padding: 6px;
+    border: none;
+    border-radius: 0px;
+    border-bottom: 1px solid var(--border-color-primary);
+}
+.card:hover input.form-input.comment {
+    color: var(--text-white-color) !important;
+    border-bottom: 1px solid var(--text-white-color);
+}
+.card:hover input.form-input.comment::placeholder {
+    color: var(--text-white-color) !important;
+}
+.card:hover .c-primary {
+    color: var(--white-color) !important;
+}
 input.form-input.search {
     width: 80% !important;
 }
@@ -497,6 +514,9 @@ button.btn:hover::after {
 .btn-a.search,
 .btn-b.toggle-dark-mode {
     padding: 11px 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Hover effect for btn-b */
@@ -541,11 +561,17 @@ li#btn{
 /* Line with gradient edges */
 .h-line {
     width: 100%;
-    height: .8px;
+    height: 1px; /* Ubah ke bilangan bulat */
+    transform: scaleY(0.6); 
     border: none; /* Menghapus border */
     /* background: linear-gradient(to right, rgba(241, 201, 99, 0) 0%, rgba(241, 201, 99, 0.3) 50%, rgba(241, 201, 99, 0) 100%); */
     background: var(--border-color-primary);
     margin: 1.5rem 0;
+}
+.card:hover .h-line {
+    background: var(--white-color);
+    height: 1px; /* Ubah ke bilangan bulat */
+    transform: scaleY(0.4); 
 }
 .h-line.white{
     background: var(--white-color);
@@ -703,9 +729,10 @@ footer .container {
     content: "";
     position: absolute;
     left: 0;
-    bottom: -5px;
+    bottom: -4px;
     width: 0%;
-    height: 1px;
+    height: 1px; 
+    transform: scaleY(0.6); 
     background-color: var(--text-white-color);
     transition: width 0.3s ease-in-out;
 }
