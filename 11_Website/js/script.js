@@ -183,3 +183,80 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const loginButton = document.getElementById("loginButton");
+
+    if (loginButton) {
+        loginButton.addEventListener("click", function (event) {
+            event.preventDefault(); // Mencegah form melakukan submit
+
+            const emailInput = document.querySelector("input[type='email']");
+            const passwordInput = document.querySelector("input[type='password']");
+
+            if (emailInput.value.trim() !== "" && passwordInput.value.trim() !== "") {
+                localStorage.setItem("isLogin", "true");
+                // Tambahkan sedikit delay untuk memastikan perubahan link berlaku
+                setTimeout(function() {
+                    window.location.href = "index.html"; // Redirect ke halaman utama setelah login berhasil
+                }, 100); // Delay 100ms
+            } else {
+                alert("Harap masukkan email dan password!");
+            }
+        });
+    }
+
+    // Script untuk mengubah href semua elemen dengan id "user"
+    const userLinks = document.querySelectorAll("#user"); // Mengambil semua elemen dengan id "user"
+
+    if (userLinks.length > 0) {
+        let isLogin = localStorage.getItem("isLogin") === "true";
+        console.log(isLogin, userLinks);
+
+        // Loop melalui semua elemen dan ubah href-nya
+        userLinks.forEach(userLink => {
+            if (isLogin) {
+                userLink.setAttribute("href", "profile.html");
+            } else {
+                userLink.setAttribute("href", "login.html");
+            }
+        });
+    }
+});
+
+// Upload Image
+document.querySelector('.box-upload-image-custom').addEventListener('click', function() {
+    document.getElementById('image-upload').click();
+});
+
+document.getElementById('image-upload').addEventListener('change', function(event) {
+    const file = event.target.files[0];
+    if (file) {
+        const reader = new FileReader();
+        reader.onload = function(e) {
+            document.getElementById('profile-image').src = e.target.result;
+        };
+        reader.readAsDataURL(file);
+    }
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    const hamburgerSidebar = document.getElementById("hamburger-sidebar");
+    const mobileSidebar = document.getElementById("mobile-sidebar");
+    const sidebarOverlay = document.getElementById("sidebar-overlay");
+
+    if (hamburgerSidebar && mobileSidebar && sidebarOverlay) {
+        hamburgerSidebar.addEventListener("click", function () {
+            mobileSidebar.classList.toggle("active");
+            hamburgerSidebar.classList.toggle("active");
+            sidebarOverlay.style.display = mobileSidebar.classList.contains("active") ? "block" : "none"; // Toggle overlay
+        });
+
+        // Close sidebar when clicking outside (on the overlay)
+        sidebarOverlay.addEventListener("click", function () {
+            mobileSidebar.classList.remove("active");
+            hamburgerSidebar.classList.remove("active");
+            sidebarOverlay.style.display = "none";
+        });
+    }
+});
