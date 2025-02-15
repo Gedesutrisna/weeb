@@ -251,52 +251,15 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     showAlertOnLoad(); // Tampilkan alert setelah halaman dimuat jika ada pesan di localStorage
-});
+        // Ubah href untuk elemen dengan id "user"
+        const userLinks = document.querySelectorAll("#user");
 
-document.addEventListener("DOMContentLoaded", function () {
-    const loginButton = document.getElementById("loginButton");
-    const logoutButtons = document.querySelectorAll(".logout");
-
-    if (loginButton) {
-        loginButton.addEventListener("click", function (event) {
-            event.preventDefault();
-
-            const emailInput = document.querySelector("input[type='email']");
-            const passwordInput = document.querySelector("input[type='password']");
-
-            if (emailInput && passwordInput && emailInput.value.trim() !== "" && passwordInput.value.trim() !== "") {
-                localStorage.setItem("isLogin", "true");
-                console.log("Login berhasil! Redirect ke index.html");
-                setTimeout(() => window.location.href = "index.html", 100);
-            } else {
-                alert("Harap masukkan email dan password!");
-            }
-        });
-    }
-
-    // Tambahkan kondisi agar tidak error jika logoutButtons tidak ditemukan
-    if (logoutButtons.length > 0) {
-        logoutButtons.forEach((btn) => {
-            btn.addEventListener("click", function () {
-                console.log("Tombol logout diklik");
-                localStorage.setItem("isLogin", "false");
-                window.location.href = "index.html";
+        if (userLinks.length > 0) {
+            let isLogin = localStorage.getItem("isLogin") === "true";
+            userLinks.forEach(userLink => {
+                userLink.setAttribute("href", isLogin ? "profile.html" : "login.html");
             });
-        });
-    }
-     else {
-        console.warn("Tombol logout tidak ditemukan!");
-    }
-
-    // Ubah href untuk elemen dengan id "user"
-    const userLinks = document.querySelectorAll("#user");
-
-    if (userLinks.length > 0) {
-        let isLogin = localStorage.getItem("isLogin") === "true";
-        userLinks.forEach(userLink => {
-            userLink.setAttribute("href", isLogin ? "profile.html" : "login.html");
-        });
-    }
+        }
 });
 
 // **Perbaikan dalam Upload Image**
