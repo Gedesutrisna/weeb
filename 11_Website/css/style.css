@@ -1110,7 +1110,9 @@ iframe {
     .row-sm {
         flex-direction: column-reverse;
     }
-
+    .card.card-sm-block {
+        flex-direction: column !important;
+    }
     .gap-sm-n{
         gap: 0px !important;
     }
