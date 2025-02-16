@@ -39,7 +39,15 @@
             <ul class="nav-links" id="nav-links">
                 <li class="aos" data-delay="200"><a href="index.html">Beranda</a></li>
                 <li class="aos" data-delay="250"><a href="index.html#about">Tentang</a></li>
-                <li class="aos" data-delay="290"><a href="event.html">Acara</a></li>
+                <li class="aos d-none d-sm-block d-md-block" data-delay="250" class="active"><a href="komunitas.html">Komunitas</a></li>
+                <li class="aos d-none d-sm-block d-md-block" data-delay="250"><a href="event.html">Acara</a></li>
+                <li class="dropdown aos d-sm-none d-md-none" data-delay="290">
+                    <a href="#" class="dropbtn active">Program <i class="fa fa-caret-down"></i></a>
+                    <ul class="dropdown-content">
+                        <li><a href="komunitas.html" class="active">Komunitas</a></li>
+                        <li><a href="event.html">Acara</a></li>
+                    </ul>
+                </li>
                 <li class="aos" data-delay="300"><a href="artikel.html">Artikel</a></li>
                 <li class="d-flex center show gap aos" data-delay="200" id="btn">
                     <a href="index.html#service">
@@ -195,132 +203,6 @@
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <section class="acara">
-        <div class="container">
-            <div class="row mb-1">
-                <div class="col-7 col-sm-12 aos" data-delay="200">
-                    <h1 class="title mb-0 mb-sm">Temukan <span class="highlight">Berbagai Festival</span> di Acara Lainnya</h1>
-                </div>
-                <div class="col-4 col-sm-12 aos" data-delay="300">
-                    <p class="text mb-0">
-                        Jelajahi lebih banyak artikel yang menginspirasi tentang budaya, seni, kuliner, dan gaya hidup. 
-                        Temukan wawasan baru dan cerita menarik hanya di sini!
-                    </p>
-                </div>
-            </div>
-            <div class="row mb aos" data-delay="300">
-                <div class="col-12">
-                    <div class="w-full">
-                        <div class="swiper-container-2">
-                            <div class="swiper-wrapper">
-                                <!-- Swiper Slide 1 -->
-                                <div class="swiper-slide aos" data-delay="200">
-                                    <a href="festival-batik.html" class="card card-flex card-sm-block">
-                                        <div class="img-card-container">
-                                            <img src="11_Bahan/assets/blog-1.png" alt="" class="card-img-event">
-                                        </div>
-                                        <div class="card-body">
-                                            <h1 class="card-title mb-2">Festival Batik Indonesia 2025</h1>
-                                            <p class="card-text text-clip mb">Rangkaian pameran batik, fashion show, dan workshop membatik langsung dari pengrajin terbaik.</p>
-                                            <ul class="event-details mb">
-                                                <li class="card-text mb-2"><i class="b-primary fa fa-calendar"></i> 5 Oktober 2025</li>
-                                                <li class="card-text mb-2"><i class="b-primary fa fa-map-marker"></i> Solo, Indonesia</li>
-                                                <li class="card-text mb-2"><i class="b-primary fa fa-ticket"></i> Gratis</li>
-                                                <li class="card-text mb-2"><i class="b-primary fa fa-users"></i> Maks. 1000 peserta</li>
-                                            </ul>
-                                            <p class="card-title-nd mb-0">Selengkapnya
-                                                <i class="fa fa-arrow-right"></i>
-                                            </p>
-                                        </div>
-                                    </a>
-                                </div>
-                                
-                                <!-- Swiper Slide 2 -->
-                                <div class="swiper-slide aos" data-delay="300">
-                                    <a href="festival-batik.html" class="card card-flex card-sm-block">
-                                        <div class="img-card-container">
-                                            <img src="11_Bahan/assets/blog-2.png" alt="" class="card-img-event">
-                                        </div>
-                                        <div class="card-body">
-                                            <h1 class="card-title mb-2">Festival Gamelan Nusantara</h1>
-                                            <p class="card-text text-clip mb">Saksikan pertunjukan gamelan dari berbagai daerah, dengan kompetisi antar grup terbaik di Indonesia.</p>
-                                            <ul class="event-details mb">
-                                                <li class="card-text mb-2"><i class="b-primary fa fa-calendar"></i> 12 November 2025</li>
-                                                <li class="card-text mb-2"><i class="b-primary fa fa-map-marker"></i> Bandung, Indonesia</li>
-                                                <li class="card-text mb-2"><i class="b-primary fa fa-ticket"></i> Rp 50.000</li>
-                                                <li class="card-text mb-2"><i class="b-primary fa fa-users"></i> Maks. 750 peserta</li>
-                                            </ul>
-                                            <p class="card-title-nd mb-0">Selengkapnya
-                                                <i class="fa fa-arrow-right"></i>
-                                            </p>
-                                        </div>
-                                    </a>
-                                </div>
-                            
-                                <!-- Swiper Slide 3 -->
-                                <div class="swiper-slide aos" data-delay="400">
-                                    <a href="festival-batik.html" class="card card-flex card-sm-block">
-                                        <div class="img-card-container">
-                                            <img src="11_Bahan/assets/blog-3.png" alt="" class="card-img-event">
-                                        </div>
-                                        <div class="card-body">
-                                            <h1 class="card-title mb-2">Festival Rasa Nusantara</h1>
-                                            <p class="card-text text-clip mb">Nikmati kelezatan kuliner khas Indonesia dengan demo masak dari chef ternama.</p>
-                                            <ul class="event-details mb">
-                                                <li class="card-text mb-2"><i class="b-primary fa fa-calendar"></i> 25 Agustus 2025</li>
-                                                <li class="card-text mb-2"><i class="b-primary fa fa-map-marker"></i> Jakarta, Indonesia</li>
-                                                <li class="card-text mb-2"><i class="b-primary fa fa-ticket"></i> Rp 30.000</li>
-                                                <li class="card-text mb-2"><i class="b-primary fa fa-users"></i> Maks. 1500 peserta</li>
-                                            </ul>
-                                            <p class="card-title-nd mb-0">Selengkapnya
-                                                <i class="fa fa-arrow-right"></i>
-                                            </p>
-                                        </div>
-                                    </a>
-                                </div>
-                            
-                                <!-- Swiper Slide 4 -->
-                                <div class="swiper-slide aos" data-delay="500">
-                                    <a href="festival-batik.html" class="card card-flex card-sm-block">
-                                        <div class="img-card-container">
-                                            <img src="11_Bahan/assets/blog-4.png" alt="" class="card-img-event">
-                                        </div>
-                                        <div class="card-body">
-                                            <h1 class="card-title mb-2">Pentas Wayang Internasional</h1>
-                                            <p class="card-text text-clip mb">Menikmati seni wayang dari berbagai daerah dan negara dalam satu panggung.</p>
-                                            <ul class="grid grid-2 grid-sm-2 grid-md-2 between event-details mb">
-                                                <li class="text mb-2"><i class="b-primary fa fa-calendar"></i> 10 September 2025</li>
-                                                <li class="text mb-2"><i class="b-primary fa fa-map-marker"></i> Surakarta, Indonesia</li>
-                                                <li class="text mb-2"><i class="b-primary fa fa-ticket"></i> Gratis</li>
-                                                <li class="text mb-2"><i class="b-primary fa fa-users"></i> Maks. 500 peserta</li>
-                                            </ul>
-                                            <p class="card-title-nd mb-0">Selengkapnya
-                                                <i class="fa fa-arrow-right"></i>
-                                            </p>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                            
-                            <div class="d-flex center mt">
-                                <div class="swiper-pagination"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row text-center">
-                <div class="col-12">
-                    <p id="no-results" class="text center mt-4 mb none">Artikel tidak ditemukan</p>
-
-                    <a href="artikel.html" class="text aos" data-delay="200">
-                        <button class="btn btn-a">Lebih Banyak Artikel</button>
-                    </a>
                 </div>
             </div>
         </div>
