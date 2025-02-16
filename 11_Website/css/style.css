@@ -755,6 +755,7 @@ section.hero-nd {
 section.detail-blog {
     padding: 50px 120px 0px 120px;
 }
+section.detail-komunitas,
 section.detail-acara {
     padding-top: 50px;
 }
@@ -1279,6 +1280,7 @@ iframe {
     section.detail-blog {
         padding: 100px 0px 0px 0px;
     }    
+    section.detail-komunitas,
     section.detail-acara {
         padding-top: 100px;
     }

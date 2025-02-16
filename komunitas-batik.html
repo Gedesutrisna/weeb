@@ -1,0 +1,588 @@
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Jelajahi keindahan warisan budaya Indonesia. Arsanta menyajikan artikel dan informasi mendalam tentang sejarah, seni, dan budaya Nusantara.">
+    <!-- Meta Information for SEO and Social Sharing -->
+    <meta name="keywords" content="Warisan Indonesia, Budaya Nusantara, Sejarah Indonesia, Seni Tradisional, Arsanta">
+    <meta name="author" content="Arsanta">
+
+    <!-- Meta Open Graph for better social sharing -->
+    <meta property="og:description" content="Pelajari sejarah dan budaya Indonesia melalui artikel-artikel menarik di Arsanta. Temukan kekayaan seni, tradisi, dan cerita Nusantara.">
+    <meta property="og:title" content="Menjelajahi Warisan Budaya Indonesia">
+    <meta property="og:image" content="11_Bahan/assets/logo.png">
+    
+    <title>Komunitas Batik Nusantara | Menjelajahi Warisan Budaya Indonesia bersama Arsanta</title>
+    <!-- Title of the Document -->
+    
+    <!-- Linking External CSS and Fonts -->
+    <link rel="stylesheet" href="11_Website/css/style.css">
+    <link rel="stylesheet" href="11_Bahan/Swiperjs v5.3.7/swiper-bundle.css">
+    <link rel="stylesheet" href="11_Bahan/fontawesome-free-6.7.2-web/fontawesome-free-6.7.2-web/css/all.min.css">
+
+    <!-- Preconnect for faster font loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="icon" href="11_Bahan/assets/logo.png">
+</head>
+<body>
+    <div id="custom-alert" class="alert hidden"></div>
+    <!-- Navigation Bar -->
+    <nav id="navbar">
+        <div class="container">
+            <a href="index.html" class="logo aos" data-delay="100">
+                <img class="logo" src="11_Bahan/assets/logo.png" alt="arsanta">
+                Arsanta.
+            </a>
+            <!-- UL Links -->
+            <ul class="nav-links" id="nav-links">
+                <li class="aos" data-delay="200"><a href="index.html">Beranda</a></li>
+                <li class="aos" data-delay="250"><a href="index.html#about">Tentang</a></li>
+                <li class="aos" data-delay="290"><a href="event.html" class="active">Acara</a></li>
+                <li class="aos" data-delay="300"><a href="artikel.html">Artikel</a></li>
+                <li class="d-flex center show gap aos" data-delay="200" id="btn">
+                    <a href="index.html#service">
+                        <button class="btn btn-b show">Jelajahi Warisan Budaya</button>
+                    </a>
+                    <div class="d-flex gap">
+                        <button class="btn btn-b reg toggle-dark-mode">
+                            <i class="fa fa-moon"></i>
+                        </button>
+                        <a href="profile.html" class="user" id="user">
+                            <button class="btn btn-b reg user">
+                                <i class="fa fa-user"></i>
+                            </button>
+                        </a>
+                    </div>
+                </li>
+            </ul>
+            <!-- Hamburger Menu -->
+            <button class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <div class="dm d-flex gap">
+                <a href="index.html#service">
+                    <button class="btn btn-b reg">Jelajahi Warisan Budaya</button>
+                </a>
+                    <div class="d-flex gap">
+                        <button class="btn btn-b reg toggle-dark-mode">
+                            <i class="fa fa-moon"></i>
+                        </button>
+                        <a href="profile.html" class="user" id="user">
+                            <button class="btn btn-b reg user">
+                                <i class="fa fa-user"></i>
+                            </button>
+                        </a>
+                    </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="detail-komunitas">
+        <div class="container">
+            <div class="row mb-1 items-top">
+                <!-- Detail Komunitas -->
+                <div class="col-6 col-sm-12 col-md-6 aos" data-delay="200">
+                    <img class="img-artikel mb-1" src="11_Bahan/assets/blog-1.png" alt="Forum Batik Nusantara">
+                    <h1 class="title mb"><span class="highlight">Forum Batik Nusantara</span></h1>
+                    <p class="text">
+                        Forum Batik Nusantara adalah ruang diskusi bagi para pecinta batik dari seluruh Indonesia. 
+                        Di sini, kamu bisa berbagi ilmu tentang motif, filosofi, dan teknik membatik, serta berdiskusi dengan pengrajin dan kolektor batik lainnya.
+                        <br><br>
+                        Bergabunglah dan temukan inspirasi dari berbagai daerah, serta dapatkan akses ke acara eksklusif seperti lokakarya membatik, pameran batik, dan komunitas online yang aktif!
+                    </p>
+                    <div class="h-line"></div>
+    
+                    <ul class="grid grid-2 grid-sm-2 grid-md-2 between event-details mb">
+                        <li class="text mb-2"><i class="c-primary fa fa-users"></i> 1.200 Anggota</li>
+                        <li class="text mb-2"><i class="c-primary fa fa-comments"></i> 250 Topik Diskusi</li>
+                        <li class="text mb-2"><i class="c-primary fa fa-calendar"></i> Meetup Rutin: 1x/bulan</li>
+                        <li class="text mb-2"><i class="c-primary fa fa-map-marker"></i> Online & Offline</li>
+                    </ul>
+                </div>
+    
+                <div class="v-line d-block d-sm-none d-md-block"></div>
+    
+                <!-- Form Bergabung -->
+                <div class="col-5 col-sm-12 col-md-5">
+                    <div class="">
+                        <h1 class="title-custom">Gabung Komunitas</h1>
+                        <div class="aos" data-delay="200">
+                            <form id="form-bergabung">
+                                <input class="form-input mb" type="text" name="nama" placeholder="Nama Lengkap...">
+                                <input class="form-input mb" type="email" name="email" placeholder="Email...">
+                                <input class="form-input mb" type="tel" name="telepon" placeholder="Nomor Telepon...">
+                                
+                                <select class="form-input mb" name="kategori">
+                                    <option value="">Pilih Kategori Keanggotaan</option>
+                                    <option value="umum">Pecinta Batik</option>
+                                    <option value="pengrajin">Pengrajin Batik</option>
+                                    <option value="kolektor">Kolektor Batik</option>
+                                    <option value="peneliti">Peneliti & Akademisi</option>
+                                </select>
+    
+                                <textarea class="form-input mb" name="motivasi" placeholder="Apa yang membuatmu tertarik dengan komunitas ini?"></textarea>
+    
+                                <label class="d-flex align-center gap">
+                                    <input type="checkbox" name="syarat" required>
+                                    <span class="text">Saya setuju dengan <a href="#" class="c-primary">Syarat & Ketentuan</a></span>
+                                </label>
+    
+                                <button type="submit" class="btn btn-a">
+                                    Gabung Sekarang
+                                </button>
+                            </form>
+    
+                            <p class="text center mt">
+                                Atau gabung langsung melalui <a href="#" class="c-primary">Grup WhatsApp</a> atau <a href="#" class="c-primary">Forum Online</a>.
+                            </p>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <section class="acara">
+        <div class="container">
+            <div class="row mb-1">
+                <div class="col-7 col-sm-12 aos" data-delay="200">
+                    <h1 class="title mb-0 mb-sm">Menelusuri <span class="highlight">Keindahan dan Makna Tari Bali</span></h1>
+                </div>
+                <div class="col-4 col-sm-12 aos" data-delay="300">
+                    <p class="text mb-0">
+                        Jelajahi keindahan dan makna mendalam dari Tari Bali melalui berbagai gambar dan dokumentasi. 
+                        Saksikan pesona gerakan yang penuh filosofi dan nilai budaya yang kaya!
+                    </p>
+                </div>
+            </div>
+            <div class="row mb aos" data-delay="300">
+                <div class="col-12">
+                    <div class="w-full">
+                        <div class="swiper-container-4">
+                            <div class="swiper-wrapper">
+                                <!-- Swiper Slide 1 -->
+                                <div class="swiper-slide aos" data-delay="200">
+                                    <div class="img-hero-container">
+                                        <img src="11_Bahan/assets/gallery-1.png" alt="" class="img-gallery">
+                                    </div>
+                                </div>
+                                <!-- Swiper Slide 2 -->
+                                <div class="swiper-slide aos" data-delay="300">
+                                    <div class="img-hero-container">
+                                        <img src="11_Bahan/assets/gallery-2.png" alt="" class="img-gallery">
+                                    </div>
+                                </div>
+                                <!-- Swiper Slide 3 -->
+                                <div class="swiper-slide aos" data-delay="400">
+                                    <div class="img-hero-container">
+                                        <img src="11_Bahan/assets/gallery-3.png" alt="" class="img-gallery">
+                                    </div>
+                                </div>
+                                <!-- Swiper Slide 4 -->
+                                <div class="swiper-slide aos" data-delay="400">
+                                    <div class="img-hero-container">
+                                        <img src="11_Bahan/assets/gallery-4.png" alt="" class="img-gallery">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex center mt">
+                                <div class="swiper-pagination"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="acara">
+        <div class="container">
+            <div class="row mb-1">
+                <div class="col-7 col-sm-12 aos" data-delay="200">
+                    <h1 class="title mb-0 mb-sm">Temukan <span class="highlight">Berbagai Festival</span> di Acara Lainnya</h1>
+                </div>
+                <div class="col-4 col-sm-12 aos" data-delay="300">
+                    <p class="text mb-0">
+                        Jelajahi lebih banyak artikel yang menginspirasi tentang budaya, seni, kuliner, dan gaya hidup. 
+                        Temukan wawasan baru dan cerita menarik hanya di sini!
+                    </p>
+                </div>
+            </div>
+            <div class="row mb aos" data-delay="300">
+                <div class="col-12">
+                    <div class="w-full">
+                        <div class="swiper-container-2">
+                            <div class="swiper-wrapper">
+                                <!-- Swiper Slide 1 -->
+                                <div class="swiper-slide aos" data-delay="200">
+                                    <a href="festival-batik.html" class="card card-flex card-sm-block">
+                                        <div class="img-card-container">
+                                            <img src="11_Bahan/assets/blog-1.png" alt="" class="card-img-event">
+                                        </div>
+                                        <div class="card-body">
+                                            <h1 class="card-title mb-2">Festival Batik Indonesia 2025</h1>
+                                            <p class="card-text text-clip mb">Rangkaian pameran batik, fashion show, dan workshop membatik langsung dari pengrajin terbaik.</p>
+                                            <ul class="event-details mb">
+                                                <li class="card-text mb-2"><i class="b-primary fa fa-calendar"></i> 5 Oktober 2025</li>
+                                                <li class="card-text mb-2"><i class="b-primary fa fa-map-marker"></i> Solo, Indonesia</li>
+                                                <li class="card-text mb-2"><i class="b-primary fa fa-ticket"></i> Gratis</li>
+                                                <li class="card-text mb-2"><i class="b-primary fa fa-users"></i> Maks. 1000 peserta</li>
+                                            </ul>
+                                            <p class="card-title-nd mb-0">Selengkapnya
+                                                <i class="fa fa-arrow-right"></i>
+                                            </p>
+                                        </div>
+                                    </a>
+                                </div>
+                                
+                                <!-- Swiper Slide 2 -->
+                                <div class="swiper-slide aos" data-delay="300">
+                                    <a href="festival-batik.html" class="card card-flex card-sm-block">
+                                        <div class="img-card-container">
+                                            <img src="11_Bahan/assets/blog-2.png" alt="" class="card-img-event">
+                                        </div>
+                                        <div class="card-body">
+                                            <h1 class="card-title mb-2">Festival Gamelan Nusantara</h1>
+                                            <p class="card-text text-clip mb">Saksikan pertunjukan gamelan dari berbagai daerah, dengan kompetisi antar grup terbaik di Indonesia.</p>
+                                            <ul class="event-details mb">
+                                                <li class="card-text mb-2"><i class="b-primary fa fa-calendar"></i> 12 November 2025</li>
+                                                <li class="card-text mb-2"><i class="b-primary fa fa-map-marker"></i> Bandung, Indonesia</li>
+                                                <li class="card-text mb-2"><i class="b-primary fa fa-ticket"></i> Rp 50.000</li>
+                                                <li class="card-text mb-2"><i class="b-primary fa fa-users"></i> Maks. 750 peserta</li>
+                                            </ul>
+                                            <p class="card-title-nd mb-0">Selengkapnya
+                                                <i class="fa fa-arrow-right"></i>
+                                            </p>
+                                        </div>
+                                    </a>
+                                </div>
+                            
+                                <!-- Swiper Slide 3 -->
+                                <div class="swiper-slide aos" data-delay="400">
+                                    <a href="festival-batik.html" class="card card-flex card-sm-block">
+                                        <div class="img-card-container">
+                                            <img src="11_Bahan/assets/blog-3.png" alt="" class="card-img-event">
+                                        </div>
+                                        <div class="card-body">
+                                            <h1 class="card-title mb-2">Festival Rasa Nusantara</h1>
+                                            <p class="card-text text-clip mb">Nikmati kelezatan kuliner khas Indonesia dengan demo masak dari chef ternama.</p>
+                                            <ul class="event-details mb">
+                                                <li class="card-text mb-2"><i class="b-primary fa fa-calendar"></i> 25 Agustus 2025</li>
+                                                <li class="card-text mb-2"><i class="b-primary fa fa-map-marker"></i> Jakarta, Indonesia</li>
+                                                <li class="card-text mb-2"><i class="b-primary fa fa-ticket"></i> Rp 30.000</li>
+                                                <li class="card-text mb-2"><i class="b-primary fa fa-users"></i> Maks. 1500 peserta</li>
+                                            </ul>
+                                            <p class="card-title-nd mb-0">Selengkapnya
+                                                <i class="fa fa-arrow-right"></i>
+                                            </p>
+                                        </div>
+                                    </a>
+                                </div>
+                            
+                                <!-- Swiper Slide 4 -->
+                                <div class="swiper-slide aos" data-delay="500">
+                                    <a href="festival-batik.html" class="card card-flex card-sm-block">
+                                        <div class="img-card-container">
+                                            <img src="11_Bahan/assets/blog-4.png" alt="" class="card-img-event">
+                                        </div>
+                                        <div class="card-body">
+                                            <h1 class="card-title mb-2">Pentas Wayang Internasional</h1>
+                                            <p class="card-text text-clip mb">Menikmati seni wayang dari berbagai daerah dan negara dalam satu panggung.</p>
+                                            <ul class="grid grid-2 grid-sm-2 grid-md-2 between event-details mb">
+                                                <li class="text mb-2"><i class="b-primary fa fa-calendar"></i> 10 September 2025</li>
+                                                <li class="text mb-2"><i class="b-primary fa fa-map-marker"></i> Surakarta, Indonesia</li>
+                                                <li class="text mb-2"><i class="b-primary fa fa-ticket"></i> Gratis</li>
+                                                <li class="text mb-2"><i class="b-primary fa fa-users"></i> Maks. 500 peserta</li>
+                                            </ul>
+                                            <p class="card-title-nd mb-0">Selengkapnya
+                                                <i class="fa fa-arrow-right"></i>
+                                            </p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <div class="d-flex center mt">
+                                <div class="swiper-pagination"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row text-center">
+                <div class="col-12">
+                    <p id="no-results" class="text center mt-4 mb none">Artikel tidak ditemukan</p>
+
+                    <a href="artikel.html" class="text aos" data-delay="200">
+                        <button class="btn btn-a">Lebih Banyak Artikel</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="comment">
+        <div class="container">
+            <div class="row mb-1">
+                <div class="col-7 col-sm-12 aos" data-delay="200">
+                    <h1 class="title mb-0 mb-sm">Diskusi Budaya Pada <span class="highlight">Forum Komentar</span></h1>
+                </div>
+                <div class="col-4 col-sm-12 aos" data-delay="300">
+                    <p class="text mb-0">
+                        Bagikan pendapat dan pengalamanmu tentang artikel ini. Diskusi dan apresiasi budaya bersama komunitas Arsanta!
+                    </p>
+                </div>
+            </div>
+            <div class="row gap items-top">
+                <div class="col-3 col-md-6 col-sm-12">
+                    <div class="card">
+                        <div class="mb">
+                            <h1 class="card-title mb-3">Luh Santos</h1>
+                            <p class="card-text">Artikel ini sangat menarik! Saya jadi lebih memahami sejarah Tari Bali.</p>
+                        </div>
+                        <div class="d-flex center between">
+                            <p class="card-text mb-0 like-btn" data-likes="3">
+                                <i class="fa-regular fa-heart c-primary"></i>
+                                <span class="like-count">3</span>
+                            </p>
+                            <p class="card-text mb-0 reply-btn">Balasan</p>
+                        </div>
+                        <div class="reply">
+                            <div class="h-line mb-2"></div>
+                            <p class="card-text center mb-2">Tidak ada balasan</p>
+                            <div class="d-flex center align-center">
+                                <input type="text" placeholder="Beri Komentar" class="form-input comment">
+                                <i class="card-text fa fa-chevron-right c-primary"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3 col-md-6 col-sm-12">
+                    <div class="card">
+                        <div class="mb">
+                            <h1 class="card-title mb-3">Nyoman Carmen</h1>
+                            <p class="card-text">Terima kasih atas informasinya! Tari Bali memang luar biasa.</p>
+                        </div>
+                        <div class="d-flex center between">
+                            <p class="card-text mb-0 like-btn" data-likes="5">
+                                <i class="fa-regular fa-heart c-primary"></i>
+                                <span class="like-count">5</span>
+                            </p>
+                            <p class="card-text mb-0 reply-btn">Balasan</p>
+                        </div>
+                        <div class="reply">
+                            <div class="h-line"></div>
+                            <div class="mb">
+                                <h1 class="card-title mb-3">A. Gus</h1>
+                                <p class="card-text">Saya setuju! Tari Bali memang penuh makna.</p>
+                            </div>
+                            <div class="d-flex center between">
+                                <p class="card-text mb-0 like-btn" data-likes="2">
+                                    <i class="fa-regular fa-heart c-primary"></i>
+                                    <span class="like-count">2</span>
+                                </p>
+                            </div>
+                            <div class="h-line mb-2"></div>
+                            <div class="d-flex center align-center">
+                                <input type="text" placeholder="Beri Komentar" class="form-input comment">
+                                <i class="card-text fa fa-chevron-right c-primary"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3 col-md-6 col-sm-12">
+                    <div class="card">
+                        <div class="mb">
+                            <h1 class="card-title mb-3">Budi Santoso</h1>
+                            <p class="card-text">Artikel ini memberikan wawasan baru tentang sejarah Bali yang sangat berguna.</p>
+                        </div>
+                        <div class="d-flex center between">
+                            <p class="card-text mb-0 like-btn" data-likes="1">
+                                <i class="fa-regular fa-heart c-primary"></i>
+                                <span class="like-count">1</span>
+                            </p>
+                            <p class="card-text mb-0 reply-btn">Balasan</p>
+                        </div>
+                        <div class="reply">
+                            <div class="h-line mb-2"></div>
+                            <p class="card-text center mb-2">Tidak ada balasan</p>
+                            <div class="d-flex center align-center">
+                                <input type="text" placeholder="Beri Komentar" class="form-input comment">
+                                <i class="card-text fa fa-chevron-right c-primary"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-3 col-md-6 col-sm-12">
+                    <div class="card">
+                        <div class="mb">
+                            <h1 class="card-title mb-3">Dewi Putri</h1>
+                            <p class="card-text">Saya suka artikel ini, sangat informatif dan memberikan perspektif baru tentang Bali.</p>
+                        </div>
+                        <div class="d-flex center between">
+                            <p class="card-text mb-0 like-btn" data-likes="4">
+                                <i class="fa-regular fa-heart c-primary"></i>
+                                <span class="like-count">4</span>
+                            </p>
+                            <p class="card-text mb-0 reply-btn">Balasan</p>
+                        </div>
+                        <div class="reply">
+                            <div class="h-line mb-2"></div>
+                            <p class="card-text center mb-2">Tidak ada balasan</p>
+                            <div class="d-flex center align-center">
+                                <input type="text" placeholder="Beri Komentar" class="form-input comment">
+                                <i class="card-text fa fa-chevron-right c-primary"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>                
+            </div>
+        </div>
+    </section>
+
+
+    <section class="message">
+        <div class="container">
+            <div class="row gap-large gap-md gap-sm-n items-top">
+                <div class="col-6 col-sm-12">
+                    <div class="hero-left aos" data-delay="200">
+                        <h1 class="title">
+                            <span class="highlight">Tuangkan Pendapat</span>
+                            Dalam Forum Diskusi
+                        </h1>
+                        <p class="text">
+                            Sampaikan pendapat, berbagi wawasan, dan berdiskusi bersama komunitas untuk menjaga dan mengembangkan warisan budaya Nusantara di era modern.                        </p>                        
+                    </div>
+                </div>
+                <div class="col-5 col-sm-12">
+                    <div class="">
+                        <div class="aos" data-delay="200">
+                            <input class="form-input mb" type="text" placeholder="Nama">
+                            <input class="form-input mb" type="text" placeholder="Email">
+                            <textarea class="form-input mb">Pesan</textarea>
+                            <button class="btn btn-a">
+                                Kirim Pesan
+                            </button>
+                        </div>
+                    </div>                    
+                </div>                
+            </div>
+        </div>
+    </section>
+    <section class="banner">
+        <div class="container">
+            <div class="container-b">
+                <div class="row center text-center">
+                    <div class="col-12">
+                        <div class="align-center">
+                            <h1 class="title white mb-1 mb-sm-2 aos" data-delay="200">
+                                Saatnya <span class="white">Mengenal & Melestarikan</span> Budaya Nusantara!
+                            </h1>
+                            <p class="text center white mb-sm-2 aos" data-delay="200">
+                                Bergabunglah dengan Arsanta dan jadilah bagian dari gerakan yang melestarikan budaya Indonesia.  
+                                Bersama, kita dapat menjaga warisan leluhur, mengenalkan tradisi kepada generasi baru.
+                                Mari berkontribusi dan tunjukkan kecintaan kita pada budaya bangsa!
+                            </p>                            
+                            <div class="d-flex gap d-sm-block center aos" data-delay="300">
+                                <a href="index.html#">
+                                    <button class="btn btn-b mb-sm-2">Gabung Sekarang</button>
+                                </a>
+                                <a href="index.html#about">
+                                    <button class="btn btn-c">Pelajari Lebih Lanjut</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container-footer"></div>
+        <div class="container">
+            <div class="row">
+                <!-- Logo and Description -->
+                <div class="col-4 col-sm-12">
+                    <div class="mb aos" data-delay="200">
+                        <a href="index.html" class="logo white">
+                            <img class="logo" src="11_Bahan/assets/logo-2.png" id="about-image-dark" alt="arsanta">
+                            <img class="logo" src="11_Bahan/assets/logo-3.png" id="about-image-light" alt="arsanta">
+                            Arsanta.
+                        </a>
+                    </div>
+                    <p class="text white aos" data-delay="200">
+                        Arsanta hadir untuk membawamu lebih dekat dengan kekayaan budaya Indonesia. Jelajahi artikel, tonton dokumenter, dan ikuti event budaya bersama kami!
+                    </p>
+                    <div class="mb"></div>
+                    <div class="d-flex gap mb-sm-2 aos" data-delay="50">
+                        <a href="https://wa.me/62881037418040?text=Halo%20Arsanta!%20Saya%20tertarik%20dengan%20konten%20budaya%20Anda.%20Bisakah%20kita%20diskusikan%20lebih%20lanjut?">
+                            <div class="icon align-center">
+                                <i class="fa-brands fa-whatsapp"></i>
+                            </div>
+                        </a>
+                        <a href="https://www.instagram.com/gedesi9n">
+                            <div class="icon align-center">
+                                <i class="fa-brands fa-instagram"></i>
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="icon align-center">
+                                <i class="fa-brands fa-facebook"></i>
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="icon align-center">
+                                <i class="fa-brands fa-tiktok"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+    
+                <!-- Navigasi Cepat, Layanan, dan Keunggulan -->
+                <div class="col-6 col-md-6 col-sm-12">
+                    <div class="grid grid-3 grid-sm-2 mb">
+                        <div class="f-box aos" data-delay="200">
+                            <h1 class="title small white">Navigasi Cepat</h1>
+                            <p class="text white">Beranda</p>
+                            <p class="text white">Artikel Budaya</p>
+                            <p class="text white">Komunitas</p>
+                            <p class="text white">Acara & Lokakarya</p>
+                        </div>
+                        <div class="f-box aos" data-delay="250">
+                            <h1 class="title small white">Layanan Kami</h1>
+                            <p class="text white">Artikel Budaya</p>
+                            <p class="text white">Video Dokumenter</p>
+                            <p class="text white">Komunitas Budaya</p>
+                            <p class="text white">Acara & Lokakarya</p>
+                        </div>
+                        <div class="f-box aos" data-delay="300">
+                            <h1 class="title small white">Mengapa Arsanta?</h1>
+                            <p class="text white">Konten Budaya Berkualitas</p>
+                            <p class="text white">Akses Gratis & Mudah</p>
+                            <p class="text white">Komunitas yang Aktif</p>
+                            <p class="text white">Acara Budaya Interaktif</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Garis Horizontal dan Hak Cipta -->
+            <div class="h-line white"></div>
+            <div class="footer text-center">
+                <p class="text white">&copy; 2024 Arsanta. Seluruh hak cipta dilindungi.</p>
+            </div>
+        </div>
+    </footer>  
+    <!-- External Scripts -->
+    <script src="11_Bahan/Swiperjs v5.3.7/swiper.min.js"></script>
+    <script src="11_Website/js/script.js"></script>
+    <script>
+    </script>
+</body>
+</html>
