@@ -92,9 +92,9 @@
                             <div class="h-line"></div>
                         </div>
                         <ul class="side-links">
-                            <li class="mb-1 mb-sm-3"><a href="profile.html"><i class="c-primary fa fa-user"></i> Profile</a></li>
-                            <li class="mb-1 mb-sm-3"><a href="riwayat-komunitas.html"><i class="fa fa-book"></i> Riwayat Komunitas</a></li>
-                            <li class="mb-4 mb-sm-3"><a class="active" href="riwayat-event.html"><i class="fa fa-calendar"></i> Riwayat Acara</a></li>
+                            <li class="mb-1 mb-sm-3"><a href="profile.html"><i class="fa fa-user"></i> Profile</a></li>
+                            <li class="mb-1 mb-sm-3"><a class="active" href="riwayat-event.html"><i class="fa fa-calendar"></i> Riwayat Acara</a></li>
+                            <li class="mb-4 mb-sm-3"><a href="riwayat-komunitas.html"><i class="fa fa-book"></i> Riwayat Komunitas</a></li>
                         </ul>
                         <button type="submit" class="btn btn-b btn-w logout">
                             <i class='fa fa-door-open'></i> 
@@ -114,9 +114,9 @@
                         <!-- Sidebar -->
                         <div class="sidebar d-none d-sm-block d-md-none" id="mobile-sidebar">
                             <ul class="side-links">
-                                <li class="mb-1 mb-sm-3"><a href="profile.html"><i class="c-primary fa fa-user"></i> Profile</a></li>
-                                <li class="mb-1 mb-sm-3"><a href="riwayat-komunitas.html"><i class="fa fa-book"></i> Riwayat Komunitas</a></li>
-                                <li class="mb-4 mb-sm-3"><a class="active" href="riwayat-event.html"><i class="fa fa-calendar"></i> Riwayat Acara</a></li>
+                                <li class="mb-1 mb-sm-3"><a href="profile.html"><i class="fa fa-user"></i> Profile</a></li>
+                                <li class="mb-1 mb-sm-3"><a class="active" href="riwayat-event.html"><i class="fa fa-calendar"></i> Riwayat Acara</a></li>
+                                <li class="mb-4 mb-sm-3"><a href="riwayat-komunitas.html"><i class="fa fa-book"></i> Riwayat Komunitas</a></li>
                             </ul>
                             <button  type="submit" class="btn btn-b btn-w logout">
                                 <i class='fa fa-door-open'></i> 
@@ -128,33 +128,51 @@
                 </div>
                 <div class="v-line d-block d-sm-none d-md-block"></div>
                 <div class="col-8 col-sm-12 col-md-8" id="">
-                    <div class="">
-                        <form method="post">
-                            <div class="box-wrap box-img-course d-flex">
-                                <div class="d-flex center w-full">
-                                    <div class="box-upload-image-custom">
-                                        <img class="upload-image-custom" id="profile-image" src="11_Bahan/assets/profile.png" alt="Profile Image">
-                                        <input type="file" id="image-upload" accept="image/*">
-                                        <i class='fa fa-pencil upload-icon'></i>
-                                    </div>                                                            
-                                </div>
+                    <div class="mb-1">
+                        <h1 class="title-custom">Acara yang Diikuti</h1>
+                    </div>
+                    <div class="h-line"></div>
+                    <div class="row mb aos" data-delay="300">
+                        <div class="col-12">
+                            <div class="grid grid-2 grid-sm-1 w-full">
+                                <a href="festival-batik.html" class="card card-flex card-sm-block">
+                                    <div class="img-card-container">
+                                        <img src="11_Bahan/assets/blog-1.png" alt="" class="card-img-event">
+                                    </div>
+                                    <div class="card-body">
+                                        <h1 class="card-title mb-2">Festival Batik Indonesia 2025</h1>
+                                        <p class="card-text text-clip mb">Rangkaian pameran batik, fashion show, dan workshop membatik langsung dari pengrajin terbaik.</p>
+                                        <ul class="event-details mb">
+                                            <li class="card-text mb-2"><i class="b-primary fa fa-calendar"></i> 5 Oktober 2025</li>
+                                            <li class="card-text mb-2"><i class="b-primary fa fa-map-marker"></i> Solo, Indonesia</li>
+                                            <li class="card-text mb-2"><i class="b-primary fa fa-ticket"></i> Gratis</li>
+                                            <li class="card-text mb-2"><i class="b-primary fa fa-users"></i> Maks. 1000 peserta</li>
+                                        </ul>
+                                        <p class="card-title-nd mb-0">Selengkapnya
+                                            <i class="fa fa-arrow-right"></i>
+                                        </p>
+                                    </div>
+                                </a>
+                                <a href="festival-batik.html" class="card card-flex card-sm-block">
+                                    <div class="img-card-container">
+                                        <img src="11_Bahan/assets/blog-2.png" alt="" class="card-img-event">
+                                    </div>
+                                    <div class="card-body">
+                                        <h1 class="card-title mb-2">Festival Gamelan Nusantara</h1>
+                                        <p class="card-text text-clip mb">Saksikan pertunjukan gamelan dari berbagai daerah, dengan kompetisi antar grup terbaik di Indonesia.</p>
+                                        <ul class="event-details mb">
+                                            <li class="card-text mb-2"><i class="b-primary fa fa-calendar"></i> 12 November 2025</li>
+                                            <li class="card-text mb-2"><i class="b-primary fa fa-map-marker"></i> Bandung, Indonesia</li>
+                                            <li class="card-text mb-2"><i class="b-primary fa fa-ticket"></i> Rp 50.000</li>
+                                            <li class="card-text mb-2"><i class="b-primary fa fa-users"></i> Maks. 750 peserta</li>
+                                        </ul>
+                                        <p class="card-title-nd mb-0">Selengkapnya
+                                            <i class="fa fa-arrow-right"></i>
+                                        </p>
+                                    </div>
+                                </a>
                             </div>
-                            <div class="form-group mb">
-                                <label for="name">Name</label>
-                                <input type="text" class="form-input" id="name" name="name" placeholder="Nama..." value="Budi Santoso">
-                            </div>
-                            <div class="form-group mb">
-                                <label for="email">Email</label>
-                                <input type="email" class="form-input" id="email" name="email" placeholder="Email..." value="budi@gmail.com">
-                            </div>
-                            <div class="form-group mb">
-                                <label for="password">Password</label>
-                                <input type="password" class="form-input" id="password" name="password" placeholder="...." value="Budi Santoso">
-                            </div>
-                            <div class="form-group">
-                                <button type="submit" class="btn btn-a btn-w">Update Profile</button>
-                            </div>
-                        </form>
+                        </div>
                     </div>
                 </div>
             </div>

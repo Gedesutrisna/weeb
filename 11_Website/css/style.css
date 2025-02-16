@@ -16,7 +16,7 @@
     /* Font Sizes */
     --font-size-p-small: 14px;
     --font-size-p-medium: 15px;
-    --font-size-p-large: 17px;
+    --font-size-p-large: 16.5px;
     --font-size-h1: 68px;
     --font-size-h2: 52px;
     --font-size-h2-custom: 49px;
@@ -401,7 +401,6 @@ img.logo {
 nav.scroll .hamburger .bar {
     background-color: var(--primary-color);
 }
-
 /* sidebar */
 .sidebar-container {
     position: relative;
@@ -409,6 +408,8 @@ nav.scroll .hamburger .bar {
 }
 
 .sidebar {
+    position: fixed;
+    width: 22%;
     background-color: transparent;
     height: auto;
     max-height: 500px;
