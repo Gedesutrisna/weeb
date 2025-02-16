@@ -151,10 +151,12 @@ p.text.white {
 }
 
 
+body.dark-mode .highlight {
+    -webkit-text-stroke: 0px var(--primary-color);
+}
 .highlight {
     color: var(--primary-color);
     -webkit-text-stroke: .5px black;
-    
 }
 .highlight-arsanta {
     position: relative;
