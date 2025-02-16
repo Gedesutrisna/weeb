@@ -188,28 +188,37 @@ document.addEventListener("DOMContentLoaded", function () {
     const loginButton = document.getElementById("loginButton");
     const logoutButtons = document.querySelectorAll(".logout");
 
-    // Fungsi untuk menampilkan alert setelah redirect
     function showAlertOnLoad() {
         const alertMessage = localStorage.getItem("alertMessage");
+        const alertType = localStorage.getItem("alertType") || "success";
         if (alertMessage) {
-            showAlert(alertMessage, localStorage.getItem("alertType") || "success");
-            localStorage.removeItem("alertMessage"); // Hapus setelah ditampilkan
+            showAlert(alertMessage, alertType);
+            localStorage.removeItem("alertMessage");
             localStorage.removeItem("alertType");
         }
     }
 
-    // Fungsi untuk menampilkan alert
     function showAlert(message, type = "success") {
-        const alertBox = document.getElementById("custom-alert");
-        if (!alertBox) return;
-
-        alertBox.textContent = message;
-        alertBox.classList.remove("hidden", "error");
-
-        if (type === "error") {
-            alertBox.classList.add("error");
+        let alertBox = document.getElementById("custom-alert");
+        if (!alertBox) {
+            alertBox = document.createElement("div");
+            alertBox.id = "custom-alert";
+            document.body.appendChild(alertBox);
         }
 
+        alertBox.innerHTML = `
+            <span>${message}</span>
+            <button class="close-btn">&times;</button>
+        `;
+        alertBox.className = `alert ${type}`;
+        alertBox.classList.remove("hidden");
+
+        // Tutup saat tombol close diklik
+        alertBox.querySelector(".close-btn").addEventListener("click", () => {
+            alertBox.classList.add("hidden");
+        });
+
+        // Hilang otomatis setelah 2.4 detik
         setTimeout(() => {
             alertBox.classList.add("hidden");
         }, 2400);
@@ -224,12 +233,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
             if (emailInput.value.trim() !== "" && passwordInput.value.trim() !== "") {
                 localStorage.setItem("isLogin", "true");
-
-                // Simpan pesan alert ke localStorage sebelum redirect
                 localStorage.setItem("alertMessage", "Login Berhasil!");
                 localStorage.setItem("alertType", "success");
-
-                window.location.href = "index.html"; // Redirect
+                window.location.href = "index.html";
             } else {
                 showAlert("Harap masukkan email dan password!", "error");
             }
@@ -240,29 +246,26 @@ document.addEventListener("DOMContentLoaded", function () {
         logoutButtons.forEach((btn) => {
             btn.addEventListener("click", function () {
                 localStorage.setItem("isLogin", "false");
-
-                // Simpan pesan alert ke localStorage sebelum redirect
                 localStorage.setItem("alertMessage", "Logout Berhasil!");
                 localStorage.setItem("alertType", "success");
-
-                window.location.href = "index.html"; // Redirect
+                window.location.href = "index.html";
             });
         });
     }
 
-    showAlertOnLoad(); // Tampilkan alert setelah halaman dimuat jika ada pesan di localStorage
-        // Ubah href untuk elemen dengan id "user"
-        const userLinks = document.querySelectorAll("#user");
+    showAlertOnLoad();
 
-        if (userLinks.length > 0) {
-            let isLogin = localStorage.getItem("isLogin") === "true";
-            userLinks.forEach(userLink => {
-                userLink.setAttribute("href", isLogin ? "profile.html" : "login.html");
-            });
-        }
+    const userLinks = document.querySelectorAll("#user");
+    if (userLinks.length > 0) {
+        let isLogin = localStorage.getItem("isLogin") === "true";
+        userLinks.forEach(userLink => {
+            userLink.setAttribute("href", isLogin ? "profile.html" : "login.html");
+        });
+    }
 });
 
-// **Perbaikan dalam Upload Image**
+
+// Perbaikan dalam Upload Image
 const uploadBox = document.querySelector('.box-upload-image-custom');
 const imageUpload = document.getElementById('image-upload');
 const profileImage = document.getElementById('profile-image');

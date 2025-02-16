@@ -920,28 +920,77 @@ footer .container {
     text-overflow: ellipsis;
 }
 
-/* Gaya untuk alert */
+/* Gaya dasar alert */
 .alert {
     position: fixed;
     top: 20px;
     right: 20px;
-    background-color: #4CAF50; /* Warna hijau untuk sukses */
-    color: white;
     padding: var(--btn-padding);
     border-radius: var(--border-radius-small);
-    z-index: 1000;
-    font-size: 16px;
-    opacity: 1;
+    font-size: var(--font-size-p-small);
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid;
     transition: opacity 0.5s ease-in-out;
+    z-index: 9999;
+}
+
+/* Warna dan ikon untuk tiap jenis alert */
+.alert.info {
+    background-color: #d9edf7;
+    color: #31708f;
+    border-color: #31708f;
+}
+
+.alert.info::before {
+    content: "ℹ️";
+}
+
+.alert.warning {
+    background-color: #fcf8e3;
+    color: #8a6d3b;
+    border-color: #8a6d3b;
+}
+
+.alert.warning::before {
+    content: "⚠️";
+}
+
+.alert.error {
+    background-color: #f2dededb;
+    color: #a94442;
+    border-color: #a9444276;
+}
+
+.alert.error::before {
+    content: "🚫";
+}
+
+.alert.success {
+    background-color: #dff0d8;
+    color: #3c763d;
+    border-color: #3c763d76;
+}
+
+.alert.success::before {
+    content: "✅";
+}
+
+/* Tombol close */
+.alert .close-btn {
+    background: none;
+    border: none;
+    font-size: var(--font-size-p-large);
+    font-weight: 700;
+    cursor: pointer;
+    color: inherit;
 }
 
 .alert.hidden {
     opacity: 0;
     pointer-events: none;
-}
-
-.alert.error {
-    background-color: #f44336; /* Merah untuk error */
 }
 
 
