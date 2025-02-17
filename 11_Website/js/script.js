@@ -92,7 +92,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const body = document.body;
     const toggleButtons = document.querySelectorAll(".toggle-dark-mode");
 
-    if (toggleButtons.length > 0) {
+    // if (toggleButtons.length > 0) {
         const updateIcon = isDark => toggleButtons.forEach(btn => {
             btn.querySelector("i").classList.toggle("fa-moon", !isDark);
             btn.querySelector("i").classList.toggle("fa-sun", isDark);
@@ -110,7 +110,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 updateIcon(isDark);
             });
         });
-    }
+    // }
 });
 
 // AOS animation trigger
