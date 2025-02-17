@@ -328,3 +328,18 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 });
+
+
+function loadVideo(container, videoId) {
+    var iframe = document.createElement("iframe");
+    // iframe.width = "530";
+    // iframe.height = "305";
+    iframe.src = "https://www.youtube.com/embed/" + videoId + "?autoplay=1";
+    iframe.frameBorder = "0";
+    iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
+    iframe.allowFullscreen = true;
+
+    // Hapus konten sebelumnya (thumbnail + tombol play) dan tambahkan iframe
+    container.innerHTML = "";
+    container.appendChild(iframe);
+}
