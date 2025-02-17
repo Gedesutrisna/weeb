@@ -131,33 +131,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 
-// Search functionality
-document.addEventListener("DOMContentLoaded", () => {
-    const searchInput = document.querySelector(".form-input.search");
-    const searchButton = document.querySelector(".btn-a.search");
-    const cards = document.querySelectorAll(".card");
-    const noResults = document.getElementById("no-results");
-
-    if (searchInput && searchButton && cards.length > 0 && noResults) {
-        const filterArticles = () => {
-            const query = searchInput.value.toLowerCase().trim();
-            let hasResults = false;
-
-            cards.forEach(card => {
-                const matches = [".card-title", ".card-text"].some(sel => card.querySelector(sel).textContent.toLowerCase().includes(query));
-                card.style.display = matches ? "block" : "none";
-                if (matches) hasResults = true;
-            });
-
-            noResults.classList.toggle("block", !hasResults);
-        };
-
-        searchButton.addEventListener("click", filterArticles);
-        searchInput.addEventListener("keyup", event => {
-            if (event.key === "Enter") filterArticles();
-        });
-    }
-});
 
 // Comments & Like
 document.addEventListener("DOMContentLoaded", function () {
@@ -223,12 +196,12 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         alertBox.innerHTML = `
-            <span>${message}</span>
+        <span>${message}</span>
             <button class="close-btn">&times;</button>
-        `;
+            `;
         alertBox.className = `alert ${type}`;
         alertBox.classList.remove("hidden");
-
+        
         // Tutup saat tombol close diklik
         alertBox.querySelector(".close-btn").addEventListener("click", () => {
             alertBox.classList.add("hidden");
@@ -239,14 +212,14 @@ document.addEventListener("DOMContentLoaded", function () {
             alertBox.classList.add("hidden");
         }, 2400);
     }
-
+    
     if (loginButton) {
         loginButton.addEventListener("click", function (event) {
             event.preventDefault();
 
             const emailInput = document.querySelector("input[type='email']");
             const passwordInput = document.querySelector("input[type='password']");
-
+            
             if (emailInput.value.trim() !== "" && passwordInput.value.trim() !== "") {
                 localStorage.setItem("isLogin", "true");
                 localStorage.setItem("alertMessage", "Login Berhasil!");
@@ -319,7 +292,7 @@ document.addEventListener("DOMContentLoaded", function () {
             hamburgerSidebar.classList.toggle("active");
             sidebarOverlay.style.display = mobileSidebar.classList.contains("active") ? "block" : "none"; // Toggle overlay
         });
-
+        
         // Close sidebar when clicking outside (on the overlay)
         sidebarOverlay.addEventListener("click", function () {
             mobileSidebar.classList.remove("active");
@@ -338,8 +311,54 @@ function loadVideo(container, videoId) {
     iframe.frameBorder = "0";
     iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
     iframe.allowFullscreen = true;
-
+    
     // Hapus konten sebelumnya (thumbnail + tombol play) dan tambahkan iframe
     container.innerHTML = "";
     container.appendChild(iframe);
 }
+
+//search load-more
+document.addEventListener("DOMContentLoaded", () => {
+    const searchInput = document.querySelector(".form-input.search");
+    const searchButton = document.querySelector(".btn-a.search");
+    const cards = document.querySelectorAll(".card");
+    const noResults = document.getElementById("no-results");
+    const loadMoreButton = document.getElementById("load-more");
+
+    const filterArticles = () => {
+        const query = searchInput.value.toLowerCase().trim();
+        let hasResults = false;
+
+        cards.forEach(card => {
+            const matches = [".card-title", ".card-text"].some(sel => 
+                card.querySelector(sel).textContent.toLowerCase().includes(query)
+            );
+
+            if (matches) {
+                card.style.display = "block";
+                card.classList.remove("hidden-article"); // Hapus class hidden jika cocok
+                hasResults = true;
+            } else {
+                card.style.display = "none";
+            }
+        });
+
+        noResults.style.display = hasResults ? "none" : "block";
+
+        // Sembunyikan tombol "Lebih Banyak Artikel" jika ada hasil pencarian
+        loadMoreButton.style.display = hasResults ? "none" : "none";
+    };
+
+    searchButton.addEventListener("click", filterArticles);
+    searchInput.addEventListener("keyup", event => {
+        if (event.key === "Enter") filterArticles();
+    });
+
+    loadMoreButton.addEventListener("click", () => {
+        document.querySelectorAll(".hidden-article").forEach(article => {
+            article.classList.remove("hidden-article");
+            article.style.display = "block"; // Pastikan artikel muncul
+        });
+        loadMoreButton.style.display = "none";
+    });
+});

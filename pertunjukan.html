@@ -39,8 +39,16 @@
             <ul class="nav-links" id="nav-links">
                 <li class="aos" data-delay="200"><a href="index.html">Beranda</a></li>
                 <li class="aos" data-delay="250"><a href="index.html#about">Tentang</a></li>
-                <li class="aos" data-delay="290"><a href="event.html" class="active">Acara</a></li>
-                <li class="aos" data-delay="300"><a href="artikel.html">Artikel</a></li>
+                <li class="aos d-none d-sm-block d-md-block" data-delay="250"><a href="komunitas.html">Komunitas</a></li>
+                <li class="aos d-none d-sm-block d-md-block" data-delay="250"><a href="event.html">Acara</a></li>
+                <li class="dropdown aos d-sm-none d-md-none" data-delay="290">
+                    <a href="#" class="dropbtn">Program <i class="fa fa-caret-down"></i></a>
+                    <ul class="dropdown-content">
+                        <li><a href="komunitas.html">Komunitas</a></li>
+                        <li><a href="event.html">Acara</a></li>
+                    </ul>
+                </li>
+                <li class="aos" data-delay="300"><a href="artikel.html" class="active">Artikel</a></li>
                 <li class="d-flex center show gap aos" data-delay="200" id="btn">
                     <a href="index.html#service">
                         <button class="btn btn-b show">Jelajahi Warisan Budaya</button>
@@ -100,15 +108,15 @@
                         </div>
                         <div class="d-flex gap-large padding-custom center w-full">
                             <div class="text-center aos" data-delay="200">
-                                <h1 class="title-custom mb-0 counter" data-target="75">0</h1>
+                                <h1 class="title-custom mb-0 counter" data-target="13">0</h1>
                                 <p class="text center">Artikel Budaya</p>
                             </div>
                             <div class="text-center aos" data-delay="250">
-                                <h1 class="title-custom mb-0 counter" data-target="09">0</h1>
+                                <h1 class="title-custom mb-0 counter" data-target="3">0</h1>
                                 <p class="text center">Daerah</p>
                             </div>
                             <div class="text-center aos" data-delay="200">
-                                <h1 class="title-custom mb-0 counter" data-target="12">0</h1>
+                                <h1 class="title-custom mb-0 counter" data-target="6">0</h1>
                                 <p class="text center">Jenis Pertunjukan</p>
                             </div>
                         </div>                        
@@ -123,20 +131,8 @@
             <div class="row mb aos" data-delay="300">
                 <div class="col-12">
                     <div class="grid grid-4 grid-md-2 grid-sm-1 w-full">
+                        
                         <!-- Blog Card 1 -->
-                        <a href="batik.html" class="card">
-                            <div class="img-card-container mb">
-                                <img src="11_Bahan/assets/blog-1.png" alt="" class="card-img-blog">
-                            </div>
-                            <div class="d-flex between align-center mb">
-                                <p class="card-text mb-0">5 Februari 2023</p>
-                            </div>
-                            <div class="card-body">
-                                <h1 class="card-title mb-2">Mengenal Batik: Warisan Budaya yang Mendunia</h1>
-                                <p class="card-text text-clip">Batik bukan sekadar kain, tetapi juga cerita yang diwariskan turun-temurun</p>
-                            </div>
-                        </a>
-                        <!-- Blog Card 2 -->
                         <a href="tari-bali.html" class="card">
                             <div class="img-card-container mb">
                                 <img src="11_Bahan/assets/blog-2.png" alt="" class="card-img-blog">
@@ -149,89 +145,44 @@
                                 <p class="card-text text-clip">Setiap gerakan dalam tari tradisional memiliki makna mendalam yang menarik</p>
                             </div>
                         </a>
-                        <!-- Blog Card 3 -->
+                        
                         <a href="tari-bali.html" class="card">
                             <div class="img-card-container mb">
-                                <img src="11_Bahan/assets/blog-3.png" alt="" class="card-img-blog">
-                            </div>
-                            <div class="d-flex between align-center mb">
-                                <p class="card-text mb-0">15 Februari 2023</p>
-                            </div>
-                            <div class="card-body">
-                                <h1 class="card-title mb-2">Kuliner Nusantara: Rasa yang Menyatukan Budaya</h1>
-                                <p class="card-text text-clip">Makanan tidak hanya mengenyangkan, tapi juga menjadi identitas budaya kita</p>
-                            </div>
-                        </a>
-                        <!-- Blog Card 4 -->
-                        <a href="tari-bali.html" class="card">
-                            <div class="img-card-container mb">
-                                <img src="11_Bahan/assets/blog-4.png" alt="" class="card-img-blog">
+                                <img src="11_Bahan/assets/blog-10.png" alt="" class="card-img-blog">
                             </div>
                             <div class="d-flex between align-center mb">
                                 <p class="card-text mb-0">20 Februari 2023</p>
                             </div>
                             <div class="card-body">
-                                <h1 class="card-title mb-2">Upacara Adat yang Masih Dilestarikan Hingga Kini</h1>
-                                <p class="card-text text-clip">Tradisi adat di berbagai daerah tetap hidup dan memiliki peran penting</p>
+                                <h1 class="card-title mb-2">Reog Ponorogo: Simbol Keberanian dan Keagungan</h1>
+                                <p class="card-text text-clip">Dengan topeng besar dan tarian dinamis, Reog Ponorogo menjadi ikon seni pertunjukan yang penuh energi.</p>
                             </div>
                         </a>
-                        <!-- Blog Card 5: Seni Pertunjukan -->
+                        
                         <a href="tari-bali.html" class="card">
                             <div class="img-card-container mb">
-                                <img src="11_Bahan/assets/blog-5.png" alt="" class="card-img-blog">
+                                <img src="11_Bahan/assets/blog-11.png" alt="" class="card-img-blog">
                             </div>
                             <div class="d-flex between align-center mb">
-                                <p class="card-text mb-0">25 Februari 2023</p>
+                                <p class="card-text mb-0">19 Februari 2023</p>
                             </div>
                             <div class="card-body">
-                                <h1 class="card-title mb-2">Musik Tradisional: Harmoni yang Menyentuh Jiwa</h1>
-                                <p class="card-text text-clip">Setiap nada dalam musik tradisional mengandung cerita dan filosofi yang dalam</p>
+                                <h1 class="card-title mb-2">Opera Jawa: Perpaduan Teater dan Musik yang Memukau</h1>
+                                <p class="card-text text-clip">Opera Jawa menggabungkan tarian, drama, dan gamelan untuk menceritakan kisah-kisah klasik.</p>
                             </div>
                         </a>
-
-                        <!-- Blog Card 6: Seni Tulis -->
                         <a href="tari-bali.html" class="card">
                             <div class="img-card-container mb">
-                                <img src="11_Bahan/assets/blog-6.png" alt="" class="card-img-blog">
+                                <img src="11_Bahan/assets/blog-15.png" alt="" class="card-img-blog">
                             </div>
                             <div class="d-flex between align-center mb">
-                                <p class="card-text mb-0">1 Maret 2023</p>
+                                <p class="card-text mb-0">20 Maret 2024</p>
                             </div>
                             <div class="card-body">
-                                <h1 class="card-title mb-2">Aksara Nusantara: Warisan Tulisan Kuno</h1>
-                                <p class="card-text text-clip">Aksara Jawa, Lontara, dan aksara lainnya menjadi bukti kekayaan budaya Indonesia</p>
+                                <h1 class="card-title mb-2">Teater Komedi: Hiburan Rakyat yang Sarat Makna</h1>
+                                <p class="card-text text-clip">Dari Srimulat hingga Lenong, teater komedi menjadi cermin kehidupan sosial dengan humor khasnya.</p>
                             </div>
                         </a>
-
-                        <!-- Blog Card 7: Makanan -->
-                        <a href="tari-bali.html" class="card">
-                            <div class="img-card-container mb">
-                                <img src="11_Bahan/assets/blog-7.png" alt="Lukisan Indonesia" class="card-img-blog">
-                            </div>
-                            <div class="d-flex between align-center mb">
-                                <p class="card-text mb-0">5 Maret 2023</p>
-                            </div>
-                            <div class="card-body">
-                                <h1 class="card-title mb-2">Lukisan Klasik Indonesia yang Melegenda</h1>
-                                <p class="card-text text-clip">Dari Affandi hingga Raden Saleh, seni lukis Indonesia memiliki sejarah panjang dan keindahan yang luar biasa.</p>
-                            </div>
-                        </a>
-
-
-                        <!-- Blog Card 8: Cerita Dongeng -->
-                        <a href="tari-bali.html" class="card">
-                            <div class="img-card-container mb">
-                                <img src="11_Bahan/assets/blog-8.png" alt="" class="card-img-blog">
-                            </div>
-                            <div class="d-flex between align-center mb">
-                                <p class="card-text mb-0">10 Maret 2023</p>
-                            </div>
-                            <div class="card-body">
-                                <h1 class="card-title mb-2">Legenda dan Dongeng Nusantara</h1>
-                                <p class="card-text text-clip">Cerita rakyat seperti Malin Kundang dan Timun Mas terus diceritakan hingga kini</p>
-                            </div>
-                        </a>
-
                     </div>
                 </div>
             </div>

@@ -359,11 +359,12 @@ nav a.active {
 
 .dropdown-content {
     position: absolute;
-    background-color: white;
-    box-shadow: 0px 2px 10px var(--border-color);
+    background-color: var(--white-color);
+    box-shadow: 0px 6px 30px rgba(0, 0, 0, 0.08);
     z-index: 99;
     border: 1px solid var(--border-color);
-    padding-top: 10px;
+    border-bottom: none;
+    /* padding-top: 10px; */
     opacity: 0;
     visibility: hidden;
     transform: translateY(-10px);
@@ -379,6 +380,7 @@ nav a.active {
     padding: 11px;
     text-decoration: none;
     display: block;
+    border-bottom: 1px solid var(--border-color);
 }
 
 .dropdown:hover .dropdown-content,
@@ -966,6 +968,11 @@ footer .container {
     overflow: hidden;
     text-overflow: ellipsis;
 }
+
+.hidden-article {
+    display: none !important;
+}
+
 
 /* Gaya dasar alert */
 .alert {
